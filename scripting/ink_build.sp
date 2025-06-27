@@ -156,6 +156,9 @@ void SetUpEntityHook(int ent)
 		SDKHook(ent, SDKHook_Use, OnLightUse);
 	} else if (StrEqual(class, "prop_internet")) {
 		SDKHook(ent, SDKHook_Use, OnInternetUse);
+	} else if (StrEqual(class, "prop_vehicle")) {
+		HookSingleEntityOutput(ent, "PlayerOn", Vehicle_OnEnter);
+		HookSingleEntityOutput(ent, "PlayerOff", Vehicle_OnExit);
 	}
 }
 
