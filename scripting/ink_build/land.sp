@@ -10,28 +10,18 @@ int CurrentLand[MAX_EDICTS + 1] = {-1, ...};
 bool ClearLand[MAXPLAYERS + 1];
 
 
-void Land_ClientEntered(int client, int land)
+public void OnLandClientEntered(int land, int client)
 {
 	char landName[32];
 	GetClientName(land, landName, sizeof(landName));
 	Ink_ClientMsg(client, "You have entered {green}%s{default}'s land.", landName);
 }
 
-void Land_EntityEntered(int ent, int land)
-{
-
-}
-
-void Land_ClientExited(int client, int land)
+public void OnLandClientExited(int land, int client)
 {
 	char landName[32];
 	GetClientName(land, landName, sizeof(landName));
 	Ink_ClientMsg(client, "You have left {green}%s{default}'s land.", landName);
-}
-
-void Land_EntityExited(int ent, int land)
-{
-
 }
 
 public Action Command_Land(int client, int args)
@@ -253,16 +243,28 @@ stock int FindCurrentLand(int ent)
 	if (land != CurrentLand[ent]) {
 		if (land != -1) {
 			if (1 <= ent <= MaxClients) {
-				Land_ClientEntered(ent, land);
+				Call_StartForward(LandClientEntered);
+				Call_PushCell(land);
+				Call_PushCell(ent);
+				Call_Finish();
 			} else {
-				Land_EntityEntered(ent, land);
+				Call_StartForward(LandEntityEntered);
+				Call_PushCell(land);
+				Call_PushCell(ent);
+				Call_Finish();
 			}
 		}
 		if (CurrentLand[ent] != -1) {
 			if (1 <= ent <= MaxClients) {
-				Land_ClientExited(ent, CurrentLand[ent]);
+				Call_StartForward(LandClientExited);
+				Call_PushCell(CurrentLand[ent]);
+				Call_PushCell(ent);
+				Call_Finish();
 			} else {
-				Land_EntityExited(ent, CurrentLand[ent]);
+				Call_StartForward(LandEntityExited);
+				Call_PushCell(CurrentLand[ent]);
+				Call_PushCell(ent);
+				Call_Finish();
 			}
 		}
 

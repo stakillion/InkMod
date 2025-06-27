@@ -52,6 +52,12 @@ int InkDissolver = INVALID_ENT_REFERENCE;
 int ClientId[MAXPLAYERS + 1];
 float ClientCmdTime[MAXPLAYERS + 1];
 
+// forwards
+GlobalForward LandClientEntered;
+GlobalForward LandClientExited;
+GlobalForward LandEntityEntered;
+GlobalForward LandEntityExited;
+
 // sprites
 int PhysBeam;
 int HaloSprite;
@@ -110,6 +116,7 @@ public void OnPluginStart()
 {
 	RegisterCvars();
 	RegisterCommands();
+	RegisterForwards();
 
 	if (LateLoad) {
 		for (int ent = MaxClients + 1; ent <= MAX_EDICTS; ent++) {
@@ -247,6 +254,14 @@ void RegisterCvars()
 
 	// land
 	ink_maxlandsize = CreateConVar("ink_maxlandsize", "2048", "Maximum width of the player's land areas.");
+}
+
+void RegisterForwards()
+{
+	LandClientEntered = new GlobalForward("OnLandClientEntered", ET_Ignore, Param_Cell, Param_Cell);
+	LandClientExited = new GlobalForward("OnLandClientExited", ET_Ignore, Param_Cell, Param_Cell);
+	LandEntityEntered = new GlobalForward("OnLandEntityEntered", ET_Ignore, Param_Cell, Param_Cell);
+	LandEntityExited = new GlobalForward("OnLandEntityExited", ET_Ignore, Param_Cell, Param_Cell);
 }
 
 // assets
