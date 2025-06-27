@@ -1,0 +1,128 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"CBaseServerVehicle::SetupMove"
+			{
+				"windows"	"4"
+				"linux"		"4"
+			}
+			"CBaseAnimating::StudioFrameAdvance"
+			{
+				"windows"	"196"
+				"linux"		"197"
+			}
+			"CBasePlayer::GetInVehicle"
+			{
+				"windows"	"399"
+				"linux"		"400"
+			}
+			"CBaseServerVehicle::HandlePassengerEntry"
+			{
+				"windows"	"17"
+				"linux"		"17"
+			}
+			"CBaseServerVehicle::GetExitAnimToUse"
+			{
+				"windows"	"21"
+				"linux"		"21"
+			}
+			"CBaseServerVehicle::HandleEntryExitFinish"
+			{
+				"windows"	"22"
+				"linux"		"22"
+			}
+		}
+		"Signatures"
+		{
+			"CPlayerMove::SetupMove"
+			{
+				"windows"	"\x55\x8B\xEC\x83\xEC\x60\x53\x56\x8B\x75\x14"
+				"linux"		"@_ZN11CPlayerMove9SetupMoveEP11CBasePlayerP8CUserCmdP11IMoveHelperP9CMoveData"
+			}
+		}
+		"Functions"
+		{
+			"CPlayerMove::SetupMove"
+			{
+				"signature"	"CPlayerMove::SetupMove"
+				"callconv"	"thiscall"
+				"return"	"void"
+				"this"		"ignore"
+				"arguments"
+				{
+					"player"
+					{
+						"type"	"cbaseentity"
+					}
+					"ucmd"
+					{
+						"type"	"int"
+					}
+					"pHelper"
+					{
+						"type"	"int"
+					}
+					"move"
+					{
+						"type"	"int"
+					}
+				}
+			}
+			"CBaseServerVehicle::HandlePassengerEntry"
+			{
+				"offset"	"CBaseServerVehicle::HandlePassengerEntry"
+				"hooktype"	"raw"
+				"return"	"void"
+				"this"		"address"
+				"arguments"
+				{
+					"pPassenger"
+					{
+						"type"	"cbaseentity"
+					}
+					"bAllowEntryOutsideZone"
+					{
+						"type"	"bool"
+					}
+				}
+			}
+			"CBaseServerVehicle::GetExitAnimToUse"
+			{
+				"offset"	"CBaseServerVehicle::GetExitAnimToUse"
+				"hooktype"	"raw"
+				"return"	"int"
+				"this"		"address"
+				"arguments"
+				{
+					"vecEyeExitEndpoint"
+					{
+						"type"	"vectorptr"
+					}
+					"bAllPointsBlocked"
+					{
+						"type"	"bool"
+					}
+				}
+			}
+		}
+	}
+	"tf"
+	{
+		"Offsets"
+		{
+			"CBaseAnimating::StudioFrameAdvance"
+			{
+				"windows"	"200"
+				"linux"		"201"
+			}
+			"CBasePlayer::GetInVehicle"
+			{
+				"windows"	"404"
+				"linux"		"405"
+			}
+		}
+	}
+}

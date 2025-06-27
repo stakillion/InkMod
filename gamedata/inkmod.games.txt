@@ -1,0 +1,151 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"CBaseEntity::KeyValue"
+			{
+				"windows"	"33"
+				"linux"		"32"
+			}
+			"CBaseEntity::AcceptInput"
+			{
+				"windows"	"38"
+				"linux"		"39"
+			}
+			"CBasePlayer::FindUseEntity"
+			{
+				"windows"	"413"
+				"linux"		"414"
+			}
+			"CleanUpMap"
+			{
+				"windows"	"231"
+				"linux"		"233"
+			}
+			"RoundCleanupShouldIgnore"
+			{
+				"windows"	"190"
+				"linux"		"192"
+			}
+		}
+		"Signatures"
+		{
+			"CBaseAnimating::LookupPoseParameter" //(CStudioHdr*, char const*)
+			{
+				"windows"	"\x55\x8B\xEC\x57\x8B\x7D\x08\x85\xFF\x75\x07"
+				"linux"		"@_ZN14CBaseAnimating19LookupPoseParameterEP10CStudioHdrPKc"
+			}
+			"CBaseAnimating::GetPoseParameter" //(int)
+			{
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x57\x80\xBE"
+				"linux"		"@_ZN14CBaseAnimating16GetPoseParameterEi"
+			}
+			"CBaseAnimating::SetPoseParameter" //(CStudioHdr*, int, float)
+			{
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\xD9\x45\x10\x57\x8B\xF9\x85\xC0\x74\x31\x56\x8B\x75\x0C"
+				"linux"		"@_ZN14CBaseAnimating16SetPoseParameterEP10CStudioHdrif"
+			}
+			"Studio_FindAttachment" //(CStudioHdr const*, char const*)
+			{
+				"windows"	"\x55\x8B\xEC\x53\x56\x57\x8B\x7D\x08\x85\xFF"
+				"linux"		"@_Z21Studio_FindAttachmentPK10CStudioHdrPKc"
+			}
+			"CBaseAnimating::GetAttachment" //(int, Vector&, QAngle&)
+			{
+				"windows"	"\x55\x8B\xEC\x8B\x01\x8D\x55\xD0\x83\xEC\x30\x8B\x80"
+				"linux"		"@_ZN14CBaseAnimating13GetAttachmentEiR6VectorR6QAngle"
+			}
+			"CBaseAnimating::GetAttachmentLocal"
+			{
+				"linux"		"@_ZN14CBaseAnimating18GetAttachmentLocalEiR6VectorR6QAngle"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x90\x00\x00\x00\x53\x56\x8B\xF1\x8D\x4D\xA0"
+			}
+		}
+		"Functions"
+		{
+			"CBaseEntity::KeyValue"
+			{
+				"offset"	"CBaseEntity::KeyValue"
+				"hooktype"	"entity"
+				"return"	"bool"
+				"this"		"entity"
+				"arguments"
+				{
+					"szKeyName"
+					{
+						"type"	"charptr"
+					}
+					"szValue"
+					{
+						"type"	"charptr"
+					}
+				}
+			}
+			"CBaseEntity::AcceptInput"
+			{
+				"offset"	"CBaseEntity::AcceptInput"
+				"hooktype"	"entity"
+				"return"	"bool"
+				"this"		"entity"
+				"arguments"
+				{
+					"szInputName"
+					{
+						"type"	"charptr"
+					}
+					"pActivator"
+					{
+						"type"	"cbaseentity"
+					}
+					"pCaller"
+					{
+						"type"	"cbaseentity"
+					}
+					"Value"
+					{
+						"type"	"object"
+						"size"	"20"
+					}
+					"outputID"
+					{
+						"type"	"int"
+					}
+				}
+			}
+			"CleanUpMap"
+			{
+				"offset"	"CleanUpMap"
+				"hooktype"	"gamerules"
+				"return"	"void"
+				"this"		"ignore"
+			}
+			"RoundCleanupShouldIgnore"
+			{
+				"offset"	"RoundCleanupShouldIgnore"
+				"hooktype"	"gamerules"
+				"return"	"bool"
+				"this"		"ignore"
+				"arguments"
+				{
+					"pEnt"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+		}
+	}
+	"tf"
+	{
+		"Offsets"
+		{
+			"CBasePlayer::FindUseEntity"
+			{
+				"windows"	"418"
+				"linux"		"419"
+			}
+		}
+	}
+}

@@ -1,0 +1,4001 @@
+"Props"
+{
+	"alyx"
+	{
+		"model"			"models/alyx.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"antlion"
+	{
+		"model"			"models/antlion.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"antlionhill"
+	{
+		"model"			"models/props_wasteland/antlionhill.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"archgate1"
+	{
+		"model"			"models/props_wasteland/prison_archgate001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"archgate2"
+	{
+		"model"			"models/props_wasteland/prison_archgate002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"archgate3"
+	{
+		"model"			"models/props_wasteland/prison_archgate002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"archgate4"
+	{
+		"model"			"models/props_wasteland/prison_archgate002c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"archwindow"
+	{
+		"model"			"models/props_wasteland/prison_archwindow001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"armchair"
+	{
+		"model"			"models/props_c17/furniturearmchair001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"awning1"
+	{
+		"model"			"models/props_c17/awning001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"awning2"
+	{
+		"model"			"models/props_c17/awning002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"barney"
+	{
+		"model"			"models/barney.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"barricade1"
+	{
+		"model"			"models/props_wasteland/barricade001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"barricade2"
+	{
+		"model"			"models/props_wasteland/barricade002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars1"
+	{
+		"model"			"models/props_building_details/storefront_template001a_bars.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars2"
+	{
+		"model"			"models/props_building_details/courtyard_template001c_bars.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars3"
+	{
+		"model"			"models/props_building_details/courtyard_template002c_bars.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars4"
+	{
+		"model"			"models/props_canal/canal_bars001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars5"
+	{
+		"model"			"models/props_canal/canal_bars002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars6"
+	{
+		"model"			"models/props_canal/canal_bars003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bars7"
+	{
+		"model"			"models/props_canal/canal_bars004.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bathtub"
+	{
+		"model"			"models/props_c17/furniturebathtub001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bathtub2"
+	{
+		"model"			"models/props_interiors/bathtub01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bedframe"
+	{
+		"model"			"models/props_c17/furniturebed001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bedframe2"
+	{
+		"model"			"models/props_wasteland/prison_bedframe001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bedframe3"
+	{
+		"model"			"models/props_wasteland/prison_bedframe001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bench"
+	{
+		"model"			"models/props_c17/bench01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bench2"
+	{
+		"model"			"models/props_trainstation/bench_indoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bench3"
+	{
+		"model"			"models/props_trainstation/benchoutdoor01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bigrock"
+	{
+		"model"			"models/props_lab/bigrock.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bike"
+	{
+		"model"			"models/props_junk/bicycle01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"binderblue"
+	{
+		"model"			"models/props_lab/binderbluelabel.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bindergray"
+	{
+		"model"			"models/props_lab/bindergraylabel01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bindergreen"
+	{
+		"model"			"models/props_lab/bindergreenlabel.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"binderred"
+	{
+		"model"			"models/props_lab/binderredlabel.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"blastdoor1"
+	{
+		"model"			"models/props_lab/blastdoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"blastdoor2"
+	{
+		"model"			"models/props_lab/blastdoor001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"blastdoor3"
+	{
+		"model"			"models/props_lab/blastdoor001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bluebarrel"
+	{
+		"model"			"models/props_borealis/bluebarrel001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"boat1"
+	{
+		"model"			"models/props_canal/boat001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"boat2"
+	{
+		"model"			"models/props_canal/boat001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"boat3"
+	{
+		"model"			"models/props_canal/boat002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"boiler"
+	{
+		"model"			"models/props_c17/furnitureboiler001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle1"
+	{
+		"model"			"models/props_junk/garbage_glassbottle001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle2"
+	{
+		"model"			"models/props_junk/garbage_glassbottle002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle3"
+	{
+		"model"			"models/props_junk/garbage_glassbottle003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle4"
+	{
+		"model"			"models/props_junk/garbage_plasticbottle001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle5"
+	{
+		"model"			"models/props_junk/garbage_plasticbottle002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle6"
+	{
+		"model"			"models/props_junk/garbage_plasticbottle003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bottle7"
+	{
+		"model"			"models/props_junk/glassbottle01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breen"
+	{
+		"model"			"models/breen.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"breenbust"
+	{
+		"model"			"models/props_combine/breenbust.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenchair"
+	{
+		"model"			"models/props_combine/breenchair.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenclock"
+	{
+		"model"			"models/props_combine/breenclock.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenconsole"
+	{
+		"model"			"models/props_combine/breenconsole.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breendesk"
+	{
+		"model"			"models/props_combine/breendesk.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenglobe"
+	{
+		"model"			"models/props_combine/breenglobe.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenorb"
+	{
+		"model"			"models/props_combine/breentp_rings.mdl"
+		"dynamic"		"idle"
+		"solid"			"2"
+		"enabled"		"1"
+	}
+	"breenpod1"
+	{
+		"model"			"models/props_combine/breenpod.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenpod2"
+	{
+		"model"			"models/props_combine/breenpod_inner.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenpod3"
+	{
+		"model"			"models/props_combine/cell_01_pod.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breentube"
+	{
+		"model"			"models/props_combine/breen_tube.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"breenwindow"
+	{
+		"model"			"models/props_combine/breenwindow.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bridge1"
+	{
+		"model"			"models/props_canal/canal_bridge01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bridge2"
+	{
+		"model"			"models/props_canal/canal_bridge02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bridge3"
+	{
+		"model"			"models/props_canal/canal_bridge03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bridge4"
+	{
+		"model"			"models/props_canal/canal_bridge03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"briefcase"
+	{
+		"model"			"models/props_c17/briefcase001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bucket1"
+	{
+		"model"			"models/props_junk/metalbucket01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bucket2"
+	{
+		"model"			"models/props_junk/metalbucket02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"bucket3"
+	{
+		"model"			"models/props_junk/plasticbucket001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"buggy"
+	{
+		"model"			"models/buggy.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"buoy"
+	{
+		"model"			"models/props_wasteland/buoy01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cabinet"
+	{
+		"model"			"models/props_interiors/furniture_cabinetdrawer01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cabinet2"
+	{
+		"model"			"models/props_interiors/furniture_cabinetdrawer02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cactus"
+	{
+		"model"			"models/props_lab/cactus.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cafeteriabench"
+	{
+		"model"			"models/props_wasteland/cafeteria_bench001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cafeteriatable"
+	{
+		"model"			"models/props_wasteland/cafeteria_table001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"canister1"
+	{
+		"model"			"models/props_c17/canister01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"canister2"
+	{
+		"model"			"models/props_c17/canister02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carblue1"
+	{
+		"model"			"models/props_vehicles/car001b_phy.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carblue2"
+	{
+		"model"			"models/props_vehicles/car003b_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carblue3"
+	{
+		"model"			"models/props_vehicles/car004a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox1"
+	{
+		"model"			"models/props_junk/cardboard_box001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox2"
+	{
+		"model"			"models/props_junk/cardboard_box001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox3"
+	{
+		"model"			"models/props_junk/cardboard_box002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox4"
+	{
+		"model"			"models/props_junk/cardboard_box002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox5"
+	{
+		"model"			"models/props_junk/cardboard_box003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox6"
+	{
+		"model"			"models/props_junk/cardboard_box003b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cardboardbox7"
+	{
+		"model"			"models/props_junk/cardboard_box004a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cargocontainer1"
+	{
+		"model"			"models/props_wasteland/cargo_container01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cargocontainer2"
+	{
+		"model"			"models/props_wasteland/cargo_container01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cargreen"
+	{
+		"model"			"models/props_vehicles/car005a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carousel"
+	{
+		"model"			"models/props_c17/playground_carousel01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carred"
+	{
+		"model"			"models/props_vehicles/car001a_phy.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carred2"
+	{
+		"model"			"models/props_vehicles/car002b_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cartire"
+	{
+		"model"			"models/props_vehicles/carparts_tire01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carwheel"
+	{
+		"model"			"models/props_vehicles/carparts_wheel01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carwhite"
+	{
+		"model"			"models/props_vehicles/car002a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carwhite2"
+	{
+		"model"			"models/props_vehicles/car004a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"carwhite3"
+	{
+		"model"			"models/props_vehicles/car005b_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"caryellow"
+	{
+		"model"			"models/props_vehicles/car003a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cashregister"
+	{
+		"model"			"models/props_c17/cashregister01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cellarray1"
+	{
+		"model"			"models/props_combine/cell_array_01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cellarray2"
+	{
+		"model"			"models/props_combine/cell_array_02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cellarray3"
+	{
+		"model"			"models/props_combine/cell_array_03.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"celldoor"
+	{
+		"model"			"models/props_wasteland/prison_celldoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cellwindow"
+	{
+		"model"			"models/props_wasteland/prison_cellwindow002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"cagelight"
+	{
+		"model"			"models/props_c17/light_cagelight01_off.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair1"
+	{
+		"model"			"models/props_c17/chair02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair2"
+	{
+		"model"			"models/props_c17/chair_kleiner03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair3"
+	{
+		"model"			"models/props_c17/chair_office01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair4"
+	{
+		"model"			"models/props_c17/furniturechair001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair5"
+	{
+		"model"			"models/props_interiors/furniture_chair01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair6"
+	{
+		"model"			"models/props_interiors/furniture_chair03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"chair7"
+	{
+		"model"			"models/props_wasteland/controlroom_chair001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"charple1"
+	{
+		"model"			"models/humans/charple01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"charple2"
+	{
+		"model"			"models/humans/charple02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"charple3"
+	{
+		"model"			"models/humans/charple03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"charple4"
+	{
+		"model"			"models/humans/charple04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale1"
+	{
+		"model"			"models/humans/group01/female_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale2"
+	{
+		"model"			"models/humans/group01/female_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale3"
+	{
+		"model"			"models/humans/group01/female_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale4"
+	{
+		"model"			"models/humans/group01/female_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale5"
+	{
+		"model"			"models/humans/group01/female_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenfemale6"
+	{
+		"model"			"models/humans/group01/female_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale1"
+	{
+		"model"			"models/humans/group01/male_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale2"
+	{
+		"model"			"models/humans/group01/male_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale3"
+	{
+		"model"			"models/humans/group01/male_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale4"
+	{
+		"model"			"models/humans/group01/male_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale5"
+	{
+		"model"			"models/humans/group01/male_05.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale6"
+	{
+		"model"			"models/humans/group01/male_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale7"
+	{
+		"model"			"models/humans/group01/male_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale8"
+	{
+		"model"			"models/humans/group01/male_08.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale9"
+	{
+		"model"			"models/humans/group01/male_09.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenmale10"
+	{
+		"model"			"models/humans/group01/male_cheaple.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"citizenradio"
+	{
+		"model"			"models/props_lab/citizenradio.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"clipboard"
+	{
+		"model"			"models/props_lab/clipboard.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"clock1"
+	{
+		"model"			"models/props_c17/clock01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"clock2"
+	{
+		"model"			"models/props_trainstation/clock01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"clock3"
+	{
+		"model"			"models/props_trainstation/trainstation_clock001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"coffintop1"
+	{
+		"model"			"models/props_c17/gravestone_coffinpiece001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"coffintop2"
+	{
+		"model"			"models/props_c17/gravestone_coffinpiece002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"column"
+	{
+		"model"			"models/props_c17/column02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"columnlight"
+	{
+		"model"			"models/props_trainstation/column_light001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combine1"
+	{
+		"model"			"models/combine_soldier.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"combine2"
+	{
+		"model"			"models/combine_soldier_prisonguard.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"combine3"
+	{
+		"model"			"models/combine_super_soldier.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade1a"
+	{
+		"model"			"models/props_combine/combine_barricade_med01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade1b"
+	{
+		"model"			"models/props_combine/combine_barricade_med01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade2a"
+	{
+		"model"			"models/props_combine/combine_barricade_med02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade2b"
+	{
+		"model"			"models/props_combine/combine_barricade_med02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade2c"
+	{
+		"model"			"models/props_combine/combine_barricade_med02c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade3"
+	{
+		"model"			"models/props_combine/combine_barricade_med03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricade4"
+	{
+		"model"			"models/props_combine/combine_barricade_med04b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadeshort1"
+	{
+		"model"			"models/props_combine/combine_barricade_short01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadeshort2"
+	{
+		"model"			"models/props_combine/combine_barricade_short02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadeshort3"
+	{
+		"model"			"models/props_combine/combine_barricade_short03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall1a"
+	{
+		"model"			"models/props_combine/combine_barricade_tall01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall1b"
+	{
+		"model"			"models/props_combine/combine_barricade_tall01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall2"
+	{
+		"model"			"models/props_combine/combine_barricade_tall02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall3a"
+	{
+		"model"			"models/props_combine/combine_barricade_tall03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall3b"
+	{
+		"model"			"models/props_combine/combine_barricade_tall03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall4a"
+	{
+		"model"			"models/props_combine/combine_barricade_tall04a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebarricadetall4b"
+	{
+		"model"			"models/props_combine/combine_barricade_tall04b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combineboothmed"
+	{
+		"model"			"models/props_combine/combine_booth_med01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combineboothshort"
+	{
+		"model"			"models/props_combine/combine_booth_short01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebridgeend"
+	{
+		"model"			"models/props_combine/combine_bridge.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinebridgemid"
+	{
+		"model"			"models/props_combine/combine_bridge_b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinecamera"
+	{
+		"model"			"models/props_combine/combinecamera001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinedoor"
+	{
+		"model"			"models/props_combine/combine_door01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinefence1a"
+	{
+		"model"			"models/props_combine/combine_fence01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinefence1b"
+	{
+		"model"			"models/props_combine/combine_fence01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinegate"
+	{
+		"model"			"models/combine_gate_citizen.mdl"
+		"dynamic"		"idle_closed"
+		"enabled"		"1"
+	}
+	"combinegenerator"
+	{
+		"model"			"models/props_combine/combine_generator01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combineinterface1"
+	{
+		"model"			"models/props_combine/combine_interface001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combineinterface2"
+	{
+		"model"			"models/props_combine/combine_interface002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combineinterface3"
+	{
+		"model"			"models/props_combine/combine_interface003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinelight1a"
+	{
+		"model"			"models/props_combine/combine_light001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinelight1b"
+	{
+		"model"			"models/props_combine/combine_light001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinelight2"
+	{
+		"model"			"models/props_combine/combine_light002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinemonitor1"
+	{
+		"model"			"models/props_combine/combine_intmonitor001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinemonitor2"
+	{
+		"model"			"models/props_combine/combine_intmonitor003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinemonitorbay"
+	{
+		"model"			"models/props_combine/combine_monitorbay.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinetrain1"
+	{
+		"model"			"models/props_combine/combine_train02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinetrain2"
+	{
+		"model"			"models/props_combine/combine_train02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinetrain3"
+	{
+		"model"			"models/props_combine/combinetrain01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewall1"
+	{
+		"model"			"models/props_combine/combineinnerwall001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewall2"
+	{
+		"model"			"models/props_combine/combineinnerwall001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewallcluster1"
+	{
+		"model"			"models/props_combine/combineinnerwallcluster1024_001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewallcluster2"
+	{
+		"model"			"models/props_combine/combineinnerwallcluster1024_002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewallcluster3"
+	{
+		"model"			"models/props_combine/combineinnerwallcluster1024_003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"combinewindow"
+	{
+		"model"			"models/props_combine/combine_window001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"computer"
+	{
+		"model"			"models/props_lab/harddrive02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"concretebarrier"
+	{
+		"model"			"models/props_c17/concrete_barrier001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"concretepipe1"
+	{
+		"model"			"models/props_pipes/concrete_pipe001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"concretepipe2"
+	{
+		"model"			"models/props_pipes/concrete_pipe001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"concretepipe3"
+	{
+		"model"			"models/props_pipes/concrete_pipe001d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"connection1"
+	{
+		"model"			"models/props_trainstation/pole_384connection001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"connection2"
+	{
+		"model"			"models/props_trainstation/pole_384connection001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"connection3"
+	{
+		"model"			"models/props_trainstation/pole_448connection001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"connection4"
+	{
+		"model"			"models/props_trainstation/pole_448connection002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"connection5"
+	{
+		"model"			"models/props_trainstation/pole_448connection002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"consolebox1"
+	{
+		"model"			"models/props_c17/consolebox01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"consolebox2"
+	{
+		"model"			"models/props_c17/consolebox03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"consolebox3"
+	{
+		"model"			"models/props_c17/consolebox05a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"coolingtank1"
+	{
+		"model"			"models/props_wasteland/coolingtank01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"coolingtank2"
+	{
+		"model"			"models/props_wasteland/coolingtank02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"coolingtank3"
+	{
+		"model"			"models/props_wasteland/horizontalcoolingtank04.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"corpse"
+	{
+		"model"			"models/humans/corpse1.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"couch1"
+	{
+		"model"			"models/props_c17/furniturecouch001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"couch2"
+	{
+		"model"			"models/props_c17/furniturecouch002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"couch3"
+	{
+		"model"			"models/props_interiors/furniture_couch01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"crane"
+	{
+		"model"			"models/cranes/crane_docks.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"craneframe"
+	{
+		"model"			"models/cranes/crane_frame.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"craneframe_interior"
+	{
+		"model"			"models/cranes/crane_frame_interior.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"crow"
+	{
+		"model"			"models/crow.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"cupboard"
+	{
+		"model"			"models/props_c17/furniturecupboard001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"desk1"
+	{
+		"model"			"models/props_interiors/furniture_desk01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"desk2"
+	{
+		"model"			"models/props_wasteland/controlroom_desk001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"desk3"
+	{
+		"model"			"models/props_wasteland/controlroom_desk001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"desklamp"
+	{
+		"model"			"models/props_lab/desklamp01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"displaycooler"
+	{
+		"model"			"models/props_c17/display_cooler01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dock1"
+	{
+		"model"			"models/props_docks/dock_broken01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dock2"
+	{
+		"model"			"models/props_docks/dock_broken01a_256.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dock3"
+	{
+		"model"			"models/props_docks/dock_broken01b_256.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dockbumper"
+	{
+		"model"			"models/props_docks/dock_bumper04a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dockpole1"
+	{
+		"model"			"models/props_docks/dockpole01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dockpole2"
+	{
+		"model"			"models/props_docks/dockpole02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dockpolecluster"
+	{
+		"model"			"models/props_docks/prefab_piling01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dogsign"
+	{
+		"model"			"models/props_lab/bewaredog.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"doll"
+	{
+		"model"			"models/props_c17/doll01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dome1"
+	{
+		"model"			"models/props_rooftop/dome004.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dome2"
+	{
+		"model"			"models/props_rooftop/dome005.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dome3"
+	{
+		"model"			"models/props_rooftop/dome_copper.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"door"
+	{
+		"model"			"models/props_c17/door01_left.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"doorlab"
+	{
+		"model"			"models/props_doors/doorklab01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"doorslotted"
+	{
+		"model"			"models/props_doors/door03_slotted_left.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"doubledoor"
+	{
+		"model"			"models/props_c17/door02_double.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"drawer1"
+	{
+		"model"			"models/props_c17/furnituredrawer001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"drawer2"
+	{
+		"model"			"models/props_c17/furnituredrawer002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"drawer3"
+	{
+		"model"			"models/props_c17/furnituredrawer003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dresser"
+	{
+		"model"			"models/props_c17/furnituredresser001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwood1"
+	{
+		"model"			"models/props_foliage/driftwood_01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwood2"
+	{
+		"model"			"models/props_foliage/driftwood_02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwood3"
+	{
+		"model"			"models/props_foliage/driftwood_03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwoodclump1"
+	{
+		"model"			"models/props_foliage/driftwood_clump_01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwoodclump2"
+	{
+		"model"			"models/props_foliage/driftwood_clump_02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"driftwoodclump3"
+	{
+		"model"			"models/props_foliage/driftwood_clump_03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dryer"
+	{
+		"model"			"models/props_wasteland/laundry_dryer002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dumpster1"
+	{
+		"model"			"models/props_junk/trashdumpster01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dumpster2"
+	{
+		"model"			"models/props_junk/trashdumpster02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"dumpster3"
+	{
+		"model"			"models/props_lab/scrapyarddumpster.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"elevatordoor"
+	{
+		"model"			"models/props_interiors/elevatorshaft_door01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"eli"
+	{
+		"model"			"models/eli.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"explosivedrum"
+	{
+		"model"			"models/props_c17/oildrum001_explosive.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fastzombie"
+	{
+		"model"			"models/zombie/fast.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"fence1"
+	{
+		"model"			"models/props_c17/fence01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fence2"
+	{
+		"model"			"models/props_c17/fence01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fence3"
+	{
+		"model"			"models/props_c17/fence02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fence4"
+	{
+		"model"			"models/props_c17/fence02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fence5"
+	{
+		"model"			"models/props_c17/fence03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fence6"
+	{
+		"model"			"models/props_c17/fence04a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed1"
+	{
+		"model"			"models/props_wasteland/exterior_fence001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed2"
+	{
+		"model"			"models/props_wasteland/exterior_fence001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed3"
+	{
+		"model"			"models/props_wasteland/exterior_fence002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed4"
+	{
+		"model"			"models/props_wasteland/exterior_fence002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed5"
+	{
+		"model"			"models/props_wasteland/exterior_fence002c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed6"
+	{
+		"model"			"models/props_wasteland/exterior_fence002d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed7"
+	{
+		"model"			"models/props_wasteland/exterior_fence002e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed8"
+	{
+		"model"			"models/props_wasteland/exterior_fence003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fencebarbed9"
+	{
+		"model"			"models/props_wasteland/exterior_fence003b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"filecabinet"
+	{
+		"model"			"models/props_lab/filecabinet02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"filecabinet2"
+	{
+		"model"			"models/props_wasteland/controlroom_filecabinet002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fireplace"
+	{
+		"model"			"models/props_c17/furniturefireplace001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fishingboat1"
+	{
+		"model"			"models/props_wasteland/boat_fishing01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fishingboat2"
+	{
+		"model"			"models/props_wasteland/boat_fishing02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"floodlight"
+	{
+		"model"			"models/props_c17/light_floodlight02_off.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fountain"
+	{
+		"model"			"models/props_c17/fountain_01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"fridge"
+	{
+		"model"			"models/props_c17/furniturefridge001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gascan"
+	{
+		"model"			"models/props_junk/gascan001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gascan2"
+	{
+		"model"			"models/props_junk/metalgascan.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gaspump"
+	{
+		"model"			"models/props_wasteland/gaspump001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gatedoor1"
+	{
+		"model"			"models/props_c17/gate_door01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gatedoor2"
+	{
+		"model"			"models/props_c17/gate_door02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gear1"
+	{
+		"model"			"models/props_wasteland/gear01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"generator1"
+	{
+		"model"			"models/props_canal/generator01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"generator2"
+	{
+		"model"			"models/props_canal/generator02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"generatortrailer"
+	{
+		"model"			"models/props_vehicles/generatortrailer01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gman"
+	{
+		"model"			"models/gman.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"grainelevator"
+	{
+		"model"			"models/props_wasteland/grainelevator01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"grave1"
+	{
+		"model"			"models/props_c17/gravestone001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"grave2"
+	{
+		"model"			"models/props_c17/gravestone002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"grave3"
+	{
+		"model"			"models/props_c17/gravestone003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"grave4"
+	{
+		"model"			"models/props_c17/gravestone004a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gravecross"
+	{
+		"model"			"models/props_c17/gravestone_cross001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"gravestatue"
+	{
+		"model"			"models/props_c17/gravestone_statue001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrail"
+	{
+		"model"			"models/props_interiors/handrailcluster03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrail2"
+	{
+		"model"			"models/props_trainstation/handrail_64decoration001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrailcorner"
+	{
+		"model"			"models/props_c17/handrail04_corner.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handraillong"
+	{
+		"model"			"models/props_c17/handrail04_long.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrailmedium"
+	{
+		"model"			"models/props_c17/handrail04_medium.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrailrise1"
+	{
+		"model"			"models/props_c17/handrail04_singlerise.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"handrailrise2"
+	{
+		"model"			"models/props_c17/handrail04_doublerise.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"harpoon"
+	{
+		"model"			"models/props_junk/harpoon002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"headcrab"
+	{
+		"model"			"models/headcrabclassic.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"headcrabblack"
+	{
+		"model"			"models/headcrabblack.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"headcrabfast"
+	{
+		"model"			"models/headcrab.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"heater1"
+	{
+		"model"			"models/props_wasteland/prison_heater001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"heater2"
+	{
+		"model"			"models/props_wasteland/prison_heater002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"heavydoor"
+	{
+		"model"			"models/props_wasteland/prison_heavydoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"helicopterbomb"
+	{
+		"model"			"models/combine_helicopter/helicopter_bomb01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"hevcase"
+	{
+		"model"			"models/props_lab/hev_case.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"hevmachine"
+	{
+		"model"			"models/props_lab/hev_machine.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"horse"
+	{
+		"model"			"models/props_c17/statue_horse.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"ichthyosaur"
+	{
+		"model"			"models/ichthyosaur.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"interiorfence1"
+	{
+		"model"			"models/props_wasteland/interior_fence001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence10"
+	{
+		"model"			"models/props_wasteland/interior_fence002d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence11"
+	{
+		"model"			"models/props_wasteland/interior_fence002e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence12"
+	{
+		"model"			"models/props_wasteland/interior_fence002f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence13"
+	{
+		"model"			"models/props_wasteland/interior_fence003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence14"
+	{
+		"model"			"models/props_wasteland/interior_fence003b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence15"
+	{
+		"model"			"models/props_wasteland/interior_fence003d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence16"
+	{
+		"model"			"models/props_wasteland/interior_fence003e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence17"
+	{
+		"model"			"models/props_wasteland/interior_fence003f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence18"
+	{
+		"model"			"models/props_wasteland/interior_fence004a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence19"
+	{
+		"model"			"models/props_wasteland/interior_fence004b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence2"
+	{
+		"model"			"models/props_wasteland/interior_fence001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence3"
+	{
+		"model"			"models/props_wasteland/interior_fence001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence4"
+	{
+		"model"			"models/props_wasteland/interior_fence001d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence5"
+	{
+		"model"			"models/props_wasteland/interior_fence001e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence6"
+	{
+		"model"			"models/props_wasteland/interior_fence001g.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence7"
+	{
+		"model"			"models/props_wasteland/interior_fence002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence8"
+	{
+		"model"			"models/props_wasteland/interior_fence002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"interiorfence9"
+	{
+		"model"			"models/props_wasteland/interior_fence002c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"jar1"
+	{
+		"model"			"models/props_lab/jar01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"jar2"
+	{
+		"model"			"models/props_lab/jar01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"jug"
+	{
+		"model"			"models/props_junk/glassjug01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"junglegym1"
+	{
+		"model"			"models/props_c17/playground_jungle_gym01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"junglegym2"
+	{
+		"model"			"models/props_c17/playground_jungle_gym01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kennel"
+	{
+		"model"			"models/props_lab/kennel_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"keyboard"
+	{
+		"model"			"models/props_c17/computer01_keyboard.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchencounter1"
+	{
+		"model"			"models/props_wasteland/kitchen_counter001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchencounter2"
+	{
+		"model"			"models/props_wasteland/kitchen_counter001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchencounter3"
+	{
+		"model"			"models/props_wasteland/kitchen_counter001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchencounter4"
+	{
+		"model"			"models/props_wasteland/kitchen_counter001d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchenfridge"
+	{
+		"model"			"models/props_wasteland/kitchen_fridge001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchenshelf1"
+	{
+		"model"			"models/props_wasteland/kitchen_shelf001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchenshelf2"
+	{
+		"model"			"models/props_wasteland/kitchen_shelf002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchensink"
+	{
+		"model"			"models/props_interiors/sinkkitchen01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchenstove1"
+	{
+		"model"			"models/props_wasteland/kitchen_stove001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kitchenstove2"
+	{
+		"model"			"models/props_wasteland/kitchen_stove002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"kleiner"
+	{
+		"model"			"models/kleiner.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"labconsole"
+	{
+		"model"			"models/props_lab/generatorconsole.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"labgenerator"
+	{
+		"model"			"models/props_lab/generator.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lablight"
+	{
+		"model"			"models/props_lab/lab_flourescentlight002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lablocker"
+	{
+		"model"			"models/props_lab/lockers.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"ladder1"
+	{
+		"model"			"models/props_c17/metalladder001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"ladder2"
+	{
+		"model"			"models/props_c17/metalladder002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lamarr"
+	{
+		"model"			"models/lamarr.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"lamp"
+	{
+		"model"			"models/props_interiors/furniture_lamp01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lamppost"
+	{
+		"model"			"models/props_c17/lamppost03a_off.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"laundrybasket1"
+	{
+		"model"			"models/props_wasteland/laundry_basket001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"laundrybasket2"
+	{
+		"model"			"models/props_wasteland/laundry_basket002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"laundrycart1"
+	{
+		"model"			"models/props_wasteland/laundry_cart001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"laundrycart2"
+	{
+		"model"			"models/props_wasteland/laundry_cart002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lightcluster"
+	{
+		"model"			"models/props_wasteland/lights_industrialcluster01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"lockers"
+	{
+		"model"			"models/props_c17/lockers001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"magnet"
+	{
+		"model"			"models/props_wasteland/cranemagnet01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"magnifyinglamp"
+	{
+		"model"			"models/props_c17/light_magnifyinglamp02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"masterinterface"
+	{
+		"model"			"models/props_combine/masterinterface.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"mattress"
+	{
+		"model"			"models/props_c17/furnituremattress001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"meathook"
+	{
+		"model"			"models/props_junk/meathook001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale1"
+	{
+		"model"			"models/humans/group03m/female_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale2"
+	{
+		"model"			"models/humans/group03m/female_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale3"
+	{
+		"model"			"models/humans/group03m/female_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale4"
+	{
+		"model"			"models/humans/group03m/female_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale5"
+	{
+		"model"			"models/humans/group03m/female_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicfemale6"
+	{
+		"model"			"models/humans/group03m/female_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale1"
+	{
+		"model"			"models/humans/group03m/male_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale2"
+	{
+		"model"			"models/humans/group03m/male_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale3"
+	{
+		"model"			"models/humans/group03m/male_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale4"
+	{
+		"model"			"models/humans/group03m/male_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale5"
+	{
+		"model"			"models/humans/group03m/male_05.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale6"
+	{
+		"model"			"models/humans/group03m/male_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale7"
+	{
+		"model"			"models/humans/group03m/male_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale8"
+	{
+		"model"			"models/humans/group03m/male_08.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"medicmale9"
+	{
+		"model"			"models/humans/group03m/male_09.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"melon"
+	{
+		"model"			"models/props_junk/watermelon01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"metalbed"
+	{
+		"model"			"models/props_wasteland/prison_metalbed001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"milk1"
+	{
+		"model"			"models/props_junk/garbage_milkcarton001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"milk2"
+	{
+		"model"			"models/props_junk/garbage_milkcarton002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"miniteleport"
+	{
+		"model"			"models/props_lab/miniteleport.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"monitor1"
+	{
+		"model"			"models/props_lab/monitor01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"monitor2"
+	{
+		"model"			"models/props_lab/monitor01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"monitor3"
+	{
+		"model"			"models/props_lab/monitor02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"monk"
+	{
+		"model"			"models/monk.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"mossman"
+	{
+		"model"			"models/mossman.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"mountedlight1"
+	{
+		"model"			"models/props_trainstation/light_128wallmounted001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"mountedlight2"
+	{
+		"model"			"models/props_trainstation/light_256ceilingmounted001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"mug"
+	{
+		"model"			"models/props_junk/garbage_coffeemug001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"newspaper"
+	{
+		"model"			"models/props_junk/garbage_newspaper001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"odessa"
+	{
+		"model"			"models/odessa.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"oildrum"
+	{
+		"model"			"models/props_c17/oildrum001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"padlock"
+	{
+		"model"			"models/props_wasteland/prison_padlock001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"paintcan"
+	{
+		"model"			"models/props_junk/metal_paintcan001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"paper"
+	{
+		"model"			"models/props_c17/paper01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"partsbin"
+	{
+		"model"			"models/props_lab/partsbin01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"payphone"
+	{
+		"model"			"models/props_trainstation/payphone001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"payphonereciever"
+	{
+		"model"			"models/props_trainstation/payphone_reciever001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pictureframe"
+	{
+		"model"			"models/props_c17/frame002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pigeon"
+	{
+		"model"			"models/pigeon.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"pillar"
+	{
+		"model"			"models/props_canal/bridge_pillar02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"plantpot"
+	{
+		"model"			"models/props_junk/terracotta01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"plasticcrate"
+	{
+		"model"			"models/props_junk/plasticcrate01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pliers"
+	{
+		"model"			"models/props_c17/tools_pliers01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"plug"
+	{
+		"model"			"models/props_lab/tpplug.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"poisonzombie"
+	{
+		"model"			"models/zombie/poison.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"pole"
+	{
+		"model"			"models/props_c17/signpole001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"police"
+	{
+		"model"			"models/police.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"popcan"
+	{
+		"model"			"models/props_junk/popcan01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pot1"
+	{
+		"model"			"models/props_c17/metalpot001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pot2"
+	{
+		"model"			"models/props_c17/metalpot002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pot3"
+	{
+		"model"			"models/props_interiors/pot01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pot4"
+	{
+		"model"			"models/props_interiors/pot02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"powertower"
+	{
+		"model"			"models/props_wasteland/powertower01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"prisongate1"
+	{
+		"model"			"models/props_wasteland/prison_gate001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"prisongate2"
+	{
+		"model"			"models/props_wasteland/prison_gate001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"prisongate3"
+	{
+		"model"			"models/props_wasteland/prison_gate001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"prisonslidingdoor"
+	{
+		"model"			"models/props_wasteland/prison_slidingdoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"propane1"
+	{
+		"model"			"models/props_c17/canister_propane01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"propane2"
+	{
+		"model"			"models/props_citizen_tech/firetrap_propanecanister01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"propanecanister"
+	{
+		"model"			"models/props_junk/propanecanister001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"propanetank"
+	{
+		"model"			"models/props_junk/propane_tank001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pulleyhook"
+	{
+		"model"			"models/props_c17/pulleyhook01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pulleylarge"
+	{
+		"model"			"models/props_c17/pulleywheels_large01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pulleysmall"
+	{
+		"model"			"models/props_c17/pulleywheels_small01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"pushcart"
+	{
+		"model"			"models/props_junk/pushcart01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"radiator1"
+	{
+		"model"			"models/props_c17/furnitureradiator001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"radiator2"
+	{
+		"model"			"models/props_interiors/radiator01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"ravendoor"
+	{
+		"model"			"models/props_lab/ravendoor.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"ravenholm"
+	{
+		"model"			"models/props_junk/ravenholmsign.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale1"
+	{
+		"model"			"models/humans/group03/female_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale2"
+	{
+		"model"			"models/humans/group03/female_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale3"
+	{
+		"model"			"models/humans/group03/female_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale4"
+	{
+		"model"			"models/humans/group03/female_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale5"
+	{
+		"model"			"models/humans/group03/female_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelfemale6"
+	{
+		"model"			"models/humans/group03/female_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale1"
+	{
+		"model"			"models/humans/group03/male_01.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale2"
+	{
+		"model"			"models/humans/group03/male_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale3"
+	{
+		"model"			"models/humans/group03/male_03.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale4"
+	{
+		"model"			"models/humans/group03/male_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale5"
+	{
+		"model"			"models/humans/group03/male_05.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale6"
+	{
+		"model"			"models/humans/group03/male_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale7"
+	{
+		"model"			"models/humans/group03/male_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale8"
+	{
+		"model"			"models/humans/group03/male_08.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rebelmale9"
+	{
+		"model"			"models/humans/group03/male_09.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"reciever1"
+	{
+		"model"			"models/props_lab/reciever01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"reciever2"
+	{
+		"model"			"models/props_lab/reciever01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"reciever3"
+	{
+		"model"			"models/props_lab/reciever01c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"reciever4"
+	{
+		"model"			"models/props_lab/reciever01d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"recievercart"
+	{
+		"model"			"models/props_lab/reciever_cart.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"refrigerator"
+	{
+		"model"			"models/props_interiors/refrigerator01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"refugeefemale1"
+	{
+		"model"			"models/humans/group02/female_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeefemale2"
+	{
+		"model"			"models/humans/group02/female_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeefemale3"
+	{
+		"model"			"models/humans/group02/female_07.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeemale1"
+	{
+		"model"			"models/humans/group02/male_02.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeemale2"
+	{
+		"model"			"models/humans/group02/male_04.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeemale3"
+	{
+		"model"			"models/humans/group02/male_06.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"refugeemale4"
+	{
+		"model"			"models/humans/group02/male_08.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"rock"
+	{
+		"model"			"models/props_junk/rock001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff1"
+	{
+		"model"			"models/props_wasteland/rockcliff01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff10"
+	{
+		"model"			"models/props_wasteland/rockcliff05e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff11"
+	{
+		"model"			"models/props_wasteland/rockcliff05f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff12"
+	{
+		"model"			"models/props_wasteland/rockcliff06d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff13"
+	{
+		"model"			"models/props_wasteland/rockcliff06i.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff14"
+	{
+		"model"			"models/props_wasteland/rockcliff07b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff15"
+	{
+		"model"			"models/props_wasteland/rockgranite01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff16"
+	{
+		"model"			"models/props_wasteland/rockgranite01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff17"
+	{
+		"model"			"models/props_wasteland/rockgranite01c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff18"
+	{
+		"model"			"models/props_wasteland/rockgranite02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff19"
+	{
+		"model"			"models/props_wasteland/rockgranite02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff2"
+	{
+		"model"			"models/props_wasteland/rockcliff01c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff20"
+	{
+		"model"			"models/props_wasteland/rockgranite02c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff21"
+	{
+		"model"			"models/props_wasteland/rockgranite03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff22"
+	{
+		"model"			"models/props_wasteland/rockgranite03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff23"
+	{
+		"model"			"models/props_wasteland/rockgranite03c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff24"
+	{
+		"model"			"models/props_wasteland/rockgranite04a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff25"
+	{
+		"model"			"models/props_wasteland/rockgranite04b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff26"
+	{
+		"model"			"models/props_wasteland/rockgranite04c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff3"
+	{
+		"model"			"models/props_wasteland/rockcliff01e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff4"
+	{
+		"model"			"models/props_wasteland/rockcliff01f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff5"
+	{
+		"model"			"models/props_wasteland/rockcliff01g.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff6"
+	{
+		"model"			"models/props_wasteland/rockcliff01j.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff7"
+	{
+		"model"			"models/props_wasteland/rockcliff01k.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff8"
+	{
+		"model"			"models/props_wasteland/rockcliff05a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcliff9"
+	{
+		"model"			"models/props_wasteland/rockcliff05b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster1"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster2"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster3"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster4"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster02c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster5"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster6"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rockcluster7"
+	{
+		"model"			"models/props_wasteland/rockcliff_cluster03c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roofvent1"
+	{
+		"model"			"models/props_rooftop/roof_vent001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roofvent2"
+	{
+		"model"			"models/props_rooftop/roof_vent002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roofvent3"
+	{
+		"model"			"models/props_rooftop/roof_vent003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roofvent4"
+	{
+		"model"			"models/props_rooftop/roof_vent004.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"satellitedish1"
+	{
+		"model"			"models/props_rooftop/roof_dish001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"satellitedish2"
+	{
+		"model"			"models/props_rooftop/satellitedish02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sawblade"
+	{
+		"model"			"models/props_junk/sawblade001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"scaffolding"
+	{
+		"model"			"models/props_rooftop/scaffolding01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"scanner"
+	{
+		"model"			"models/combine_scanner.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"seagull"
+	{
+		"model"			"models/seagull.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"securitybank"
+	{
+		"model"			"models/props_lab/securitybank.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"servers"
+	{
+		"model"			"models/props_lab/servers.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shelf1"
+	{
+		"model"			"models/props_interiors/furniture_shelf01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shelf2"
+	{
+		"model"			"models/props_c17/furnitureshelf001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shelf3"
+	{
+		"model"			"models/props_c17/furnitureshelf001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shelf4"
+	{
+		"model"			"models/props_c17/shelfunit01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shoe"
+	{
+		"model"			"models/props_junk/shoe001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"shovel"
+	{
+		"model"			"models/props_junk/shovel01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign1"
+	{
+		"model"			"models/props_c17/streetsign001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign2"
+	{
+		"model"			"models/props_c17/streetsign002b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign3"
+	{
+		"model"			"models/props_c17/streetsign003b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign4"
+	{
+		"model"			"models/props_c17/streetsign004e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign5"
+	{
+		"model"			"models/props_c17/streetsign004f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign6"
+	{
+		"model"			"models/props_c17/streetsign005b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign7"
+	{
+		"model"			"models/props_c17/streetsign005c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sign8"
+	{
+		"model"			"models/props_c17/streetsign005d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sink1"
+	{
+		"model"			"models/props_c17/furnituresink001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sink2"
+	{
+		"model"			"models/props_wasteland/prison_sink001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sink3"
+	{
+		"model"			"models/props_wasteland/prison_sink001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"slide"
+	{
+		"model"			"models/props_c17/playgroundslide01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"socket"
+	{
+		"model"			"models/props_lab/tpplugholder_single.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"speakers"
+	{
+		"model"			"models/props_wasteland/speakercluster01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"stool"
+	{
+		"model"			"models/props_c17/chair_stool01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"storagecloset"
+	{
+		"model"			"models/props_wasteland/controlroom_storagecloset001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"stove"
+	{
+		"model"			"models/props_c17/furniturestove001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation1"
+	{
+		"model"			"models/props_c17/substation_circuitbreaker01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation2"
+	{
+		"model"			"models/props_c17/substation_stripebox01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation3"
+	{
+		"model"			"models/props_c17/substation_transformer01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation4"
+	{
+		"model"			"models/props_c17/substation_transformer01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation5"
+	{
+		"model"			"models/props_c17/substation_transformer01c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation6"
+	{
+		"model"			"models/props_c17/substation_transformer01d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"substation7"
+	{
+		"model"			"models/props_c17/substation_transformer01e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"suitcase1"
+	{
+		"model"			"models/props_c17/suitcase001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"suitcase2"
+	{
+		"model"			"models/props_c17/suitcase_passenger_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"support"
+	{
+		"model"			"models/props_c17/support01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"swingset"
+	{
+		"model"			"models/props_c17/playground_swingset01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"table1"
+	{
+		"model"			"models/props_c17/furnituretable001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"table2"
+	{
+		"model"			"models/props_c17/furnituretable002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"table3"
+	{
+		"model"			"models/props_c17/furnituretable003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"takeout"
+	{
+		"model"			"models/props_junk/garbage_takeoutcarton001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tanker"
+	{
+		"model"			"models/props_vehicles/tanker001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"teetertoter"
+	{
+		"model"			"models/props_c17/playground_teetertoter_seat.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"thumper1"
+	{
+		"model"			"models/props_combine/combinethumper001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"thumper2"
+	{
+		"model"			"models/props_combine/combinethumper002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tictacktoeblock"
+	{
+		"model"			"models/props_c17/playgroundtick-tack-toe_block01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tictacktoepost"
+	{
+		"model"			"models/props_c17/playgroundtick-tack-toe_post01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"toilet"
+	{
+		"model"			"models/props_wasteland/prison_toilet01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"toiletcombo"
+	{
+		"model"			"models/props_c17/furnituretoilet001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"towtruck"
+	{
+		"model"			"models/props_vehicles/truck003a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign1"
+	{
+		"model"			"models/props_trainstation/tracksign01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign2"
+	{
+		"model"			"models/props_trainstation/tracksign02.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign3"
+	{
+		"model"			"models/props_trainstation/tracksign03.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign4"
+	{
+		"model"			"models/props_trainstation/tracksign07.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign5"
+	{
+		"model"			"models/props_trainstation/tracksign08.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign6"
+	{
+		"model"			"models/props_trainstation/tracksign09.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tracksign7"
+	{
+		"model"			"models/props_trainstation/tracksign10.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tractortire"
+	{
+		"model"			"models/props_vehicles/tire001a_tractor.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trafficcone"
+	{
+		"model"			"models/props_junk/trafficcone001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trafficlight"
+	{
+		"model"			"models/props_c17/traffic_light001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trailer1"
+	{
+		"model"			"models/props_vehicles/trailer001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trailer2"
+	{
+		"model"			"models/props_vehicles/trailer002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"train1"
+	{
+		"model"			"models/props_trainstation/train001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"train2"
+	{
+		"model"			"models/props_trainstation/train002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"train3"
+	{
+		"model"			"models/props_trainstation/train003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"train4"
+	{
+		"model"			"models/props_trainstation/train004.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"train5"
+	{
+		"model"			"models/props_trainstation/train005.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trainlightcluster"
+	{
+		"model"			"models/props_trainstation/lighttowercluster01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trainseats"
+	{
+		"model"			"models/props_trainstation/traincar_seats001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trainstoplight1"
+	{
+		"model"			"models/props_trainstation/light_signal001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trainstoplight2"
+	{
+		"model"			"models/props_trainstation/light_signal002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"traintrack1"
+	{
+		"model"			"models/props_trainstation/traintrack001c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"traintrack2"
+	{
+		"model"			"models/props_trainstation/traintrack006b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trapblade"
+	{
+		"model"			"models/props_c17/trappropeller_blade.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trapengine"
+	{
+		"model"			"models/props_c17/trappropeller_engine.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trashbin"
+	{
+		"model"			"models/props_junk/trashbin01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trashcan1"
+	{
+		"model"			"models/props_trainstation/trashcan_indoor001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trashcan2"
+	{
+		"model"			"models/props_trainstation/trashcan_indoor001b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tree1"
+	{
+		"model"			"models/props_foliage/tree_deciduous_01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tree2"
+	{
+		"model"			"models/props_foliage/tree_deciduous_02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tree3"
+	{
+		"model"			"models/props_foliage/tree_deciduous_03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tree4"
+	{
+		"model"			"models/props_foliage/tree_deciduous_03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tree5"
+	{
+		"model"			"models/props_foliage/tree_poplar_01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"treecliff1"
+	{
+		"model"			"models/props_foliage/tree_cliff_01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"treecliff2"
+	{
+		"model"			"models/props_foliage/tree_cliff_02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"treegroup"
+	{
+		"model"			"models/props_foliage/tree_deciduous_card_01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"treeoak"
+	{
+		"model"			"models/props_foliage/oak_tree01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truck"
+	{
+		"model"			"models/props_vehicles/truck001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truckcab"
+	{
+		"model"			"models/props_vehicles/truck002a_cab.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"trucktire"
+	{
+		"model"			"models/props_vehicles/tire001b_truck.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss1"
+	{
+		"model"			"models/props_c17/truss02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss2"
+	{
+		"model"			"models/props_c17/truss02c.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss3"
+	{
+		"model"			"models/props_c17/truss02d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss4"
+	{
+		"model"			"models/props_c17/truss02e.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss5"
+	{
+		"model"			"models/props_c17/truss02f.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss6"
+	{
+		"model"			"models/props_c17/truss02g.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss7"
+	{
+		"model"			"models/props_c17/truss02h.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss8"
+	{
+		"model"			"models/props_c17/truss03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"truss9"
+	{
+		"model"			"models/props_c17/truss03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tube"
+	{
+		"model"			"models/props_lab/generatortube.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tubecap"
+	{
+		"model"			"models/props_canal/canal_cap001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tugboat1"
+	{
+		"model"			"models/props_wasteland/tugtop001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tugboat2"
+	{
+		"model"			"models/props_wasteland/tugtop002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"turret_floor"
+	{
+		"model"			"models/combine_turrets/floor_turret.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"turret_ground"
+	{
+		"model"			"models/combine_turrets/ground_turret.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"tv"
+	{
+		"model"			"models/props_c17/tv_monitor01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypole1"
+	{
+		"model"			"models/props_c17/utilitypole01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypole2"
+	{
+		"model"			"models/props_c17/utilitypole01b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypole3"
+	{
+		"model"			"models/props_c17/utilitypole01d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypole4"
+	{
+		"model"			"models/props_c17/utilitypole02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypole5"
+	{
+		"model"			"models/props_c17/utilitypole03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"utilitypolemount"
+	{
+		"model"			"models/props_c17/utilitypolemount01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"valvewheel"
+	{
+		"model"			"models/props_pipes/valvewheel001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"van"
+	{
+		"model"			"models/props_vehicles/van001a_physics.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"vanity"
+	{
+		"model"			"models/props_interiors/furniture_vanity01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"vendingmachine"
+	{
+		"model"			"models/props_interiors/vendingmachinesoda01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"vortigaunt"
+	{
+		"model"			"models/vortigaunt.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"vortigauntslave"
+	{
+		"model"			"models/vortigaunt_slave.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"wagon"
+	{
+		"model"			"models/props_vehicles/wagon001a_phy.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"washer1"
+	{
+		"model"			"models/props_wasteland/laundry_washer001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"washer2"
+	{
+		"model"			"models/props_wasteland/laundry_washer003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"washingmachine"
+	{
+		"model"			"models/props_c17/furniturewashingmachine001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"weaponstripper"
+	{
+		"model"			"models/props_combine/weaponstripper.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel1"
+	{
+		"model"			"models/props_wasteland/wheel01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel2"
+	{
+		"model"			"models/props_wasteland/wheel01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel3"
+	{
+		"model"			"models/props_wasteland/wheel02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel4"
+	{
+		"model"			"models/props_wasteland/wheel02b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel5"
+	{
+		"model"			"models/props_wasteland/wheel03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheel6"
+	{
+		"model"			"models/props_wasteland/wheel03b.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wheelbarrow"
+	{
+		"model"			"models/props_junk/wheebarrow01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"windmillblade"
+	{
+		"model"			"models/props_citizen_tech/windmill_blade002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"window1"
+	{
+		"model"			"models/props_building_details/building_tem002_window01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"window2"
+	{
+		"model"			"models/props_building_details/courtyard_template002_window.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard1"
+	{
+		"model"			"models/props_debris/wood_board01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard2"
+	{
+		"model"			"models/props_debris/wood_board02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard3"
+	{
+		"model"			"models/props_debris/wood_board03a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard4"
+	{
+		"model"			"models/props_debris/wood_board04a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard5"
+	{
+		"model"			"models/props_debris/wood_board05a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard6"
+	{
+		"model"			"models/props_debris/wood_board06a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodboard7"
+	{
+		"model"			"models/props_debris/wood_board07a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodcrate1"
+	{
+		"model"			"models/props_junk/wood_crate001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodcrate2"
+	{
+		"model"			"models/props_junk/wood_crate002a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodfence1"
+	{
+		"model"			"models/props_wasteland/wood_fence01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodfence2"
+	{
+		"model"			"models/props_wasteland/wood_fence02a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"woodpallet"
+	{
+		"model"			"models/props_junk/wood_pallet001a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"workspace1"
+	{
+		"model"			"models/props_lab/workspace001.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"workspace2"
+	{
+		"model"			"models/props_lab/workspace002.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"workspace3"
+	{
+		"model"			"models/props_lab/workspace003.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"workspace4"
+	{
+		"model"			"models/props_lab/workspace004.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wrench"
+	{
+		"model"			"models/props_c17/tools_wrench01a.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"zombie"
+	{
+		"model"			"models/zombie/classic.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"zombielegs"
+	{
+		"model"			"models/zombie/classic_legs.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"zombietorso"
+	{
+		"model"			"models/zombie/classic_torso.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
+}

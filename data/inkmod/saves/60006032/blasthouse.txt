@@ -1,0 +1,270 @@
+"Entities"
+{
+	"prop_physics-blastdoor3-1349451698"
+	{
+		"origin"		"-245.095581 195.226349 0.312500"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_door_rotating-door-1917255601"
+	{
+		"origin"		"-245.648804 64.590118 54.312496"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_c17/door01_left.mdl"
+		"skin"		"11"
+		"hardware"		"1"
+	}
+	"prop_physics-blastdoor3-250544048"
+	{
+		"origin"		"-245.095581 -20.450409 0.312500"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-785055663"
+	{
+		"origin"		"-245.095581 195.226349 106.312508"
+		"angles"		"30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1155923884"
+	{
+		"origin"		"-245.095581 -20.314178 106.312508"
+		"angles"		"30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor1-726400939"
+	{
+		"origin"		"-245.095581 86.260040 106.312508"
+		"angles"		"30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor3-897908650"
+	{
+		"origin"		"-164.932983 275.356720 0.312500"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-844758953"
+	{
+		"origin"		"-164.977905 -100.698456 0.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-202506152"
+	{
+		"origin"		"3.022583 -100.698456 0.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-441253799"
+	{
+		"origin"		"3.067993 275.356720 0.312500"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1675558822"
+	{
+		"origin"		"-192.096069 -20.313690 198.111343"
+		"angles"		"60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1882980261"
+	{
+		"origin"		"-192.096069 195.226349 198.111343"
+		"angles"		"60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor1-1372585892"
+	{
+		"origin"		"-192.096069 86.259552 198.111343"
+		"angles"		"60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor3-1218314147"
+	{
+		"origin"		"-100.297241 -20.313690 251.111343"
+		"angles"		"90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1499922338"
+	{
+		"origin"		"-100.297241 195.226349 251.111343"
+		"angles"		"90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor1-632487841"
+	{
+		"origin"		"-100.297241 86.259552 251.111343"
+		"angles"		"90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor3-633929632"
+	{
+		"origin"		"171.023071 -100.698456 0.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1364459423"
+	{
+		"origin"		"171.067993 275.356720 0.312500"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1565327262"
+	{
+		"origin"		"251.067993 -20.453339 0.314453"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-117505949"
+	{
+		"origin"		"251.106079 195.349396 0.310547"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor1-1807613852"
+	{
+		"origin"		"251.596313 86.829865 0.317383"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor3-759299995"
+	{
+		"origin"		"251.067993 -20.453339 106.314453"
+		"angles"		"-30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1676279706"
+	{
+		"origin"		"251.106567 195.349396 106.310555"
+		"angles"		"-30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1615921049"
+	{
+		"origin"		"198.107056 195.349396 198.109390"
+		"angles"		"-60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-873267096"
+	{
+		"origin"		"198.068970 -20.453339 198.113281"
+		"angles"		"-60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-595001239"
+	{
+		"origin"		"106.270630 -20.453339 251.113281"
+		"angles"		"-90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1378942870"
+	{
+		"origin"		"106.308716 195.349396 251.109390"
+		"angles"		"-90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor1-1464467349"
+	{
+		"origin"		"251.596313 86.829865 106.318367"
+		"angles"		"-30.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor1-1134821268"
+	{
+		"origin"		"198.596313 86.829865 198.116211"
+		"angles"		"-60.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor1-1856896915"
+	{
+		"origin"		"106.797485 86.829865 251.116211"
+		"angles"		"-90.000000 0.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001a.mdl"
+	}
+	"prop_physics-blastdoor3-1193934738"
+	{
+		"origin"		"3.068481 275.356720 106.312508"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-251592593"
+	{
+		"origin"		"3.023071 -100.698456 106.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1525743504"
+	{
+		"origin"		"-164.932007 275.356720 106.312508"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1629355919"
+	{
+		"origin"		"171.068970 275.356720 106.312508"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1882652558"
+	{
+		"origin"		"171.023071 -100.698456 106.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-69336973"
+	{
+		"origin"		"-164.977905 -100.698456 106.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-2013790092"
+	{
+		"origin"		"-164.976929 -100.698456 106.281250"
+		"angles"		"270.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-861798283"
+	{
+		"origin"		"-164.976929 -206.698456 106.281250"
+		"angles"		"270.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_physics-blastdoor3-1734213514"
+	{
+		"origin"		"-164.977905 -312.698456 0.281250"
+		"angles"		"0.000000 90.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_vehicle_driveable-jeep-1502019465"
+	{
+		"origin"		"-171.877075 -169.709412 4.880775"
+		"angles"		"0.093661 -65.699730 0.184655"
+		"model"		"models/buggy.mdl"
+		"vehicletype"		"1"
+		"vehiclescript"		"scripts/vehicles/jeep_test.txt"
+	}
+	"prop_physics-blastdoor3-1735458696"
+	{
+		"origin"		"-80.976929 -184.698456 0.281250"
+		"angles"		"0.000000 180.000000 0.000000"
+		"model"		"models/props_lab/blastdoor001c.mdl"
+	}
+	"prop_doll-pigeon-565116807"
+	{
+		"origin"		"-244.696533 -310.697968 110.201492"
+		"angles"		"0.000000 -169.768570 0.000000"
+		"model"		"models/pigeon.mdl"
+		"sequence"		"4"
+		"locked"		"1"
+		"cycle"		"0.548381"
+	}
+	"prop_dynamic-breenorb-1730215814"
+	{
+		"origin"		"4.434692 202.351410 347.375946"
+		"angles"		"0.000000 0.000000 0.000000"
+		"model"		"models/props_combine/breentp_rings.mdl"
+		"solid"		"2"
+		"animation"		"idle"
+	}
+}

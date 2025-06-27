@@ -1,0 +1,17 @@
+"Vehicles"
+{
+	"jeep"
+	{
+		"model"			"models/buggy.mdl"
+		"script"		"scripts/vehicles/jeep_test.txt"
+		"type"			"1"
+		"enabled"		"1"
+	}
+	"airboat"
+	{
+		"model"			"models/airboat.mdl"
+		"script"		"scripts/vehicles/airboat.txt"
+		"type"			"8"
+		"enabled"		"1"
+	}
+}
