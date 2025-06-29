@@ -139,7 +139,7 @@ public Action Command_SpawnProp(int client, int args)
 	}
 
 	// create entity
-	int ent;
+	int ent = INVALID_ENT_REFERENCE;
 	if (type == 1) {
 		if (!Ink_CheckClientLimit(client, "prop_physics")) {
 			return Plugin_Handled;
@@ -184,7 +184,7 @@ public Action OnDollTakeDamage(int victim, int &attacker, int &inflictor, float 
 	if (!Ink_CheckEntOwner(victim, attacker)) {
 		return Plugin_Handled;
 	}
-	
+
 	if (!Entity_HasSpawnFlags(victim, 256)) {
 		return Plugin_Handled;
 	}

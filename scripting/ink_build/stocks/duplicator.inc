@@ -66,9 +66,6 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 		if (StrEqual(keyname, "owner") && !storeOwner) {
 			// dont store owner unless specified
 			continue;
-		} else if (StrEqual(keyname, "editor")) {
-			// dont store editor
-			continue;
 		}
 		
 		if (StrEqual(keyname, "modelscale")) {

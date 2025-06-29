@@ -37,8 +37,36 @@ public Action Command_StackEnt(int client, int args)
 		return Plugin_Handled;
 	}
 
+	char cmdArg[3];
+	GetCmdArgString(cmdArg, sizeof(cmdArg));
+	String_ToLower(cmdArg, cmdArg, sizeof(cmdArg));
+
 	float offset[3];
-	for (int index = 0; index < 3; index++) {
+	if (IsCharAlpha(cmdArg[0]) || IsCharAlpha(cmdArg[1])) {
+		float mins[3], maxs[3], dims[3];
+		GetEntPropVector(ent, Prop_Data, "m_vecMins", mins);
+		GetEntPropVector(ent, Prop_Data, "m_vecMaxs", maxs);
+
+		if (cmdArg[0] == '-') {
+			cmdArg[0] = cmdArg[1];
+			SubtractVectors(mins, maxs, dims);
+		} else {
+			if (cmdArg[0] == '+') {
+				cmdArg[0] = cmdArg[1];
+			}
+			SubtractVectors(maxs, mins, dims);
+		}
+
+		
+		if (cmdArg[0] == 'x') {
+			offset[0] = dims[0] - 0.562988;
+		} else if (cmdArg[0] == 'y') {
+			offset[1] = dims[1] - 0.562988;
+		} else if (cmdArg[0] == 'z') {
+			offset[2] = dims[2] - 0.562988;
+		}
+	}
+	else for (int index = 0; index < 3; index++) {
 		offset[index] = GetCmdArgFloat(index + 1);
 		if (offset[index] < -500 || offset[index] > 500) {
 			Ink_ClientMsg(client, "Unable to stack - distance too large.");
@@ -89,6 +117,42 @@ public Action Command_StackEnt(int client, int args)
 			EmitSoundToAll("physics/concrete/concrete_impact_soft3.wav", entCopy);
 		}
 	}
+
+	return Plugin_Handled;
+}
+
+public Action Command_StackInfo(int client, int args)
+{
+	static int stackInfoEnt[MAXPLAYERS + 1] = {INVALID_ENT_REFERENCE, ...};
+
+	// find entity under the player's crosshair
+	int ent = Ink_GetClientAim(client);
+
+	if (ent == INVALID_ENT_REFERENCE) {
+		Ink_ClientMsg(client, "You're not looking at anything.");
+		return Plugin_Handled;
+	}
+	if (!Ink_CheckEntOwner(ent, client)) {
+		Ink_ClientMsg(client, "This entity doesn't belong to you.");
+		return Plugin_Handled;
+	}
+
+	if (stackInfoEnt[client] == INVALID_ENT_REFERENCE) {
+		// set initial ent
+		stackInfoEnt[client] = EntIndexToEntRef(ent);
+		Ink_ClientMsg(client, "Selected entity for stackinfo. Now do {green}!stackinfo{default} on target.");
+
+		return Plugin_Handled;
+	}
+
+	float firstPos[3], lastPos[3], diff[3];
+	GetEntPropVector(stackInfoEnt[client], Prop_Data, "m_vecAbsOrigin", firstPos);
+	GetEntPropVector(ent, Prop_Data, "m_vecAbsOrigin", lastPos);
+
+	SubtractVectors(firstPos, lastPos, diff);
+	Ink_ClientMsg(client, "{green}%f %f %f{default}", diff[0], diff[1], diff[2]);
+
+	stackInfoEnt[client] = INVALID_ENT_REFERENCE;
 
 	return Plugin_Handled;
 }

@@ -67,7 +67,6 @@ public Action Command_Land(int client, int args)
 		Ink_ClientMsg(client, "Creating land. Do {green}!land{default} again to confirm.");
 
 	} else if (!Object[client].GetArray("land.offset", landPoints[1], 3)) {
-		Object[client].GetArray("land.origin", landPoints[0], 3);
 		Ink_GetClientAim(client, landPoints[1]);
 		landPoints[1][2] = landPoints[0][2];
 

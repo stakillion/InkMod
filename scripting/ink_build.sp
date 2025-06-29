@@ -117,6 +117,12 @@ public void OnPluginStart()
 	RegisterCvars();
 	RegisterCommands();
 	RegisterForwards();
+}
+
+public void OnMapStart()
+{
+	LoadAssets();
+	CreateTimer(0.1, DrawLand, INVALID_HANDLE, TIMER_REPEAT);
 
 	if (LateLoad) {
 		for (int ent = MaxClients + 1; ent <= MAX_EDICTS; ent++) {
@@ -132,12 +138,6 @@ public void OnPluginStart()
 			}
 		}
 	}
-}
-
-public void OnMapStart()
-{
-	LoadAssets();
-	CreateTimer(0.1, DrawLand, INVALID_HANDLE, TIMER_REPEAT);
 }
 
 // objects
@@ -221,6 +221,7 @@ void RegisterCommands()
 
 	RegAdminCmd("n_remove", Command_RemoveEnt, 0, "Removes the targeted entity.");
 	RegAdminCmd("n_del", Command_RemoveEnt, 0, "Removes the targeted entity.");
+	RegAdminCmd("n_clean", Command_CleanArea, 0, "Removes all entities within the selected area.");
 
 	RegAdminCmd("n_replace", Command_ReplaceEnt, 0, "Replaces the entity's model with the specified prop.");
 
@@ -232,6 +233,7 @@ void RegisterCommands()
 	RegAdminCmd("n_skin", Command_SkinEnt, 0, "Changes the skin of an entity.");
 
 	RegAdminCmd("n_stack", Command_StackEnt, 0, "Makes a copy of an entity and moves it by the given offset");
+	RegAdminCmd("n_stackinfo", Command_StackInfo, 0, "Prints the difference between the coordinates of two entities.");
 
 	RegAdminCmd("n_weld",    Command_ParentEnt, 0, "Parents an entity to another entity.");
 	RegAdminCmd("n_release", Command_UnparentEnt, 0, "Releases all entities from a parent.");
