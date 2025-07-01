@@ -41,15 +41,18 @@ public Action Command_StackEnt(int client, int args)
 	GetCmdArgString(cmdArg, sizeof(cmdArg));
 	String_ToLower(cmdArg, cmdArg, sizeof(cmdArg));
 
-	float offset[3];
+	float offset[3], entAngles[3];
 	if (IsCharAlpha(cmdArg[0]) || IsCharAlpha(cmdArg[1])) {
 		float mins[3], maxs[3], dims[3];
 		GetEntPropVector(ent, Prop_Data, "m_vecMins", mins);
 		GetEntPropVector(ent, Prop_Data, "m_vecMaxs", maxs);
 
+		float gap = 0.562988;
+
 		if (cmdArg[0] == '-') {
 			cmdArg[0] = cmdArg[1];
 			SubtractVectors(mins, maxs, dims);
+			gap *= -1;
 		} else {
 			if (cmdArg[0] == '+') {
 				cmdArg[0] = cmdArg[1];
@@ -57,14 +60,15 @@ public Action Command_StackEnt(int client, int args)
 			SubtractVectors(maxs, mins, dims);
 		}
 
-		
 		if (cmdArg[0] == 'x') {
-			offset[0] = dims[0] - 0.562988;
+			offset[0] = dims[0] - gap;
 		} else if (cmdArg[0] == 'y') {
-			offset[1] = dims[1] - 0.562988;
+			offset[1] = dims[1] - gap;
 		} else if (cmdArg[0] == 'z') {
-			offset[2] = dims[2] - 0.562988;
+			offset[2] = dims[2] - gap;
 		}
+
+		Entity_GetAbsAngles(ent, entAngles);
 	}
 	else for (int index = 0; index < 3; index++) {
 		offset[index] = GetCmdArgFloat(index + 1);
@@ -90,9 +94,6 @@ public Action Command_StackEnt(int client, int args)
 		Ink_ClientEntMsg(client, ent, "Error attempting to duplicate {entity}!");
 		return Plugin_Handled;
 	}
-
-	float entAngles[3];
-	Entity_GetAbsAngles(ent, entAngles);
 
 	// spawn copy
 	int entCopy = Ink_KeyValuesToEnt(entCopyKv, offset, entAngles);
@@ -149,7 +150,7 @@ public Action Command_StackInfo(int client, int args)
 	GetEntPropVector(stackInfoEnt[client], Prop_Data, "m_vecAbsOrigin", firstPos);
 	GetEntPropVector(ent, Prop_Data, "m_vecAbsOrigin", lastPos);
 
-	SubtractVectors(firstPos, lastPos, diff);
+	SubtractVectors(lastPos, firstPos, diff);
 	Ink_ClientMsg(client, "{green}%f %f %f{default}", diff[0], diff[1], diff[2]);
 
 	stackInfoEnt[client] = INVALID_ENT_REFERENCE;

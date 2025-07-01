@@ -1024,7 +1024,7 @@
 	"combinedoor"
 	{
 		"model"			"models/props_combine/combine_door01.mdl"
-		"physics"		"1"
+		"dynamic"		"idle_closed"
 		"enabled"		"1"
 	}
 	"combinefence1a"
@@ -1039,9 +1039,15 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
-	"combinegate"
+	"combinegate1"
 	{
 		"model"			"models/combine_gate_citizen.mdl"
+		"dynamic"		"idle_closed"
+		"enabled"		"1"
+	}
+	"combinegate2"
+	{
+		"model"			"models/combine_gate_vehicle.mdl"
 		"dynamic"		"idle_closed"
 		"enabled"		"1"
 	}
@@ -1420,7 +1426,7 @@
 	"doorlab"
 	{
 		"model"			"models/props_doors/doorklab01.mdl"
-		"physics"		"1"
+		"dynamic"		"refPose"
 		"enabled"		"1"
 	}
 	"doorslotted"
@@ -1523,6 +1529,12 @@
 	{
 		"model"			"models/props_interiors/elevatorshaft_door01a.mdl"
 		"physics"		"1"
+		"enabled"		"1"
+	}
+	"elevatordoor2"
+	{
+		"model"			"models/props_lab/elevatordoor.mdl"
+		"dynamic"		"idle"
 		"enabled"		"1"
 	}
 	"eli"
@@ -3866,18 +3878,6 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
-	"window1"
-	{
-		"model"			"models/props_building_details/building_tem002_window01.mdl"
-		"physics"		"1"
-		"enabled"		"1"
-	}
-	"window2"
-	{
-		"model"			"models/props_building_details/courtyard_template002_window.mdl"
-		"physics"		"1"
-		"enabled"		"1"
-	}
 	"woodboard1"
 	{
 		"model"			"models/props_debris/wood_board01a.mdl"
@@ -3996,6 +3996,130 @@
 	{
 		"model"			"models/zombie/classic_torso.mdl"
 		"cycler"		"1"
+		"enabled"		"1"
+	}
+
+	// CELMOD ASSETS
+	"metal1"
+	{
+		"model"			"models/props_phx/construct/metal_plate1x2_t.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"metal2"
+	{
+		"model"			"models/props_phx/construct/metal_plate2x2_t.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+
+	"window1"
+	{
+		"model"			"models/props_phx/construct/windows/window1x1_t.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"window2"
+	{
+		"model"			"models/props_phx/construct/windows/window2x2_t.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+
+	"wall1"
+	{
+		"model"			"models/celmod/build/wall1_d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wall2"
+	{
+		"model"			"models/celmod/build/wall2_d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wall3"
+	{
+		"model"			"models/celmod/build/wall3_d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wall4"
+	{
+		"model"			"models/celmod/build/wall4_d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"wall5"
+	{
+		"model"			"models/celmod/build/wall5_d.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"box1"
+	{
+		"model"			"models/celmod/build/box1.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"box2"
+	{
+		"model"			"models/celmod/build/box2.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"box3"
+	{
+		"model"			"models/celmod/build/box3.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roof1"
+	{
+		"model"			"models/celmod/build/roof1.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roof2"
+	{
+		"model"			"models/celmod/build/roof2.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roof3"
+	{
+		"model"			"models/celmod/build/roof3.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roof4"
+	{
+		"model"			"models/celmod/build/roof4.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"roof5"
+	{
+		"model"			"models/celmod/build/roof5.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sphere1"
+	{
+		"model"			"models/celmod/build/sphere1.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sphere2"
+	{
+		"model"			"models/celmod/build/sphere2.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"sphere3"
+	{
+		"model"			"models/celmod/build/sphere3.mdl"
+		"physics"		"1"
 		"enabled"		"1"
 	}
 }
