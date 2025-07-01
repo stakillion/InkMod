@@ -88,7 +88,7 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 	}
 
 	// entity-specific properties
-	if (StrContains(entClass, "cycler") == 0) {
+	if (StrContains(entClass, "entity_cycler") == 0) {
 		// store current animation frame
 		float entCycle = GetEntPropFloat(ent, Prop_Send, "m_flCycle");
 		if (entCycle != 0.0) {
@@ -151,7 +151,7 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 		int solid = entKv.GetNum("solid", 6);
 		ent = Ink_CreateDynamicProp(entModel, animation, solid);
 
-	} else if (StrContains(entKey[0], "cycler") == 0) {
+	} else if (StrContains(entKey[0], "entity_cycler") == 0) {
 		ent = Ink_CreateCycler(entModel);
 
 	} else if (StrContains(entKey[0], "prop_door") == 0) {

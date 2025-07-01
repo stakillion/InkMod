@@ -180,7 +180,17 @@ stock int Ink_GetEntSequence(int ent, bool obj = true)
 }
 stock void Ink_SetEntSequence(int ent, int sequence, bool obj = true)
 {
-	SetEntProp(ent, Prop_Send, "m_nSequence", sequence);
+	char entModel[PLATFORM_MAX_PATH];
+	GetEntPropString(ent, Prop_Data, "m_ModelName", entModel, sizeof(entModel));
+	bool alyx = (StrEqual(entModel, "models/alyx.mdl"))
+
+	// fix server crash
+	int fixed = sequence
+	if (alyx && sequence == 14) {
+		fixed++;
+	}
+
+	SetEntProp(ent, Prop_Send, "m_nSequence", fixed);
 
 	if (obj) {
 		if (sequence > 0) {

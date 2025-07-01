@@ -50,10 +50,8 @@ stock int Ink_CreateDynamicProp(const char[] modelPath, const char[] defaultAnim
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
 
-	// set default animation (required for collision)
-	DispatchKeyValue(ent, "DefaultAnim", defaultAnim);
-
 	// set collision
+	DispatchKeyValue(ent, "DefaultAnim", defaultAnim);
 	Entity_SetSolidType(ent, solid);
 	Entity_SetCollisionGroup(ent, COLLISION_GROUP_NONE);
 
@@ -76,12 +74,12 @@ stock int Ink_CreateCycler(const char[] modelPath)
 		return INVALID_ENT_REFERENCE;
 	}
 
+	// apply entity properties for entity_cycler
+	DispatchKeyValue(ent, "classname", "entity_cycler");
+
 	// apply model
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
-
-	// avoid server crash w/ cycler
-	DispatchKeyValue(ent, "DefaultAnim", "ragdoll");
 
 	// make prop_dynamic_override animate
 	//SetEntPropFloat(ent, Prop_Send, "m_flPlaybackRate", 1.0);
@@ -89,6 +87,7 @@ stock int Ink_CreateCycler(const char[] modelPath)
 	//SetEntProp(ent, Prop_Data, "m_bSequenceLoops", 1);
 
 	// set collision
+	DispatchKeyValue(ent, "DefaultAnim", "ragdoll");
 	Entity_SetSolidType(ent, SOLID_BBOX);
 	Entity_SetCollisionGroup(ent, COLLISION_GROUP_NONE);
 
@@ -99,6 +98,11 @@ stock int Ink_CreateCycler(const char[] modelPath)
 	// spawn
 	DispatchSpawn(ent);
 	ActivateEntity(ent);
+
+	//float entMins[3];
+	//GetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
+	//entMins[2] = 0.0;
+	//SetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
 
 	// create object data
 	GetInkObject(ent, true);
@@ -145,7 +149,7 @@ public Action Command_SpawnProp(int client, int args)
 
 		ent = Ink_CreatePhysicsProp(model);
 	} else if (type == 2) {
-		if (!Ink_CheckClientLimit(client, "cycler")) {
+		if (!Ink_CheckClientLimit(client, "entity_cycler")) {
 			return Plugin_Handled;
 		}
 
