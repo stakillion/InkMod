@@ -19,8 +19,8 @@ stock int Ink_CreateLadder(const char[] modelPath)
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
 
-	// apply entity properties for prop_ladder
-	DispatchKeyValue(ent, "classname", "prop_ladder");
+	// apply entity properties for entity_ladder
+	DispatchKeyValue(ent, "classname", "entity_ladder");
 
 	// spawn
 	DispatchSpawn(ent);
@@ -54,7 +54,7 @@ public Action Command_SpawnLadder(int client, int args)
 		return Plugin_Handled;
 	}
 
-	if (!Ink_CheckClientLimit(client, "prop_ladder")) {
+	if (!Ink_CheckClientLimit(client, "entity_ladder")) {
 		return Plugin_Handled;
 	}
 
@@ -70,7 +70,7 @@ public Action Command_SpawnLadder(int client, int args)
 	}
 
 	if (ent == INVALID_ENT_REFERENCE) {
-		Ink_ClientMsg(client, "Error spawning ladder cel.");
+		Ink_ClientMsg(client, "Error spawning ladder entity.");
 		return Plugin_Handled;
 	}
 

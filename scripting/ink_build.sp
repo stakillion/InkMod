@@ -157,11 +157,11 @@ void SetUpEntityHook(int ent)
 	char class[32];
 	GetEntityClassname(ent, class, sizeof(class));
 
-	if (StrEqual(class, "prop_doll")) {
-		SDKHook(ent, SDKHook_OnTakeDamage, OnDollTakeDamage);
-	} else if (StrEqual(class, "prop_light")) {
+	if (StrEqual(class, "cycler")) {
+		SDKHook(ent, SDKHook_OnTakeDamage, OnCyclerTakeDamage);
+	} else if (StrEqual(class, "entity_light")) {
 		SDKHook(ent, SDKHook_Use, OnLightUse);
-	} else if (StrEqual(class, "prop_internet")) {
+	} else if (StrEqual(class, "entity_internet")) {
 		SDKHook(ent, SDKHook_Use, OnInternetUse);
 	} else if (StrEqual(class, "prop_vehicle")) {
 		HookSingleEntityOutput(ent, "PlayerOn", Vehicle_OnEnter);
@@ -251,7 +251,7 @@ void RegisterCvars()
 {
 	// ent limits
 	ink_maxplayerents = CreateConVar("ink_maxplayerents", "250", "Limit for number of total entity spawns per player");
-	ink_maxplayerlights = CreateConVar("ink_maxplayerlights", "15", "Limit for number of total entity spawns per player");
+	ink_maxplayerlights = CreateConVar("ink_maxplayerlights", "10", "Limit for number of total light spawns per player");
 	ink_maxplayervehicles = CreateConVar("ink_maxplayervehicles", "2",  "Limit for number of vehicle spawns per player");
 
 	// land

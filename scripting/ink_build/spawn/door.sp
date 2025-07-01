@@ -19,7 +19,7 @@ stock int Ink_CreateDoor(const char[] modelPath, int hardware = 1)
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
 
-	// apply entity properties for prop_door
+	// apply entity properties for prop_door_rotating
 	DispatchKeyValue(ent, "spawnflags", "8192");
 	DispatchKeyValue(ent, "distance", "90");
 	DispatchKeyValue(ent, "speed", "100");

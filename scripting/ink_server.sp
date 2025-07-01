@@ -32,7 +32,7 @@ Handle SDKCall_FindUseEntity;
 DynamicHook DHook_CleanUpMap;
 DynamicHook DHook_AcceptInput;
 
-bool ClientInUse[MAXPLAYERS + 1];
+bool InUse[MAXPLAYERS + 1];
 
 
 /*********************************
@@ -137,8 +137,7 @@ public Action Command_Noclip(int client, int args)
 
 	if (GetEntityMoveType(client) != MOVETYPE_NOCLIP) {
 		SetEntityMoveType(client, MOVETYPE_NOCLIP);
-	}
-	else {
+	} else {
 		SetEntityMoveType(client, MOVETYPE_WALK);
 	}
 
@@ -147,7 +146,7 @@ public Action Command_Noclip(int client, int args)
 
 public void OnClientPutInServer(int client)
 {
-	ClientInUse[client] = false;
+	InUse[client] = false;
 }
 
 public void OnClientPostAdminCheck(int client)
@@ -196,7 +195,7 @@ public Action Command_VoiceMenu(int client, const char[] command, int args)
 		GetCmdArg(2, cmdArg[1], sizeof(cmdArg[]));
 
 		if (cmdArg[0][0] == '0' && cmdArg[1][0] == '0') {
-			ClientInUse[client] = true;
+			InUse[client] = true;
 			if (SDKCall(SDKCall_FindUseEntity, client) != -1) {
 				return Plugin_Handled;
 			}
@@ -213,7 +212,7 @@ public Action OnClientCommandKeyValues(int client, KeyValues kv)
 		kv.GetSectionName(cmd,sizeof(cmd));
 
 		if (StrEqual(cmd, "+use_action_slot_item_server", false)) {
-			ClientInUse[client] = true;
+			InUse[client] = true;
 			if (SDKCall(SDKCall_FindUseEntity, client) != -1) {
 				return Plugin_Handled;
 			}
@@ -225,8 +224,8 @@ public Action OnClientCommandKeyValues(int client, KeyValues kv)
 
 public Action OnPlayerRunCmd(int client, int &buttons, int &impulse, float vel[3], float angles[3], int &weapon, int &subtype, int &cmdnum, int &tickcount, int &seed, int mouse[2])
 {
-	if (ClientInUse[client]) {
-		ClientInUse[client] = false;
+	if (InUse[client]) {
+		InUse[client] = false;
 
 		buttons |= IN_USE;
 		return Plugin_Changed;

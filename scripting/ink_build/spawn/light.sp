@@ -19,8 +19,8 @@ stock int Ink_CreateLight(const char[] modelPath, int distance = 500)
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
 
-	// apply entity properties for prop_light
-	DispatchKeyValue(ent, "classname", "prop_light");
+	// apply entity properties for entity_light
+	DispatchKeyValue(ent, "classname", "entity_light");
 	DispatchKeyValue(ent, "rendermode", "1");
 	AcceptEntityInput(ent, "disableshadow");
 
@@ -63,7 +63,7 @@ public Action Command_SpawnLight(int client, int args)
 		return Plugin_Handled;
 	}
 
-	if (!Ink_CheckClientLimit(client, "prop_light")) {
+	if (!Ink_CheckClientLimit(client, "entity_light")) {
 		return Plugin_Handled;
 	}
 
@@ -76,7 +76,7 @@ public Action Command_SpawnLight(int client, int args)
 	int ent = Ink_CreateLight("models/roller_spikes.mdl", distance);
 
 	if (ent == INVALID_ENT_REFERENCE) {
-		Ink_ClientMsg(client, "Error spawning light prop.");
+		Ink_ClientMsg(client, "Error spawning light entity.");
 		return Plugin_Handled;
 	}
 

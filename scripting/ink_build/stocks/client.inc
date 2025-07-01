@@ -67,10 +67,10 @@ stock bool Ink_CheckClientLimit(int client, char[] class, int add = 1, bool noti
 
 		char entClass[64];
 		GetEntityClassname(ent, entClass, sizeof(entClass));
-		if (StrContains(entClass, "prop_light", false) != -1) {
+		if (StrContains(entClass, "entity_light", false) != -1) {
 			lightCount++;
 		}
-		if (StrContains(entClass, "vehicle", false) != -1) {
+		if (StrContains(entClass, "prop_vehicle", false) != -1) {
 			vehicleCount++;
 		}
 	}
@@ -82,7 +82,7 @@ stock bool Ink_CheckClientLimit(int client, char[] class, int add = 1, bool noti
 		return false;
 	}
 
-	if (StrContains(class, "prop_light", false) != -1 && lightCount + add > ink_maxplayerlights.IntValue) {
+	if (StrContains(class, "entity_light", false) != -1 && lightCount + add > ink_maxplayerlights.IntValue) {
 		if (notify) {
 			Ink_ClientMsg(client, "Reached maximum number of lights: {green}%i{default}.", lightCount);
 		}

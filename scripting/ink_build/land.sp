@@ -341,7 +341,7 @@ stock bool IntersectingLand(float land1[2][3], float land2[2][3])
 
 stock void GetLandCenter(float land[2][3], float pos[3])
 {
-	float low[2] = {999999.0, ...}, high[2] = {-999999.0, ...}
+	float low[2] = {999999.0, ...}, high[2] = {-999999.0, ...};
 	for (int i; i < 2; i++) {
 		if (low[i] > land[0][i]) {
 			low[i] = land[0][i];

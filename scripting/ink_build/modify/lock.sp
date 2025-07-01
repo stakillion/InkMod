@@ -23,7 +23,7 @@ public Action Command_LockEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "prop_light") == -1 && StrContains(entClass, "prop_doll") == -1 && StrContains(entClass, "prop_internet") == -1) {
+	if (StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "entity_light") == -1 && StrContains(entClass, "cycler") == -1 && StrContains(entClass, "entity_internet") == -1) {
 		Ink_ClientEntMsg(client, ent, "Unable to lock {entity}.");
 		return Plugin_Handled;
 	}
@@ -53,7 +53,7 @@ public Action Command_UnlockEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "prop_light") == -1 && StrContains(entClass, "prop_doll") == -1 && StrContains(entClass, "prop_internet") == -1) {
+	if (StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "entity_light") == -1 && StrContains(entClass, "cycler") == -1 && StrContains(entClass, "entity_internet") == -1) {
 		Ink_ClientEntMsg(client, ent, "Unable to unlock {entity}.");
 		return Plugin_Handled;
 	}

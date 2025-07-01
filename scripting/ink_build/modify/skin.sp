@@ -30,7 +30,7 @@ public Action Command_SkinEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	bool isDoll = (StrContains(entClass, "prop_doll", false) == 0);
+	bool isDoll = (StrContains(entClass, "cycler", false) == 0);
 
 	int skin;
 	if (cmdArg[0] == '+' || cmdArg[0] == '-') {

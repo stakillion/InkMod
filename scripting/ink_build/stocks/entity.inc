@@ -135,7 +135,7 @@ stock void Ink_SetEntColor(int ent, int color[4], bool obj = true)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_light") == 0) {
+	if (StrContains(entClass, "entity_light") == 0) {
 		int light = GetEntPropEnt(ent, Prop_Data, "m_hMoveChild");
 		Entity_SetRenderColor(light, color[0], color[1], color[2], color[3]);
 	}
@@ -274,7 +274,7 @@ stock void Ink_SetEntLocked(int ent, bool lock, bool obj = true)
 		} else {
 			AcceptEntityInput(ent, "Unlock");
 		}
-	} else if (StrContains(entClass, "prop_light") == 0 || StrContains(entClass, "prop_doll") == 0 || StrContains(entClass, "prop_internet") == 0) {
+	} else if (StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "cycler") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		if (lock) {
 			Entity_RemoveSpawnFlags(ent, 256);
 		} else {
@@ -303,7 +303,7 @@ stock bool Ink_GetEntLocked(int ent, bool obj = true)
 
 	if (StrContains(entClass, "prop_door") == 0) {
 		return view_as<bool>(GetEntProp(ent, Prop_Data, "m_bLocked"));
-	} else if (StrContains(entClass, "prop_light") == 0 || StrContains(entClass, "prop_doll") == 0) {
+	} else if (StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "cycler") == 0) {
 		return Entity_HasSpawnFlags(ent, 256);
 	}
 

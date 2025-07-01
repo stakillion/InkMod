@@ -46,7 +46,7 @@ public Action Command_ParentEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_light") == 0 || StrContains(entClass, "prop_ladder") == 0) {
+	if (StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0) {
 		weldEnt[client] = INVALID_ENT_REFERENCE;
 		Ink_ClientEntMsg(client, ent, "{entity} cannot become a move parent.");
 		return Plugin_Handled;

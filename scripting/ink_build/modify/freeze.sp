@@ -29,10 +29,10 @@ public Action Command_FreezeEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "prop_light") == 0 || StrContains(entClass, "prop_ladder") == 0 || StrContains(entClass, "prop_internet") == 0) {
+	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, true);
 
-	} else if (StrContains(entClass, "prop_doll") == 0) {
+	} else if (StrContains(entClass, "cycler") == 0) {
 		Ink_SetEntPlaybackRate(ent, 0.0);
 
 	} else {
@@ -69,10 +69,10 @@ public Action Command_UnfreezeEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "prop_light") == 0 || StrContains(entClass, "prop_ladder") == 0 || StrContains(entClass, "prop_internet") == 0) {
+	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, false);
 
-	} else if (StrContains(entClass, "prop_doll", false) == 0) {
+	} else if (StrContains(entClass, "cycler", false) == 0) {
 		Ink_SetEntPlaybackRate(ent, 1.0);
 
 	} else {

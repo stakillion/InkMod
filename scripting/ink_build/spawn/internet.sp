@@ -19,8 +19,8 @@ stock int Ink_CreateInternet(const char[] modelPath)
 	PrecacheModel(modelPath, true);
 	SetEntityModel(ent, modelPath);
 
-	// apply entity properties for prop_internet
-	DispatchKeyValue(ent, "classname", "prop_internet");
+	// apply entity properties for entity_internet
+	DispatchKeyValue(ent, "classname", "entity_internet");
 
 	// spawn
 	DispatchSpawn(ent);
@@ -47,7 +47,7 @@ public Action Command_SpawnInternet(int client, int args)
 		return Plugin_Handled;
 	}
 
-	if (!Ink_CheckClientLimit(client, "prop_internet")) {
+	if (!Ink_CheckClientLimit(client, "entity_internet")) {
 		return Plugin_Handled;
 	}
 
@@ -55,7 +55,7 @@ public Action Command_SpawnInternet(int client, int args)
 	int ent = Ink_CreateInternet("models/props_lab/monitor02.mdl");
 
 	if (ent == INVALID_ENT_REFERENCE) {
-		Ink_ClientMsg(client, "Error spawning internet prop.");
+		Ink_ClientMsg(client, "Error spawning internet entity.");
 		return Plugin_Handled;
 	}
 
@@ -95,8 +95,8 @@ public Action Command_SetURLEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_internet") != 0) {
-		Ink_ClientEntMsg(client, ent, "This command can only be used on {green}!internet{default} props.");
+	if (StrContains(entClass, "entity_internet") != 0) {
+		Ink_ClientEntMsg(client, ent, "This command can only be used on {green}!internet{default} entities.");
 		return Plugin_Handled;
 	}
 
@@ -114,7 +114,7 @@ public Action OnInternetUse(int entity, int activator, int caller, UseType type,
 {
 	char url[256];
 	if (!Object[entity].GetString("url", url, sizeof(url))) {
-		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet prop.");
+		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet entities.");
 		return Plugin_Continue;
 	}
 

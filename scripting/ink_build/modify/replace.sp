@@ -32,7 +32,7 @@ public Action Command_ReplaceEnt(int client, int args)
 
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_physics") == -1 && StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "prop_light") == -1) {
+	if (StrContains(entClass, "prop_physics") == -1 && StrContains(entClass, "prop_door") == -1 && StrContains(entClass, "entity_light") == -1) {
 		Ink_ClientEntMsg(client, ent, "Unable to replace model on {entity}.");
 		return Plugin_Handled;
 	}

@@ -129,7 +129,7 @@ void StartGrab(int client, int ent, int color[4] = {0, 255, 128, 200})
 	// freeze entity
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_physics", false) == 0) {
+	if (StrContains(entClass, "prop_door", false) == -1 && StrContains(entClass, "prop_vehicle", false) == -1) {
 		Ink_SetEntFrozen(ent, true, false);
 	}
 
@@ -158,7 +158,7 @@ void EndGrab(int client)
 	// restore movetype
 	char entClass[64];
 	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
-	if (StrContains(entClass, "prop_physics", false) == 0) {
+	if (StrContains(entClass, "prop_door", false) == -1 && StrContains(entClass, "prop_vehicle", false) == -1) {
 		bool frozen = Ink_GetEntFrozen(ent);
 		Ink_SetEntFrozen(ent, frozen, false);
 	}

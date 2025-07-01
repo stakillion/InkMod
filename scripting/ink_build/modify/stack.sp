@@ -69,8 +69,8 @@ public Action Command_StackEnt(int client, int args)
 		}
 
 		Entity_GetAbsAngles(ent, entAngles);
-	}
-	else for (int index = 0; index < 3; index++) {
+
+	} else for (int index = 0; index < 3; index++) {
 		offset[index] = GetCmdArgFloat(index + 1);
 		if (offset[index] < -500 || offset[index] > 500) {
 			Ink_ClientMsg(client, "Unable to stack - distance too large.");

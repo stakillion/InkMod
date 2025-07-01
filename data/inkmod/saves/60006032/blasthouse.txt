@@ -250,7 +250,7 @@
 		"angles"		"0.000000 180.000000 0.000000"
 		"model"		"models/props_lab/blastdoor001c.mdl"
 	}
-	"prop_doll-pigeon-565116807"
+	"cycler-pigeon-565116807"
 	{
 		"origin"		"-244.696533 -310.697968 110.201492"
 		"angles"		"0.000000 -169.768570 0.000000"

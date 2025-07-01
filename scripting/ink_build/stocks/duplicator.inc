@@ -75,7 +75,8 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 		} else if (StrEqual(keyname, "rendercolor")) {
 			int color[4] = {255, ...};
 			Object[ent].GetArray(keyname, color, 4);
-			kv.SetColor4(keyname, color);
+			Format(string, sizeof(string), "%i %i %i %i", color[0], color[1], color[2], color[3]);
+			kv.SetString(keyname, string);
 		}
 		// everything else
 		else if (Object[ent].GetValue(keyname, value)) {
@@ -87,7 +88,7 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 	}
 
 	// entity-specific properties
-	if (StrContains(entClass, "prop_doll") == 0) {
+	if (StrContains(entClass, "cycler") == 0) {
 		// store current animation frame
 		float entCycle = GetEntPropFloat(ent, Prop_Send, "m_flCycle");
 		if (entCycle != 0.0) {
@@ -102,7 +103,7 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 		// store door hardware type
 		int hardware = GetEntProp(ent, Prop_Data, "m_nHardwareType");
 		kv.SetNum("hardware", hardware);
-	} else if (StrContains(entClass, "prop_light") == 0) {
+	} else if (StrContains(entClass, "entity_light") == 0) {
 		// store light distance
 		int light = GetEntPropEnt(ent, Prop_Data, "m_hMoveChild");
 		float distance = GetEntPropFloat(light, Prop_Data, "m_Radius");
@@ -150,17 +151,17 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 		int solid = entKv.GetNum("solid", 6);
 		ent = Ink_CreateDynamicProp(entModel, animation, solid);
 
-	} else if (StrContains(entKey[0], "prop_doll") == 0) {
-		ent = Ink_CreateDollProp(entModel);
+	} else if (StrContains(entKey[0], "cycler") == 0) {
+		ent = Ink_CreateCycler(entModel);
 
 	} else if (StrContains(entKey[0], "prop_door") == 0) {
 		int hardware = entKv.GetNum("hardware");
 		ent = Ink_CreateDoor(entModel, hardware);
 
-	} else if (StrContains(entKey[0], "prop_ladder") == 0) {
+	} else if (StrContains(entKey[0], "entity_ladder") == 0) {
 		ent = Ink_CreateLadder(entModel);
 
-	} else if (StrContains(entKey[0], "prop_light") == 0) {
+	} else if (StrContains(entKey[0], "entity_light") == 0) {
 		int distance = entKv.GetNum("distance");
 		ent = Ink_CreateLight(entModel, distance);
 
@@ -169,7 +170,7 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 		entKv.GetString("vehiclescript", entVehicleScript, sizeof(entVehicleScript));
 		ent = Ink_CreateVehicle(entModel, entVehicleScript, entKv.GetNum("vehicletype"));
 
-	} else if (StrContains(entKey[0], "prop_internet") == 0) {
+	} else if (StrContains(entKey[0], "entity_internet") == 0) {
 		ent = Ink_CreateInternet(entModel);
 
 	} else {

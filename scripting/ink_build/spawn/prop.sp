@@ -67,7 +67,7 @@ stock int Ink_CreateDynamicProp(const char[] modelPath, const char[] defaultAnim
 	return ent;
 }
 
-stock int Ink_CreateDollProp(const char[] modelPath)
+stock int Ink_CreateCycler(const char[] modelPath)
 {
 	// create entity
 	int ent = CreateEntityByName("cycler");
@@ -75,8 +75,6 @@ stock int Ink_CreateDollProp(const char[] modelPath)
 	if (ent == INVALID_ENT_REFERENCE) {
 		return INVALID_ENT_REFERENCE;
 	}
-
-	DispatchKeyValue(ent, "classname", "prop_doll");
 
 	// apply model
 	PrecacheModel(modelPath, true);
@@ -95,7 +93,7 @@ stock int Ink_CreateDollProp(const char[] modelPath)
 	Entity_SetCollisionGroup(ent, COLLISION_GROUP_NONE);
 
 	// hook damage
-	SDKHook(ent, SDKHook_OnTakeDamage, OnDollTakeDamage);
+	SDKHook(ent, SDKHook_OnTakeDamage, OnCyclerTakeDamage);
 	Entity_AddSpawnFlags(ent, 256);
 
 	// spawn
@@ -147,11 +145,11 @@ public Action Command_SpawnProp(int client, int args)
 
 		ent = Ink_CreatePhysicsProp(model);
 	} else if (type == 2) {
-		if (!Ink_CheckClientLimit(client, "prop_doll")) {
+		if (!Ink_CheckClientLimit(client, "cycler")) {
 			return Plugin_Handled;
 		}
 
-		ent = Ink_CreateDollProp(model);
+		ent = Ink_CreateCycler(model);
 	} else if (type == 3) {
 		if (!Ink_CheckClientLimit(client, "prop_dynamic")) {
 			return Plugin_Handled;
@@ -179,7 +177,7 @@ public Action Command_SpawnProp(int client, int args)
 	return Plugin_Handled;
 }
 
-public Action OnDollTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype)
+public Action OnCyclerTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype)
 {
 	if (!Ink_CheckEntOwner(victim, attacker)) {
 		return Plugin_Handled;
