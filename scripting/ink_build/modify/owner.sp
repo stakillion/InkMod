@@ -122,7 +122,7 @@ public Action Command_ClaimEnt(int client, int args)
 	}
 
 	if (Object[ent] == null) {
-		Object[ent] = GetInkObject(ent, true);
+		Object[ent] = Ink_GetObject(ent, true);
 		Ink_SetEntOwner(ent, client);
 		Ink_ClientEntMsg(client, ent, "Accepted {entity} from the map.");
 		return Plugin_Handled;

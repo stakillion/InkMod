@@ -6,6 +6,8 @@ forward void OnLandClientExited(int land, int client);
 forward void OnLandEntityEntered(int land, int ent);
 forward void OnLandEntityExited(int land, int ent);
 
+native void Ink_ActivateEnt(int ent, int activator);
+
 public SharedPlugin __pl_ink_build = 
 {
 	name = "InkMod Build",

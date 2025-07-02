@@ -69,7 +69,7 @@ stock int Ink_CreateVehicle(const char[] modelPath, const char[] scriptPath, int
 	}
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }

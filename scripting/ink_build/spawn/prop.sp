@@ -32,7 +32,7 @@ stock int Ink_CreatePhysicsProp(const char[] modelPath)
 	Entity_DisableMotion(ent);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }
@@ -60,7 +60,7 @@ stock int Ink_CreateDynamicProp(const char[] modelPath, const char[] defaultAnim
 	ActivateEntity(ent);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }
@@ -74,8 +74,8 @@ stock int Ink_CreateCycler(const char[] modelPath)
 		return INVALID_ENT_REFERENCE;
 	}
 
-	// apply entity properties for entity_cycler
-	DispatchKeyValue(ent, "classname", "entity_cycler");
+	// apply entity properties for prop_cycler
+	DispatchKeyValue(ent, "classname", "prop_cycler");
 
 	// apply model
 	PrecacheModel(modelPath, true);
@@ -105,7 +105,7 @@ stock int Ink_CreateCycler(const char[] modelPath)
 	//SetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }
@@ -149,7 +149,7 @@ public Action Command_SpawnProp(int client, int args)
 
 		ent = Ink_CreatePhysicsProp(model);
 	} else if (type == 2) {
-		if (!Ink_CheckClientLimit(client, "entity_cycler")) {
+		if (!Ink_CheckClientLimit(client, "prop_cycler")) {
 			return Plugin_Handled;
 		}
 

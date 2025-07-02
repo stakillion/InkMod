@@ -36,7 +36,7 @@ stock int Ink_CreateDoor(const char[] modelPath, int hardware = 1)
 	ActivateEntity(ent);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }
@@ -76,6 +76,13 @@ public Action Command_SpawnDoor(int client, int args)
 
 	// give to player
 	Ink_SetEntOwner(ent, client);
+
+	return Plugin_Handled;
+}
+
+public Action OnDoorUse(int entity, int activator, int caller, UseType type, float value)
+{
+	AcceptEntityInput(entity, "Open");
 
 	return Plugin_Handled;
 }

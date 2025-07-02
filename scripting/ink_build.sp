@@ -78,6 +78,7 @@ int CrystalBeam;
 // spawnables
 #include "ink_build/spawn/prop.sp"
 #include "ink_build/spawn/door.sp"
+#include "ink_build/spawn/gate.sp"
 #include "ink_build/spawn/ladder.sp"
 #include "ink_build/spawn/light.sp"
 #include "ink_build/spawn/vehicle.sp"
@@ -110,6 +111,9 @@ int CrystalBeam;
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
 	LateLoad = late;
+	RegPluginLibrary("InkMod Build");
+
+	RegisterNatives();
 }
 
 public void OnPluginStart()
@@ -127,13 +131,13 @@ public void OnMapStart()
 	if (LateLoad) {
 		for (int ent = MaxClients + 1; ent <= MAX_EDICTS; ent++) {
 			if (IsValidEntity(ent)) {
-				Object[ent] = GetInkObject(ent, false);
+				Object[ent] = Ink_GetObject(ent, false);
 				SetUpEntityHook(ent);
 			}
 		}
 		for (int client = 1; client <= MaxClients; client++) {
 			if (IsClientAuthorized(client)) {
-				Object[client] = GetInkObject(client, false);
+				Object[client] = Ink_GetObject(client, false);
 				InitializeClient(client);
 			}
 		}
@@ -157,7 +161,7 @@ void SetUpEntityHook(int ent)
 	char class[32];
 	GetEntityClassname(ent, class, sizeof(class));
 
-	if (StrEqual(class, "cycler")) {
+	if (StrEqual(class, "prop_cycler")) {
 		SDKHook(ent, SDKHook_OnTakeDamage, OnCyclerTakeDamage);
 	} else if (StrEqual(class, "entity_light")) {
 		SDKHook(ent, SDKHook_Use, OnLightUse);
@@ -166,6 +170,8 @@ void SetUpEntityHook(int ent)
 	} else if (StrEqual(class, "prop_vehicle")) {
 		HookSingleEntityOutput(ent, "PlayerOn", Vehicle_OnEnter);
 		HookSingleEntityOutput(ent, "PlayerOff", Vehicle_OnExit);
+	} else if (StrEqual(class, "prop_gate")) {
+		SDKHook(ent, SDKHook_OnTakeDamage, OnGateUse);
 	}
 }
 
@@ -186,7 +192,9 @@ void RegisterCommands()
 {
 	// spawnables
 	RegAdminCmd("n_prop", Command_SpawnProp, 0, "Spawns a prop with the specified model.");
+	RegAdminCmd("n_spawn", Command_SpawnProp, 0, "Spawns a prop with the specified model.");
 	RegAdminCmd("n_door", Command_SpawnDoor, 0, "Spawns a usable rotating door.");
+	RegAdminCmd("n_gate", Command_SpawnGate, 0, "Spawns a usable animated door prop.");
 	RegAdminCmd("n_ladder", Command_SpawnLadder, 0, "Spawns a usable ladder.");
 	RegAdminCmd("n_light", Command_SpawnLight, 0, "Spawns a light.");
 	RegAdminCmd("n_vehicle", Command_SpawnVehicle, 0, "Spawns a vehicle.");
@@ -232,13 +240,13 @@ void RegisterCommands()
 
 	RegAdminCmd("n_skin", Command_SkinEnt, 0, "Changes the skin of an entity.");
 
-	RegAdminCmd("n_stack", Command_StackEnt, 0, "Makes a copy of an entity and moves it by the given offset");
+	RegAdminCmd("n_stack", Command_StackEnt, 0, "Makes a copy of an entity and moves it by the given offset.");
 	RegAdminCmd("n_stackinfo", Command_StackInfo, 0, "Prints the difference between the coordinates of two entities.");
 
 	RegAdminCmd("n_weld",    Command_ParentEnt, 0, "Parents an entity to another entity.");
 	RegAdminCmd("n_release", Command_UnparentEnt, 0, "Releases all entities from a parent.");
 
-	RegAdminCmd("n_seturl", Command_SetURLEnt, 0, "Sets the destination url on an !internet portal");
+	RegAdminCmd("n_seturl", Command_SetURLEnt, 0, "Sets the destination url on an !internet portal.");
 
 	// land commands
 	RegAdminCmd("n_land",  Command_Land, 0, "Creates a land area.");
@@ -264,6 +272,11 @@ void RegisterForwards()
 	LandClientExited = new GlobalForward("OnLandClientExited", ET_Ignore, Param_Cell, Param_Cell);
 	LandEntityEntered = new GlobalForward("OnLandEntityEntered", ET_Ignore, Param_Cell, Param_Cell);
 	LandEntityExited = new GlobalForward("OnLandEntityExited", ET_Ignore, Param_Cell, Param_Cell);
+}
+
+void RegisterNatives()
+{
+	CreateNative("Ink_ActivateEnt", Native_Ink_ActivateEnt);
 }
 
 // assets
@@ -298,9 +311,9 @@ void LoadAssets()
 }
 
 
-/***************************
-            Loop            
-***************************/
+/******************************
+            Process            
+******************************/
 
 public void OnGameFrame()
 {
@@ -324,6 +337,32 @@ void EntOnGameFrame(int ent)
 void ClientOnGameFrame(int client)
 {
 	FindCurrentLand(client);
+}
+
+
+/**************************
+          Natives          
+**************************/
+
+void Native_Ink_ActivateEnt(Handle plugin, int params)
+{
+	int ent = GetNativeCell(1);
+	int client = GetNativeCell(2);
+
+	char entClass[32];
+	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+
+	if (StrContains(entClass, "entity_light", false) != -1) {
+		OnLightUse(ent, client, client, Use_On, 1.0);
+	} else if (StrContains(entClass, "entity_internet", false) != -1) {
+		OnInternetUse(ent, client, client, Use_On, 1.0);
+	} else if (StrContains(entClass, "prop_door", false) != -1) {
+		OnDoorUse(ent, client, client, Use_On, 1.0);
+	}  else if (StrContains(entClass, "prop_gate", false) != -1) {
+		OnGateUse(ent, client, client, Use_On, 1.0);
+	}
+
+	return;
 }
 
 

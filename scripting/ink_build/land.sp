@@ -38,7 +38,6 @@ public Action Command_Land(int client, int args)
 	}
 
 	float landPoints[2][3];
-
 	if (!Object[client].GetArray("land.origin", landPoints[0], 3)) {
 		Ink_GetClientAim(client, landPoints[0]);
 

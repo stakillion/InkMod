@@ -88,7 +88,7 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 	}
 
 	// entity-specific properties
-	if (StrContains(entClass, "entity_cycler") == 0) {
+	if (StrContains(entClass, "prop_cycler") == 0) {
 		// store current animation frame
 		float entCycle = GetEntPropFloat(ent, Prop_Send, "m_flCycle");
 		if (entCycle != 0.0) {
@@ -151,7 +151,7 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 		int solid = entKv.GetNum("solid", 6);
 		ent = Ink_CreateDynamicProp(entModel, animation, solid);
 
-	} else if (StrContains(entKey[0], "entity_cycler") == 0) {
+	} else if (StrContains(entKey[0], "prop_cycler") == 0) {
 		ent = Ink_CreateCycler(entModel);
 
 	} else if (StrContains(entKey[0], "prop_door") == 0) {
@@ -252,7 +252,12 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 		} else if (StrEqual(keyName, "cycle")) {
 			// set cycle on entity
 			SetEntPropFloat(ent, Prop_Send, "m_flCycle", entKv.GetFloat(NULL_STRING, 0.0));
-
+		} else if (StrEqual(keyName, "parent")) {
+			// restore welds
+			DataPack pack = new DataPack();
+			CreateTimer(0.1, RestoreParent, pack);
+			pack.WriteCell(ent);
+			pack.WriteCell(entKv.GetNum(NULL_STRING, 0));
 		} else {
 			// copy remaining keyvalues to entity object
 			switch (entKv.GetDataType(NULL_STRING)) {
@@ -272,4 +277,34 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 
 	entKv.GoBack();
 	return ent;
+}
+
+public Action RestoreParent(Handle timer, DataPack pack)
+{
+	pack.Reset();
+	int ent = pack.ReadCell();
+	int parentId = pack.ReadCell();
+	int owner = Ink_GetEntOwner(ent);
+
+	for (int e = MaxClients + 1; e <= MAX_EDICTS; e++) {
+		if (!IsValidEntity(e)) {
+			continue;
+		}
+
+		if (!Ink_CheckEntOwner(e, owner)) {
+			continue;
+		}
+
+		char globalName[64], saveName[2][32]
+		GetEntPropString(e, Prop_Data, "m_iGlobalname", globalName, sizeof(globalName));
+		ExplodeString(globalName, "-", saveName, 2, sizeof(saveName[]));
+
+		int saveId = StringToInt(saveName[1]) * -1;
+		if (saveId == parentId) {
+			Ink_SetEntParent(ent, e);
+			break;
+		}
+	}
+
+	return Plugin_Stop;
 }

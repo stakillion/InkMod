@@ -31,11 +31,11 @@ stock int Ink_CreateInternet(const char[] modelPath)
 	Entity_DisableMotion(ent);
 
 	// hook use
-	SDKHook(ent, SDKHook_Use, OnInternetUse)
+	SDKHook(ent, SDKHook_Use, OnInternetUse);
 	Entity_AddSpawnFlags(ent, 256);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 
 	return ent;
 }
@@ -129,4 +129,6 @@ public Action OnInternetUse(int entity, int activator, int caller, UseType type,
 
 	ShowVGUIPanel(activator, "info", kv, true);
 	delete kv;
+
+	return Plugin_Handled;
 }

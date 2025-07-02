@@ -50,7 +50,7 @@ stock int Ink_CreateLight(const char[] modelPath, int distance = 500)
 	Entity_AddSpawnFlags(ent, 256);
 
 	// create object data
-	GetInkObject(ent, true);
+	Ink_GetObject(ent, true);
 	Ink_SetEntColor(ent, {255, 255, 255, 64});
 
 	return ent;
@@ -98,4 +98,6 @@ public Action OnLightUse(int entity, int activator, int caller, UseType type, fl
 {
 	int light = GetEntPropEnt(entity, Prop_Data, "m_hMoveChild");
 	AcceptEntityInput(light, "toggle");
+
+	return Plugin_Handled;
 }

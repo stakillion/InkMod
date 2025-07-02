@@ -32,7 +32,7 @@ int ClientId[MAXPLAYERS + 1];
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
 	RegPluginLibrary("InkMod Objects");
-	CreateNative("GetInkObject", Native_GetInkObject);
+	CreateNative("Ink_GetObject", Native_Ink_GetObject);
 
 	return APLRes_Success;
 }
@@ -69,7 +69,7 @@ public void OnClientPostAdminCheck(int client)
 	Objects.GetObject(client, true);
 }
 
-int Native_GetInkObject(Handle plugin, int params)
+int Native_Ink_GetObject(Handle plugin, int params)
 {
 	return view_as<int>(Objects.GetObject(GetNativeCell(1), GetNativeCell(2)));
 }

@@ -219,7 +219,7 @@ public Action Command_Load(int client, int args)
 		ExplodeString(keyName, "-", entKey, 3, sizeof(entKey[]));
 
 		char globalName[64];
-		Format(globalName, sizeof(globalName), "%s-%i", saveName, entKey[2]);
+		Format(globalName, sizeof(globalName), "%s-%s", saveName, entKey[2]);
 		DispatchKeyValue(ent, "globalname", globalName);
 
 		Ink_SetEntOwner(ent, client);

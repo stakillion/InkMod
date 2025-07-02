@@ -117,16 +117,16 @@ public Action Command_CleanArea(int client, int args)
 	} else {
 		Ink_ClientMsg(client, "Cleaned up {green}%i{default} entities.", count);
 	}
-	CleanStartPos[client][0] = 0;
-	CleanStartPos[client][1] = 0;
-	CleanStartPos[client][2] = 0;
+	CleanStartPos[client][0] = 0.0;
+	CleanStartPos[client][1] = 0.0;
+	CleanStartPos[client][2] = 0.0;
 
 	return Plugin_Handled;
 }
 
 public Action DrawCleanArea(Handle timer, int client)
 {
-	if (CleanStartPos[client][0] == 0) {
+	if (CleanStartPos[client][0] == 0.0) {
 		return Plugin_Stop;
 	}
 

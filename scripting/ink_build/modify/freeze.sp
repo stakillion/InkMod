@@ -32,7 +32,7 @@ public Action Command_FreezeEnt(int client, int args)
 	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, true);
 
-	} else if (StrContains(entClass, "cycler") == 0) {
+	} else if (StrContains(entClass, "cycler") != -1) {
 		Ink_SetEntPlaybackRate(ent, 0.0);
 
 	} else {
@@ -72,7 +72,7 @@ public Action Command_UnfreezeEnt(int client, int args)
 	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, false);
 
-	} else if (StrContains(entClass, "cycler", false) == 0) {
+	} else if (StrContains(entClass, "cycler", false) != -1) {
 		Ink_SetEntPlaybackRate(ent, 1.0);
 
 	} else {
