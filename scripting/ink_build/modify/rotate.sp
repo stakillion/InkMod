@@ -40,7 +40,7 @@ public Action Command_RotateEnt(int client, int args)
 	EmitSoundToAll("buttons/lever7.wav", ent);
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "prop_door") == 0) {
 		DispatchSpawn(ent);
 	}
@@ -66,7 +66,7 @@ public Action Command_StandEnt(int client, int args)
 	EmitSoundToAll("buttons/lever7.wav", ent);
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "prop_door") == 0) {
 		DispatchSpawn(ent);
 	}

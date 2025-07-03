@@ -1,6 +1,6 @@
 /*
  *
- *	InkMod Build - Entity Spawn: Ladder
+ *	InkMod Build - Entity Spawn: Internet
  *
 **/
 #define _ink_build_spawn_internet_
@@ -94,7 +94,7 @@ public Action Command_SetURLEnt(int client, int args)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "entity_internet") != 0) {
 		Ink_ClientEntMsg(client, ent, "This command can only be used on {green}!internet{default} entities.");
 		return Plugin_Handled;
@@ -112,6 +112,12 @@ public Action Command_SetURLEnt(int client, int args)
 
 public Action OnInternetUse(int entity, int activator, int caller, UseType type, float value)
 {
+	float time = GetGameTime();
+	if (UseTime[entity] > time - 0.5) {
+		return Plugin_Handled;
+	}
+	UseTime[entity] = time;
+
 	char url[256];
 	if (!Object[entity].GetString("url", url, sizeof(url))) {
 		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet entities.");

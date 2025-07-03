@@ -15,8 +15,9 @@
 #pragma semicolon 1
 #pragma newdecls required
 
-#include <ink_stocks>
+#include <ink_build>
 #include <ink_objects>
+#include <ink_stocks>
 
 #define MAX_EDICTS  2048
 #define ZERO_VECTOR view_as<float>({0.0, 0.0, 0.0})
@@ -47,6 +48,7 @@ ConVar ink_maxlandsize;
 // entity data
 StringMap Object[MAX_EDICTS + 1] = {null, ...};
 int InkDissolver = INVALID_ENT_REFERENCE;
+float UseTime[MAX_EDICTS + 1];
 
 // client data
 int ClientId[MAXPLAYERS + 1];
@@ -83,6 +85,7 @@ int CrystalBeam;
 #include "ink_build/spawn/light.sp"
 #include "ink_build/spawn/vehicle.sp"
 #include "ink_build/spawn/internet.sp"
+#include "ink_build/spawn/button.sp"
 
 // entity modify commands
 #include "ink_build/modify/color.sp"
@@ -98,6 +101,7 @@ int CrystalBeam;
 #include "ink_build/modify/skin.sp"
 #include "ink_build/modify/weld.sp"
 #include "ink_build/modify/lock.sp"
+#include "ink_build/modify/link.sp"
 
 // land
 #include "ink_build/land.sp"
@@ -137,7 +141,6 @@ public void OnMapStart()
 		}
 		for (int client = 1; client <= MaxClients; client++) {
 			if (IsClientAuthorized(client)) {
-				Object[client] = Ink_GetObject(client, false);
 				InitializeClient(client);
 			}
 		}
@@ -170,8 +173,8 @@ void SetUpEntityHook(int ent)
 	} else if (StrEqual(class, "prop_vehicle")) {
 		HookSingleEntityOutput(ent, "PlayerOn", Vehicle_OnEnter);
 		HookSingleEntityOutput(ent, "PlayerOff", Vehicle_OnExit);
-	} else if (StrEqual(class, "prop_gate")) {
-		SDKHook(ent, SDKHook_OnTakeDamage, OnGateUse);
+	} else if (StrEqual(class, "entity_button")) {
+		SDKHook(ent, SDKHook_Use, OnButtonUse);
 	}
 }
 
@@ -185,6 +188,7 @@ void InitializeClient(int client)
 {
 	ClientId[client] = GetSteamAccountID(client);
 	ClientCmdTime[client] = 0.0;
+	Object[client] = Ink_GetObject(client, true);
 }
 
 // commands
@@ -199,6 +203,7 @@ void RegisterCommands()
 	RegAdminCmd("n_light", Command_SpawnLight, 0, "Spawns a light.");
 	RegAdminCmd("n_vehicle", Command_SpawnVehicle, 0, "Spawns a vehicle.");
 	RegAdminCmd("n_internet", Command_SpawnInternet, 0, "Spawns a usable internet portal.");
+	RegAdminCmd("n_button", Command_SpawnButton, 0, "Spawns a button used to control other entities.");
 
 	// entity modify commands
 	RegAdminCmd("n_color", Command_ColorEnt, 0, "Changes the color of an entity.");
@@ -247,6 +252,9 @@ void RegisterCommands()
 	RegAdminCmd("n_release", Command_UnparentEnt, 0, "Releases all entities from a parent.");
 
 	RegAdminCmd("n_seturl", Command_SetURLEnt, 0, "Sets the destination url on an !internet portal.");
+
+	RegAdminCmd("n_link", Command_LinkEnt, 0, "Links a button entity to other controllable entities.");
+	RegAdminCmd("n_unlink", Command_UnlinkEnt, 0, "Destroys the link between a button and other controllable entities.");
 
 	// land commands
 	RegAdminCmd("n_land",  Command_Land, 0, "Creates a land area.");
@@ -349,8 +357,12 @@ void Native_Ink_ActivateEnt(Handle plugin, int params)
 	int ent = GetNativeCell(1);
 	int client = GetNativeCell(2);
 
+	if (ent < 0) {
+		ent = EntRefToEntIndex(ent);
+	}
+
 	char entClass[32];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 
 	if (StrContains(entClass, "entity_light", false) != -1) {
 		OnLightUse(ent, client, client, Use_On, 1.0);

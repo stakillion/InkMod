@@ -51,6 +51,58 @@ public Action Ink_EntityKill(Handle timer, int ent)
 	return Plugin_Handled;
 }
 
+stock int Ink_GetEntOwner(int ent, int &ownerId = 0)
+{
+	if (!Object[ent].GetValue("owner", ownerId)) {
+		return -1;
+	}
+	for (int client = 1; client <= MaxClients; client++) {
+		if (ownerId == ClientId[client]) {
+			// found client
+			return client;
+		}
+	}
+
+	return 0;
+}
+stock int Ink_SetEntOwner(int ent, int client)
+{
+	int ownerId;
+	int owner = Ink_GetEntOwner(ent, ownerId);
+
+	// if owner is the same as recipient, do nothing
+	if (owner == client) {
+		return client;
+	}
+
+	// store original owner, if changing owners
+	if (owner != -1 && !Object[ent].GetValue("creator", owner)) {
+		Object[ent].SetValue("creator", ownerId);
+	}
+
+	// set new owner
+	Object[ent].SetValue("owner", ClientId[client]);
+
+	return client;
+}
+stock bool Ink_CheckEntOwner(int ent, int client, int override_flags = 0)
+{
+	if (Object[ent] == null) {
+		return false;
+	}
+
+	if (override_flags != 0 && CheckCommandAccess(client, "", override_flags, true)) {
+		return true;
+	}
+
+	int ownerId;
+	if (!Object[ent].GetValue("owner", ownerId)) {
+		return false;
+	}
+
+	return ownerId == ClientId[client];
+}
+
 stock bool Ink_GetEntFrozen(int ent, bool obj = true)
 {
 	if (obj) {
@@ -134,7 +186,7 @@ stock void Ink_SetEntColor(int ent, int color[4], bool obj = true)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "entity_light") == 0) {
 		int light = GetEntPropEnt(ent, Prop_Data, "m_hMoveChild");
 		Entity_SetRenderColor(light, color[0], color[1], color[2], color[3]);
@@ -276,7 +328,7 @@ stock void Ink_SetEntScale(int ent, float scale, bool obj = true)
 stock void Ink_SetEntLocked(int ent, bool lock, bool obj = true)
 {
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 
 	if (StrContains(entClass, "prop_door") == 0) {
 		if (lock) {
@@ -309,7 +361,7 @@ stock bool Ink_GetEntLocked(int ent, bool obj = true)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 
 	if (StrContains(entClass, "prop_door") == 0) {
 		return view_as<bool>(GetEntProp(ent, Prop_Data, "m_bLocked"));
@@ -318,56 +370,4 @@ stock bool Ink_GetEntLocked(int ent, bool obj = true)
 	}
 
 	return false;
-}
-
-stock int Ink_GetEntOwner(int ent, int &ownerId = 0)
-{
-	if (!Object[ent].GetValue("owner", ownerId)) {
-		return -1;
-	}
-	for (int client = 1; client <= MaxClients; client++) {
-		if (ownerId == ClientId[client]) {
-			// found client
-			return client;
-		}
-	}
-
-	return 0;
-}
-stock int Ink_SetEntOwner(int ent, int client)
-{
-	int ownerId;
-	int owner = Ink_GetEntOwner(ent, ownerId);
-
-	// if owner is the same as recipient, do nothing
-	if (owner == client) {
-		return client;
-	}
-
-	// store original owner, if changing owners
-	if (owner != -1 && !Object[ent].GetValue("creator", owner)) {
-		Object[ent].SetValue("creator", ownerId);
-	}
-
-	// set new owner
-	Object[ent].SetValue("owner", ClientId[client]);
-
-	return client;
-}
-stock bool Ink_CheckEntOwner(int ent, int client, int override_flags = 0)
-{
-	if (Object[ent] == null) {
-		return false;
-	}
-
-	if (override_flags != 0 && CheckCommandAccess(client, "", override_flags, true)) {
-		return true;
-	}
-
-	int ownerId;
-	if (!Object[ent].GetValue("owner", ownerId)) {
-		return false;
-	}
-
-	return ownerId == ClientId[client];
 }

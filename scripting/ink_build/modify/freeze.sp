@@ -28,7 +28,7 @@ public Action Command_FreezeEnt(int client, int args)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, true);
 
@@ -68,7 +68,7 @@ public Action Command_UnfreezeEnt(int client, int args)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "prop_physics") == 0 || StrContains(entClass, "entity_light") == 0 || StrContains(entClass, "entity_ladder") == 0 || StrContains(entClass, "entity_internet") == 0) {
 		Ink_SetEntFrozen(ent, false);
 

@@ -1,6 +1,6 @@
 /*
  *
- *	InkMod Build - Entity Spawn: Ladder
+ *	InkMod Build - Entity Spawn: Light
  *
 **/
 #define _ink_build_spawn_light_
@@ -96,6 +96,12 @@ public Action Command_SpawnLight(int client, int args)
 
 public Action OnLightUse(int entity, int activator, int caller, UseType type, float value)
 {
+	float time = GetGameTime();
+	if (UseTime[entity] > time - 0.5) {
+		return Plugin_Handled;
+	}
+	UseTime[entity] = time;
+
 	int light = GetEntPropEnt(entity, Prop_Data, "m_hMoveChild");
 	AcceptEntityInput(light, "toggle");
 

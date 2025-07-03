@@ -6,7 +6,7 @@
 #define _ink_build_spawn_gate_
 
 
-stock int Ink_CreateGate(const char[] modelPath)
+stock int Ink_CreateGate(const char[] modelPath, const char[] defaultAnim = "idle_closed")
 {
 	// create entity
 	int ent = CreateEntityByName("prop_dynamic_override");
@@ -23,7 +23,7 @@ stock int Ink_CreateGate(const char[] modelPath)
 	DispatchKeyValue(ent, "classname", "prop_gate");
 
 	// set collision
-	DispatchKeyValue(ent, "DefaultAnim", "idle_closed");
+	DispatchKeyValue(ent, "DefaultAnim", defaultAnim);
 	Entity_SetSolidType(ent, SOLID_VPHYSICS);
 	Entity_SetCollisionGroup(ent, COLLISION_GROUP_NONE);
 
@@ -83,11 +83,18 @@ public Action Command_SpawnGate(int client, int args)
 	// give to player
 	Ink_SetEntOwner(ent, client);
 
+	Ink_ClientMsg(client, "Created gate prop. To use, you must {green}!link{default} it to a {green}!button{default} entity.")
 	return Plugin_Handled;
 }
 
 public Action OnGateUse(int entity, int activator, int caller, UseType type, float value)
 {
+	float time = GetGameTime();
+	if (UseTime[entity] > time - 2.5) {
+		return Plugin_Handled;
+	}
+	UseTime[entity] = time;
+
 	char state[32];
 	GetEntPropString(entity, Prop_Data, "m_iszDefaultAnim", state, sizeof(state));
 

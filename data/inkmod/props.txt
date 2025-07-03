@@ -228,12 +228,6 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
-	"blastdoor4"
-	{
-		"model"			"models/props_lab/blastdoor001c.mdl"
-		"dynamic"		"idle"
-		"enabled"		"1"
-	}
 	"bluebarrel"
 	{
 		"model"			"models/props_borealis/bluebarrel001.mdl"
@@ -725,6 +719,13 @@
 	{
 		"model"			"models/humans/charple04.mdl"
 		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"chefhat"
+	{
+		"model"			"models/chefhat.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
 		"enabled"		"1"
 	}
 	"citizenfemale1"
@@ -2257,6 +2258,13 @@
 	{
 		"model"			"models/props_c17/light_magnifyinglamp02.mdl"
 		"physics"		"1"
+		"enabled"		"1"
+	}
+	"mask"
+	{
+		"model"			"models/barneyhelmet_faceplate.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
 		"enabled"		"1"
 	}
 	"masterinterface"

@@ -27,7 +27,7 @@ public Action Command_ScaleEnt(int client, int args)
 	}
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	if (StrContains(entClass, "prop_vehicle") != -1) {
 		Ink_ClientEntMsg(client, ent, "Unable to set scale on {entity}.");
 		return Plugin_Handled;

@@ -23,7 +23,7 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 
 	// get entity classname
 	char entClass[32];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 
 	// get entity name
 	char entName[32];
@@ -77,6 +77,11 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 			Object[ent].GetArray(keyname, color, 4);
 			Format(string, sizeof(string), "%i %i %i %i", color[0], color[1], color[2], color[3]);
 			kv.SetString(keyname, string);
+		} else if (StrEqual(keyname, "links")) {
+			int ents[6];
+			Object[ent].GetArray(keyname, ents, 6);
+			Format(string, sizeof(string), "%i %i %i %i %i %i", ents[0], ents[1], ents[2], ents[3], ents[4], ents[5]);
+			kv.SetString(keyname, string);
 		}
 		// everything else
 		else if (Object[ent].GetValue(keyname, value)) {
@@ -116,6 +121,9 @@ stock KeyValues Ink_EntToKeyValues(int ent, KeyValues kv = view_as<KeyValues>(IN
 		// store vehicle type
 		value = GetEntProp(ent, Prop_Data, "m_nVehicleType");
 		kv.SetNum("vehicletype", value);
+	} else if (StrContains(entClass, "prop_gate") == 0) {
+		GetEntPropString(ent, Prop_Data, "m_iszDefaultAnim", string, sizeof(string));
+		kv.SetString("animation", string)
 	}
 
 	kv.GoBack();
@@ -172,6 +180,14 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 
 	} else if (StrContains(entKey[0], "entity_internet") == 0) {
 		ent = Ink_CreateInternet(entModel);
+
+	} else if (StrContains(entKey[0], "entity_button") == 0) {
+		ent = Ink_CreateButton(entModel);
+
+	} else if (StrContains(entKey[0], "prop_gate") == 0) {
+		char animation[PLATFORM_MAX_PATH];
+		entKv.GetString("animation", animation, sizeof(animation));
+		ent = Ink_CreateGate(entModel, animation);
 
 	} else {
 		entKv.GoBack();
@@ -258,6 +274,13 @@ stock int Ink_KeyValuesToEnt(KeyValues entKv, const float origin[3] = {0.0, 0.0,
 			CreateTimer(0.1, RestoreParent, pack);
 			pack.WriteCell(ent);
 			pack.WriteCell(entKv.GetNum(NULL_STRING, 0));
+		} else if (StrEqual(keyName, "links")) {
+			// restore button links
+			entKv.GetString(NULL_STRING, keyValue, sizeof(keyValue));
+			DataPack pack = new DataPack();
+			CreateTimer(0.1, RestoreLinks, pack);
+			pack.WriteCell(ent);
+			pack.WriteString(keyValue);
 		} else {
 			// copy remaining keyvalues to entity object
 			switch (entKv.GetDataType(NULL_STRING)) {
@@ -305,6 +328,44 @@ public Action RestoreParent(Handle timer, DataPack pack)
 			break;
 		}
 	}
+
+	return Plugin_Stop;
+}
+
+public Action RestoreLinks(Handle timer, DataPack pack)
+{
+	pack.Reset();
+	int ent = pack.ReadCell();
+	char linkString[256];
+	pack.ReadString(linkString, sizeof(linkString));
+	char linkBuffers[6][16];
+	ExplodeString(linkString, " ", linkBuffers, 6, sizeof(linkBuffers[]));
+
+	int owner = Ink_GetEntOwner(ent);
+
+	int ents[6];
+	for (int e = MaxClients + 1; e <= MAX_EDICTS; e++) {
+		if (!IsValidEntity(e)) {
+			continue;
+		}
+
+		if (!Ink_CheckEntOwner(e, owner)) {
+			continue;
+		}
+
+		char globalName[64], saveName[2][32]
+		GetEntPropString(e, Prop_Data, "m_iGlobalname", globalName, sizeof(globalName));
+		ExplodeString(globalName, "-", saveName, 2, sizeof(saveName[]));
+		int saveId = StringToInt(saveName[1]) * -1;
+
+		for (int i; i < 6; i++) {
+			if (saveId == StringToInt(linkBuffers[i])) {
+				ents[i] = EntIndexToEntRef(e);
+			}
+		}
+	}
+
+	Object[ent].SetArray("links", ents, 6);
 
 	return Plugin_Stop;
 }

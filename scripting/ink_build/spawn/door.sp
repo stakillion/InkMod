@@ -82,6 +82,12 @@ public Action Command_SpawnDoor(int client, int args)
 
 public Action OnDoorUse(int entity, int activator, int caller, UseType type, float value)
 {
+	float time = GetGameTime();
+	if (UseTime[entity] > time - 0.5) {
+		return Plugin_Handled;
+	}
+	UseTime[entity] = time;
+
 	AcceptEntityInput(entity, "Open");
 
 	return Plugin_Handled;

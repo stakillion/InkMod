@@ -29,7 +29,7 @@ public Action Command_SkinEnt(int client, int args)
 	GetCmdArgString(cmdArg, sizeof(cmdArg));
 
 	char entClass[64];
-	GetEntPropString(ent, Prop_Data, "m_iClassname", entClass, sizeof(entClass));
+	GetEntityClassname(ent, entClass, sizeof(entClass));
 	bool isDoll = (StrContains(entClass, "cycler", false) != -1);
 
 	int skin;
