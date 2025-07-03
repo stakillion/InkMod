@@ -228,6 +228,12 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
+	"blastdoor4"
+	{
+		"model"			"models/props_lab/blastdoor001c.mdl"
+		"dynamic"		"idle"
+		"enabled"		"1"
+	}
 	"bluebarrel"
 	{
 		"model"			"models/props_borealis/bluebarrel001.mdl"
@@ -887,6 +893,13 @@
 	{
 		"model"			"models/combine_super_soldier.mdl"
 		"cycler"		"1"
+		"enabled"		"1"
+	}
+	"combineball"
+	{
+		"model"			"models/effects/combineball.mdl"
+		"dynamic"		"idle"
+		"solid"			"2"
 		"enabled"		"1"
 	}
 	"combinebarricade1a"
@@ -1753,6 +1766,12 @@
 		"cycler"		"1"
 		"enabled"		"1"
 	}
+	"gman2"
+	{
+		"model"			"models/perftest/gman.mdl"
+		"cycler"		"1"
+		"enabled"		"1"
+	}
 	"grainelevator"
 	{
 		"model"			"models/props_wasteland/grainelevator01.mdl"
@@ -2222,6 +2241,12 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
+	"lsd"
+	{
+		"model"			"models/gibs/gunship_gibs_eye.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
 	"magnet"
 	{
 		"model"			"models/props_wasteland/cranemagnet01a.mdl"
@@ -2652,6 +2677,62 @@
 	{
 		"model"			"models/props_interiors/radiator01a.mdl"
 		"physics"		"1"
+		"enabled"		"1"
+	}
+	"rays1"
+	{
+		"model"			"models/effects/vol_light128x128.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays2"
+	{
+		"model"			"models/effects/vol_light128x256.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays3"
+	{
+		"model"			"models/effects/vol_light128x384.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays4"
+	{
+		"model"			"models/effects/vol_light128x512.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays5"
+	{
+		"model"			"models/effects/vol_light256x384.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays6"
+	{
+		"model"			"models/effects/vol_light256x512.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays7"
+	{
+		"model"			"models/effects/vol_light64x128.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"rays8"
+	{
+		"model"			"models/effects/vol_light64x256.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
 		"enabled"		"1"
 	}
 	"ravendoor"
@@ -3212,9 +3293,50 @@
 		"physics"		"1"
 		"enabled"		"1"
 	}
+	"slab1"
+	{
+		"model"			"models/shadertest/shaderslab1.mdl"
+		"dynamic"		"idle1"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"slab2"
+	{
+		"model"			"models/shadertest/shaderslab2.mdl"
+		"dynamic"		"idle1"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"slab3"
+	{
+		"model"			"models/shadertest/shaderslab3.mdl"
+		"dynamic"		"idle1"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"slab4"
+	{
+		"model"			"models/shadertest/shaderslab4.mdl"
+		"dynamic"		"idle1"
+		"solid"			"4"
+		"enabled"		"1"
+	}
+	"slab5"
+	{
+		"model"			"models/shadertest/shaderslab5.mdl"
+		"dynamic"		"idle1"
+		"solid"			"4"
+		"enabled"		"1"
+	}
 	"slide"
 	{
 		"model"			"models/props_c17/playgroundslide01.mdl"
+		"physics"		"1"
+		"enabled"		"1"
+	}
+	"smokestack"
+	{
+		"model"			"models/props_animated_breakable/smokestack.mdl"
 		"physics"		"1"
 		"enabled"		"1"
 	}
@@ -3229,6 +3351,13 @@
 		"model"			"models/props_wasteland/speakercluster01a.mdl"
 		"physics"		"1"
 		"enabled"		"1"
+	}
+	"splode"
+	{
+		"model"			"models/effects/splode.mdl"
+		"dynamic"		"idle"
+		"solid"			"4"
+		"enabled"		"0"
 	}
 	"stool"
 	{
