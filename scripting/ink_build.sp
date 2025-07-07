@@ -207,6 +207,7 @@ void RegisterCommands()
 
 	// entity modify commands
 	RegAdminCmd("n_color", Command_ColorEnt, 0, "Changes the color of an entity.");
+	RegAdminCmd("n_paint", Command_ColorEnt, 0, "Changes the color of an entity.");
 	RegAdminCmd("n_alpha", Command_AlphaEnt, 0, "Changes the alpha transparency of an entity.");
 	RegAdminCmd("n_amt", Command_AlphaEnt, 0, "Changes the alpha transparency of an entity.");
 
@@ -240,6 +241,7 @@ void RegisterCommands()
 
 	RegAdminCmd("n_rotate", Command_RotateEnt, 0, "Rotates an entity on it's axis, by the specified offset.");
 	RegAdminCmd("n_stand",  Command_StandEnt, 0, "Sets an entity to it's default rotation (0 0 0).");
+	RegAdminCmd("n_straight",  Command_StandEnt, 0, "Sets an entity to it's default rotation (0 0 0).");
 
 	RegAdminCmd("n_scale", Command_ScaleEnt, 0, "Changes the size of an entity.");
 
@@ -249,6 +251,7 @@ void RegisterCommands()
 	RegAdminCmd("n_stackinfo", Command_StackInfo, 0, "Prints the difference between the coordinates of two entities.");
 
 	RegAdminCmd("n_weld",    Command_ParentEnt, 0, "Parents an entity to another entity.");
+	RegAdminCmd("n_unweld", Command_UnparentEnt, 0, "Releases all entities from a parent.");
 	RegAdminCmd("n_release", Command_UnparentEnt, 0, "Releases all entities from a parent.");
 
 	RegAdminCmd("n_seturl", Command_SetURLEnt, 0, "Sets the destination url on an !internet portal.");

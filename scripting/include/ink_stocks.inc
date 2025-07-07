@@ -53,8 +53,8 @@ stock void Ink_CalcEntSpawnPos(int ent, int spawner, float entPos[3], float entA
 	GetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
 
 	// do quick maths
-	entPos[0] = spawnerPos[0] + Cosine(DegToRad(spawnerAng[1])) * (48 - entMins[0]);
-	entPos[1] = spawnerPos[1] + Sine(DegToRad(spawnerAng[1])) * (48 - entMins[0]);
+	entPos[0] = spawnerPos[0] + Cosine(DegToRad(spawnerAng[1])) * (64 - entMins[0]);
+	entPos[1] = spawnerPos[1] + Sine(DegToRad(spawnerAng[1])) * (64 - entMins[0]);
 	entPos[2] = spawnerPos[2] - entMins[2];
 
 	entAng[0] = 0.0;
@@ -94,8 +94,14 @@ stock int Ink_ModelFromAlias(const char[] alias, char[] model, int modelSize, ch
 
 	enabled = false;
 
-	if (propKv.JumpToKey(alias)) {
-		// get prop data
+	if (propKv.GotoFirstSubKey(false)) do {
+		char keyName[64];
+		propKv.GetSectionName(keyName, sizeof(keyName));
+
+		if (StrContains(keyName, alias, false) == -1) {
+			continue;
+		}
+
 		int propType = -1;
 
 		propKv.GetString("model", model, modelSize);
@@ -112,7 +118,8 @@ stock int Ink_ModelFromAlias(const char[] alias, char[] model, int modelSize, ch
 
 		delete propKv;
 		return propType;
-	}
+
+	} while (propKv.GotoNextKey())
 
 	delete propKv;
 	return -1;

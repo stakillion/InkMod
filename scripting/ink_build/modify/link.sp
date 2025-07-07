@@ -27,17 +27,16 @@ public Action Command_LinkEnt(int client, int args)
 	bool isEntLinkable = (StrContains(entClass, "prop_door") != -1 || StrContains(entClass, "prop_gate") != -1 || StrContains(entClass, "entity_light") != -1);
 	bool isEntButton = (StrContains(entClass, "entity_button") != -1);
 
-	// if client is not currently linking an entity, set weld ent
+	// if client is not currently linking an entity, set first ent
 	if (linkEnt[client] == INVALID_ENT_REFERENCE) {
-		// set link ent
-		linkEnt[client] = EntIndexToEntRef(ent);
 
 		if (!isEntLinkable && !isEntButton) {
 			Ink_ClientEntMsg(client, ent, "Unable to link {entity}.");
-			linkEnt[client] = INVALID_ENT_REFERENCE;
 			return Plugin_Handled;
 		}
 
+		// set first ent
+		linkEnt[client] = EntIndexToEntRef(ent);
 		Ink_ClientMsg(client, "Selected entity to link. Now do {green}!link{default} on target.");
 		return Plugin_Handled;
 	}
@@ -111,7 +110,7 @@ public Action Command_UnlinkEnt(int client, int args)
 		return Plugin_Handled;
 
 	} else if (isEntLinkable) {
-		Ink_ClientMsg(client, "This command must be ran on the controller entity.");
+		Ink_ClientMsg(client, "This command must be used on the controller entity.");
 		return Plugin_Handled;
 	}
 

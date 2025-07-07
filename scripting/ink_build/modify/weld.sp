@@ -22,7 +22,7 @@ public Action Command_ParentEnt(int client, int args)
 		return Plugin_Handled;
 	}
 
-	// if client is not currently welding an entity, set weld ent
+	// if client is not currently welding an entity, set first ent
 	if (weldEnt[client] == INVALID_ENT_REFERENCE) {
 
 		int entParent = Ink_GetEntParent(ent);
@@ -36,11 +36,9 @@ public Action Command_ParentEnt(int client, int args)
 			return Plugin_Handled;
 		}
 
-		// set weld ent
+		// set first ent
 		weldEnt[client] = EntIndexToEntRef(ent);
-
 		Ink_ClientMsg(client, "Selected entity to weld. Now do {green}!weld{default} on target.");
-
 		return Plugin_Handled;
 	}
 
@@ -52,7 +50,7 @@ public Action Command_ParentEnt(int client, int args)
 		return Plugin_Handled;
 	}
 
-	// get weld ent
+	// get first ent
 	int firstEnt = EntRefToEntIndex(weldEnt[client]);
 	if (firstEnt == INVALID_ENT_REFERENCE) {
 		weldEnt[client] = INVALID_ENT_REFERENCE;

@@ -105,7 +105,7 @@ public Action Command_SetURLEnt(int client, int args)
 	Object[ent].SetString("url", cmdArg, true);
 
 	Ink_ToolEffect(client, hitPos);
-	Ink_ClientEntMsg(client, ent, "Set URL on internet prop to {green}%s{default}.", cmdArg);
+	Ink_ClientEntMsg(client, ent, "Set URL on internet entity to {green}%s{default}.", cmdArg);
 
 	return Plugin_Handled;
 }
@@ -120,7 +120,7 @@ public Action OnInternetUse(int entity, int activator, int caller, UseType type,
 
 	char url[256];
 	if (!Object[entity].GetString("url", url, sizeof(url))) {
-		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet entities.");
+		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet entity.");
 		return Plugin_Continue;
 	}
 

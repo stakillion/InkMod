@@ -77,21 +77,21 @@ stock bool Ink_CheckClientLimit(int client, char[] class, int add = 1, bool noti
 
 	if (entCount + add > ink_maxplayerents.IntValue) {
 		if (notify) {
-			Ink_ClientMsg(client, "Reached maximum number of entities: {green}%i{default}.", entCount);
+			Ink_ClientMsg(client, "Reached maximum number of entities: {green}%i{default}.", ink_maxplayerents.IntValue);
 		}
 		return false;
 	}
 
 	if (StrContains(class, "entity_light", false) != -1 && lightCount + add > ink_maxplayerlights.IntValue) {
 		if (notify) {
-			Ink_ClientMsg(client, "Reached maximum number of lights: {green}%i{default}.", lightCount);
+			Ink_ClientMsg(client, "Reached maximum number of lights: {green}%i{default}.", ink_maxplayerlights.IntValue);
 		}
 		return false;
 	}
 
 	if (StrContains(class, "prop_vehicle", false) != -1 && vehicleCount + add > ink_maxplayervehicles.IntValue) {
 		if (notify) {
-			Ink_ClientMsg(client, "Reached maximum number of vehicles: {green}%i{default}.", vehicleCount);
+			Ink_ClientMsg(client, "Reached maximum number of vehicles: {green}%i{default}.", ink_maxplayervehicles.IntValue);
 		}
 		return false;
 	}
