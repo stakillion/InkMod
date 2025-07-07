@@ -82,7 +82,7 @@ public Action Command_StackEnt(int client, int args)
 	GetEntPropString(ent, Prop_Data, "m_iName", alias[0], sizeof(alias[]));
 	ExplodeString(alias[0], "-", alias, 2, sizeof(alias[]));
 	bool enabled = false;
-	Ink_ModelFromAlias(alias[0], "", 0, "", 0, enabled);
+	Ink_ModelFromAlias(alias[0], sizeof(alias[]), "", 0, "", 0, enabled);
 	if (!enabled && !CheckCommandAccess(client, "ink_root", ADMFLAG_ROOT)) {
 		Ink_ClientMsg(client, "This prop has been discontinued: {green}%s{default}.", alias[0]);
 		return Plugin_Handled;

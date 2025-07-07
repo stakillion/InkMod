@@ -83,7 +83,7 @@ stock int Ink_GetEntTopParent(int ent)
           Data          
 ***********************/
 
-stock int Ink_ModelFromAlias(const char[] alias, char[] model, int modelSize, char[] anim, int animSize, int &solid = 6, bool &enabled = false)
+stock int Ink_ModelFromAlias(char[] alias, int aliasSize, char[] model, int modelSize, char[] anim, int animSize, int &solid = 6, bool &enabled = false)
 {
 	// load props file
 	char propPath[PLATFORM_MAX_PATH];
@@ -104,6 +104,7 @@ stock int Ink_ModelFromAlias(const char[] alias, char[] model, int modelSize, ch
 
 		int propType = -1;
 
+		strcopy(alias, aliasSize, keyName);
 		propKv.GetString("model", model, modelSize);
 		enabled = view_as<bool>(propKv.GetNum("enabled"));
 

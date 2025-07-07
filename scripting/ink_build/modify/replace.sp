@@ -43,10 +43,10 @@ public Action Command_ReplaceEnt(int client, int args)
 
 	// get prop data
 	char model[PLATFORM_MAX_PATH], animation[32];
+	int type, solid = 6;
 	bool enabled;
-	int type, solid;
 
-	if ((type = Ink_ModelFromAlias(alias, model, sizeof(model), animation, sizeof(animation), solid, enabled)) == -1) {
+	if ((type = Ink_ModelFromAlias(alias, sizeof(alias), model, sizeof(model), animation, sizeof(animation), solid, enabled)) == -1) {
 		Ink_ClientMsg(client, "Prop not found: {green}%s{default}.", alias);
 		return Plugin_Handled;
 	}

@@ -12,6 +12,8 @@
 #pragma semicolon 1
 #pragma newdecls required
 
+#include <ink_stocks>
+
 
 public Plugin myinfo =
 {
@@ -175,7 +177,15 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 	ReplaceString(chatCmdArg[0], sizeof(chatCmdArg[]), chatCmdPrefix, "n_");
 
 	if (GetCommandFlags(chatCmdArg[0]) == INVALID_FCVAR_FLAGS) {
-		return Plugin_Continue;
+
+		ReplaceString(chatCmdArg[0], sizeof(chatCmdArg[]), "n_", "");
+		// attempt prop lookup
+		if (Ink_ModelFromAlias(chatCmdArg[0], sizeof(chatCmdArg[]), "", 0, "", 0) != -1) {
+			strcopy(chatCmdArg[1], sizeof(chatCmdArg[]), chatCmdArg[0]);
+			strcopy(chatCmdArg[0], sizeof(chatCmdArg[]), "n_prop");
+		} else {
+			return Plugin_Continue;
+		}
 	}
 
 	FakeClientCommandEx(client, "%s %s", chatCmdArg[0], chatCmdArg[1]);
