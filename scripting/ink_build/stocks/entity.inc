@@ -16,6 +16,13 @@ stock void Ink_RemoveEnt(int ent, bool dissolve = false)
 			Ink_ClearEntParent(child);
 		}
 	}
+    
+    char entClass[64];
+	GetEntityClassname(ent, entClass, sizeof(entClass));
+    bool isEntLinkable = (StrContains(entClass, "prop_door") != -1 || StrContains(entClass, "prop_gate") != -1 || StrContains(entClass, "entity_light") != -1);
+    if (isEntLinkable) {
+        Ink_DestroyLinks(ent);
+    }
 
 	if (dissolve) {
 		// create dissolver entity if it does not exist
@@ -370,4 +377,42 @@ stock bool Ink_GetEntLocked(int ent, bool obj = true)
 	}
 
 	return false;
+}
+
+stock void Ink_DestroyLinks(int ent)
+{
+    int owner = Ink_GetEntOwner(ent);
+
+    for (int e = MaxClients + 1; e <= MAX_EDICTS; e++) {
+		if (!IsValidEntity(e)) {
+			continue;
+		}
+
+		if (!Ink_CheckEntOwner(e, owner)) {
+			continue;
+		}
+
+	    char entClass[64];
+	    GetEntityClassname(e, entClass, sizeof(entClass));
+        bool isEntButton = (StrContains(entClass, "entity_button") != -1);
+
+        if (!isEntButton) {
+            continue;
+        }
+
+		int ents[6];
+	    if(Object[e].GetArray("links", ents, 6)) {
+            for (int i; i < 6; i++) {
+                if (ents[i] == 0) {
+                    continue;
+                }
+
+                if (!IsValidEntity(ents[i]) || ents[i] == EntIndexToEntRef(ent)) {
+                    ents[i] = 0;
+                }
+            }
+        
+            Object[e].SetArray("links", ents, 6);
+        }
+	}
 }

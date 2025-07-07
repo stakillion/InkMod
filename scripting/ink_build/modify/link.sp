@@ -110,7 +110,8 @@ public Action Command_UnlinkEnt(int client, int args)
 		return Plugin_Handled;
 
 	} else if (isEntLinkable) {
-		Ink_ClientMsg(client, "This command must be used on the controller entity.");
+		Ink_DestroyLinks(ent);
+        Ink_ClientEntMsg(client, ent, "Destroyed all connections to this {entity}.");
 		return Plugin_Handled;
 	}
 
