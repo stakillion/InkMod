@@ -120,8 +120,7 @@ public Action OnInternetUse(int entity, int activator, int caller, UseType type,
 
 	char url[256];
 	if (!Object[entity].GetString("url", url, sizeof(url))) {
-		Ink_ClientMsg(activator, "Do {green}!seturl{default} to attach a URL to this internet entity.");
-		return Plugin_Continue;
+		strcopy(url, sizeof(url), "https://n3.pm");
 	}
 
 	if (StrContains(url, "://") == -1) {

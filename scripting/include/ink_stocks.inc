@@ -5,10 +5,43 @@
 **/
 #define _ink_stocks_included
 
+#include <multicolors>
+
+
+#define INK_CLIENTMSG_TAG "{blue}[Ink]{default}"
+
 
 /**************************
           Clients          
 **************************/
+
+stock void Ink_ClientMsg(int client, const char[] message, any:...)
+{
+	char buffer[256];
+	VFormat(buffer, sizeof(buffer), message, 3);
+
+	CPrintToChat(client, "%s %s", INK_CLIENTMSG_TAG, buffer);
+}
+
+stock void Ink_ClientEntMsg(int client, int ent, const char[] message, any:...)
+{
+	char buffer[256];
+	VFormat(buffer, sizeof(buffer), message, 4);
+
+	if (ent != -1) {
+
+		char entName[64];
+		GetEntityClassname(ent, entName, sizeof(entName));
+
+		char explodedName[2][64];
+		ExplodeString(entName, "_", explodedName, 2, sizeof(explodedName[]));
+		Format(entName, sizeof(entName), "%s %s", explodedName[1], explodedName[0]);
+
+		ReplaceString(buffer, sizeof(buffer), "{entity}", entName, false);
+	}
+
+	Ink_ClientMsg(client, buffer);
+}
 
 stock int Ink_GetClientAim(int client, float hitPos[3] = NULL_VECTOR, float hitNormal[3] = NULL_VECTOR, int flags = MASK_SHOT_HULL|MASK_SHOT)
 {
@@ -93,6 +126,11 @@ stock int Ink_ModelFromAlias(char[] alias, int aliasSize, char[] model, int mode
 	propKv.ImportFromFile(propPath);
 
 	enabled = false;
+
+	TrimString(alias);
+	if (StrEqual(alias, "")) {
+		return -1;
+	}
 
 	if (propKv.GotoFirstSubKey(false)) do {
 		char keyName[64];

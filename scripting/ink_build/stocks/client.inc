@@ -7,37 +7,6 @@
 #define _ink_build_stocks_client_
 
 
-#define INK_CLIENTMSG_TAG "{blue}[Ink]{default}"
-
-
-stock void Ink_ClientMsg(int client, const char[] message, any:...)
-{
-	char buffer[256];
-	VFormat(buffer, sizeof(buffer), message, 3);
-
-	CPrintToChat(client, "%s %s", INK_CLIENTMSG_TAG, buffer);
-}
-
-stock void Ink_ClientEntMsg(int client, int ent, const char[] message, any:...)
-{
-	char buffer[256];
-	VFormat(buffer, sizeof(buffer), message, 4);
-
-	if (ent != -1) {
-
-		char entName[64];
-		GetEntityClassname(ent, entName, sizeof(entName));
-
-		char explodedName[2][64];
-		ExplodeString(entName, "_", explodedName, 2, sizeof(explodedName[]));
-		Format(entName, sizeof(entName), "%s %s", explodedName[1], explodedName[0]);
-
-		ReplaceString(buffer, sizeof(buffer), "{entity}", entName, false);
-	}
-
-	Ink_ClientMsg(client, buffer);
-}
-
 stock int Ink_GetClientById(int id)
 {
 	for (int client = 1; client <= MaxClients; client++) {

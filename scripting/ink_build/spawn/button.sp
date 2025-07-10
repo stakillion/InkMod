@@ -83,18 +83,20 @@ public Action OnButtonUse(int entity, int activator, int caller, UseType type, f
 	UseTime[entity] = time;
 
 	int ents[6];
-	Object[entity].GetArray("links", ents, 6);
+	if (Object[entity].GetArray("links", ents, 6)) {
+		for (int i; i < 6; i++) {
+			if (ents[i] == 0) {
+				continue;
+			}
 
-	for (int i; i < 6; i++) {
-		if (ents[i] == 0) {
-			continue;
+			if (!IsValidEntity(ents[i])) {
+				continue;
+			}
+
+			Ink_ActivateEnt(ents[i], activator);
 		}
-
-		if (!IsValidEntity(ents[i])) {
-			continue;
-		}
-
-		Ink_ActivateEnt(ents[i], activator);
+	} else {
+		Ink_ClientMsg(activator, "This button has no connections. Use the {green}!link{default} command to connect it to another entity.");
 	}
 
 	return Plugin_Handled;

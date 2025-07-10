@@ -9,7 +9,6 @@
 #include <sdkhooks>
 #include <smlib>
 #include <dhooks>
-#include <multicolors>
 #include <loadsoundscript>
 
 #pragma semicolon 1
@@ -373,7 +372,7 @@ void Native_Ink_ActivateEnt(Handle plugin, int params)
 		OnInternetUse(ent, client, client, Use_On, 1.0);
 	} else if (StrContains(entClass, "prop_door", false) != -1) {
 		OnDoorUse(ent, client, client, Use_On, 1.0);
-	}  else if (StrContains(entClass, "prop_gate", false) != -1) {
+	} else if (StrContains(entClass, "prop_gate", false) != -1) {
 		OnGateUse(ent, client, client, Use_On, 1.0);
 	}
 
