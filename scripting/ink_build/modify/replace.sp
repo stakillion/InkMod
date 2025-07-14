@@ -54,6 +54,10 @@ public Action Command_ReplaceEnt(int client, int args)
 		Ink_ClientMsg(client, "This prop has been discontinued: {green}%s{default}.", alias);
 		return Plugin_Handled;
 	}
+	if (type != -1) {
+		Ink_ClientMsg(client, "This model can't be used with this entity.");
+		return Plugin_Handled;
+	}
 
 	PrecacheModel(model, true);
 	SetEntityModel(ent, model);

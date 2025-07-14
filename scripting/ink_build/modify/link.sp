@@ -82,6 +82,7 @@ public Action Command_LinkEnt(int client, int args)
 	linkEnt[client] = INVALID_ENT_REFERENCE;
 
 	Ink_ClientEntMsg(client, firstEnt, "Linked {entity} to target.");
+	Ink_LinkEffect(ent, firstEnt);
 	return Plugin_Handled;
 }
 

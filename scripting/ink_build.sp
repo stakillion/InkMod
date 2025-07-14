@@ -191,78 +191,78 @@ void InitializeClient(int client)
 }
 
 // commands
-void RegisterCommands()
+void RegisterCommands(int adminflags = 0)
 {
 	// spawnables
-	RegAdminCmd("n_prop", Command_SpawnProp, 0, "Spawns a prop with the specified model.");
-	RegAdminCmd("n_spawn", Command_SpawnProp, 0, "Spawns a prop with the specified model.");
-	RegAdminCmd("n_door", Command_SpawnDoor, 0, "Spawns a usable rotating door.");
-	RegAdminCmd("n_gate", Command_SpawnGate, 0, "Spawns a usable animated door prop.");
-	RegAdminCmd("n_ladder", Command_SpawnLadder, 0, "Spawns a usable ladder.");
-	RegAdminCmd("n_light", Command_SpawnLight, 0, "Spawns a light.");
-	RegAdminCmd("n_vehicle", Command_SpawnVehicle, 0, "Spawns a vehicle.");
-	RegAdminCmd("n_internet", Command_SpawnInternet, 0, "Spawns a usable internet portal.");
-	RegAdminCmd("n_button", Command_SpawnButton, 0, "Spawns a button used to control other entities.");
+	RegAdminCmd("n_prop", Command_SpawnProp, adminflags, "Spawns a prop with the specified model.");
+	RegAdminCmd("n_spawn", Command_SpawnProp, adminflags, "Spawns a prop with the specified model.");
+	RegAdminCmd("n_door", Command_SpawnDoor, adminflags, "Spawns a usable rotating door.");
+	RegAdminCmd("n_gate", Command_SpawnGate, adminflags, "Spawns a usable animated door prop.");
+	RegAdminCmd("n_ladder", Command_SpawnLadder, adminflags, "Spawns a usable ladder.");
+	RegAdminCmd("n_light", Command_SpawnLight, adminflags, "Spawns a light.");
+	RegAdminCmd("n_vehicle", Command_SpawnVehicle, adminflags, "Spawns a vehicle.");
+	RegAdminCmd("n_internet", Command_SpawnInternet, adminflags, "Spawns a usable internet portal.");
+	RegAdminCmd("n_button", Command_SpawnButton, adminflags, "Spawns a button used to control other entities.");
 
 	// entity modify commands
-	RegAdminCmd("n_color", Command_ColorEnt, 0, "Changes the color of an entity.");
-	RegAdminCmd("n_paint", Command_ColorEnt, 0, "Changes the color of an entity.");
-	RegAdminCmd("n_alpha", Command_AlphaEnt, 0, "Changes the alpha transparency of an entity.");
-	RegAdminCmd("n_amt", Command_AlphaEnt, 0, "Changes the alpha transparency of an entity.");
+	RegAdminCmd("n_color", Command_ColorEnt, adminflags, "Changes the color of an entity.");
+	RegAdminCmd("n_paint", Command_ColorEnt, adminflags, "Changes the color of an entity.");
+	RegAdminCmd("n_alpha", Command_AlphaEnt, adminflags, "Changes the alpha transparency of an entity.");
+	RegAdminCmd("n_amt", Command_AlphaEnt, adminflags, "Changes the alpha transparency of an entity.");
 
-	RegAdminCmd("n_freeze",   Command_FreezeEnt, 0, "Disables physics on the targeted entity.");
-	RegAdminCmd("n_unfreeze", Command_UnfreezeEnt, 0, "Enables physics on the targeted entity.");
+	RegAdminCmd("n_freeze",   Command_FreezeEnt, adminflags, "Disables physics on the targeted entity.");
+	RegAdminCmd("n_unfreeze", Command_UnfreezeEnt, adminflags, "Enables physics on the targeted entity.");
 
-	RegAdminCmd("n_move", Command_MoveEnt, 0, "Moves an entity relative to the player's position.");
-	RegAdminCmd("+move",  Command_MoveEnt, 0, "Moves an entity relative to the player's position.");
-	RegAdminCmd("-move",  Command_MoveEnt, 0, "Moves an entity relative to the player's position.");
+	RegAdminCmd("n_move", Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
+	RegAdminCmd("+move",  Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
+	RegAdminCmd("-move",  Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
 
-	RegAdminCmd("n_copy", Command_CopyEnt, 0, "Copies an entity and moves the copy relative to the player's position.");
-	RegAdminCmd("+copy",  Command_CopyEnt, 0, "Copies an entity and moves the copy relative to the player's position.");
-	RegAdminCmd("-copy",  Command_CopyEnt, 0, "Copies an entity and moves the copy relative to the player's position.");
+	RegAdminCmd("n_copy", Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
+	RegAdminCmd("+copy",  Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
+	RegAdminCmd("-copy",  Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
 
-	RegAdminCmd("n_lock", Command_LockEnt, 0, "Locks an entity, making it unusable.");
-	RegAdminCmd("n_unlock",  Command_UnlockEnt, 0, "Unlocks an entity, making it usable.");
+	RegAdminCmd("n_lock", Command_LockEnt, adminflags, "Locks an entity, making it unusable.");
+	RegAdminCmd("n_unlock",  Command_UnlockEnt, adminflags, "Unlocks an entity, making it usable.");
 
-	RegAdminCmd("n_smove",  Command_SmoveEnt, 0, "Moves an entity by the given offset.");
-	RegAdminCmd("n_moveto", Command_MoveToEnt, 0, "Moves an entity to another entity.");
-	RegAdminCmd("n_drop",   Command_DropEnt, 0, "Drops an entity to ground level.");
+	RegAdminCmd("n_smove",  Command_SmoveEnt, adminflags, "Moves an entity by the given offset.");
+	RegAdminCmd("n_moveto", Command_MoveToEnt, adminflags, "Moves an entity to another entity.");
+	RegAdminCmd("n_drop",   Command_DropEnt, adminflags, "Drops an entity to ground level.");
 
-	RegAdminCmd("n_owner", Command_GetEntOwner, 0, "Prints the owner of the targeted entity.");
-	RegAdminCmd("n_give",  Command_GiveEnt, 0, "Offers the targeted entity to the specified player.");
-	RegAdminCmd("n_claim",  Command_ClaimEnt, 0, "Accepts an entity ownership offer.");
+	RegAdminCmd("n_owner", Command_GetEntOwner, adminflags, "Prints the owner of the targeted entity.");
+	RegAdminCmd("n_give",  Command_GiveEnt, adminflags, "Offers the targeted entity to the specified player.");
+	RegAdminCmd("n_claim",  Command_ClaimEnt, adminflags, "Accepts an entity ownership offer.");
 
-	RegAdminCmd("n_remove", Command_RemoveEnt, 0, "Removes the targeted entity.");
-	RegAdminCmd("n_del", Command_RemoveEnt, 0, "Removes the targeted entity.");
-	RegAdminCmd("n_clean", Command_CleanArea, 0, "Removes all entities within the selected area.");
+	RegAdminCmd("n_remove", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
+	RegAdminCmd("n_del", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
+	RegAdminCmd("n_clean", Command_CleanArea, adminflags, "Removes all entities within the selected area.");
 
-	RegAdminCmd("n_replace", Command_ReplaceEnt, 0, "Replaces the entity's model with the specified prop.");
+	RegAdminCmd("n_replace", Command_ReplaceEnt, adminflags, "Replaces the entity's model with the specified prop.");
 
-	RegAdminCmd("n_rotate", Command_RotateEnt, 0, "Rotates an entity on it's axis, by the specified offset.");
-	RegAdminCmd("n_stand",  Command_StandEnt, 0, "Sets an entity to it's default rotation (0 0 0).");
-	RegAdminCmd("n_straight",  Command_StandEnt, 0, "Sets an entity to it's default rotation (0 0 0).");
+	RegAdminCmd("n_rotate", Command_RotateEnt, adminflags, "Rotates an entity on it's axis, by the specified offset.");
+	RegAdminCmd("n_stand",  Command_StandEnt, adminflags, "Sets an entity to it's default rotation (0 0 0).");
+	RegAdminCmd("n_straight",  Command_StandEnt, adminflags, "Sets an entity to it's default rotation (0 0 0).");
 
-	RegAdminCmd("n_scale", Command_ScaleEnt, 0, "Changes the size of an entity.");
+	RegAdminCmd("n_scale", Command_ScaleEnt, adminflags, "Changes the size of an entity.");
 
-	RegAdminCmd("n_skin", Command_SkinEnt, 0, "Changes the skin of an entity.");
+	RegAdminCmd("n_skin", Command_SkinEnt, adminflags, "Changes the skin of an entity.");
 
-	RegAdminCmd("n_stack", Command_StackEnt, 0, "Makes a copy of an entity and moves it by the given offset.");
-	RegAdminCmd("n_stackinfo", Command_StackInfo, 0, "Prints the difference between the coordinates of two entities.");
+	RegAdminCmd("n_stack", Command_StackEnt, adminflags, "Makes a copy of an entity and moves it by the given offset.");
+	RegAdminCmd("n_stackinfo", Command_StackInfo, adminflags, "Prints the difference between the coordinates of two entities.");
 
-	RegAdminCmd("n_weld",    Command_ParentEnt, 0, "Parents an entity to another entity.");
-	RegAdminCmd("n_unweld", Command_UnparentEnt, 0, "Releases all entities from a parent.");
-	RegAdminCmd("n_release", Command_UnparentEnt, 0, "Releases all entities from a parent.");
+	RegAdminCmd("n_weld",    Command_ParentEnt, adminflags, "Parents an entity to another entity.");
+	RegAdminCmd("n_unweld", Command_UnparentEnt, adminflags, "Releases all entities from a parent.");
+	RegAdminCmd("n_release", Command_UnparentEnt, adminflags, "Releases all entities from a parent.");
 
-	RegAdminCmd("n_seturl", Command_SetURLEnt, 0, "Sets the destination url on an !internet portal.");
+	RegAdminCmd("n_seturl", Command_SetURLEnt, adminflags, "Sets the destination url on an !internet portal.");
 
-	RegAdminCmd("n_link", Command_LinkEnt, 0, "Links a button entity to other controllable entities.");
-	RegAdminCmd("n_unlink", Command_UnlinkEnt, 0, "Destroys the link between a button and other controllable entities.");
+	RegAdminCmd("n_link", Command_LinkEnt, adminflags, "Links a button entity to other controllable entities.");
+	RegAdminCmd("n_unlink", Command_UnlinkEnt, adminflags, "Destroys the link between a button and other controllable entities.");
 
 	// land commands
-	RegAdminCmd("n_land",  Command_Land, 0, "Creates a land area.");
+	RegAdminCmd("n_land",  Command_Land, adminflags, "Creates a land area.");
 
-	RegAdminCmd("n_save",  Command_Save, 0, "Saves your land-contained entities to the server.");
-	RegAdminCmd("n_load",  Command_Load, 0, "Loads a previously saved build from the server.");
+	RegAdminCmd("n_save",  Command_Save, adminflags, "Saves your land-contained entities to the server.");
+	RegAdminCmd("n_load",  Command_Load, adminflags, "Loads a previously saved build from the server.");
 }
 
 void RegisterCvars()
@@ -302,19 +302,16 @@ void LoadAssets()
 	// sounds
 	PrecacheSound("weapons/airboat/airboat_gun_lastshot1.wav", true);
 	PrecacheSound("weapons/airboat/airboat_gun_lastshot2.wav", true);
-
 	PrecacheSound("physics/concrete/concrete_impact_soft1.wav", true);
 	PrecacheSound("physics/concrete/concrete_impact_soft2.wav", true);
 	PrecacheSound("physics/concrete/concrete_impact_soft3.wav", true);
-
 	PrecacheSound("ambient/levels/citadel/weapon_disintegrate1.wav", true);
 	PrecacheSound("ambient/levels/citadel/weapon_disintegrate2.wav", true);
 	PrecacheSound("ambient/levels/citadel/weapon_disintegrate3.wav", true);
 	PrecacheSound("ambient/levels/citadel/weapon_disintegrate4.wav", true);
-
 	PrecacheSound("buttons/lever7.wav", true);
-
 	PrecacheSound("weapons/physgun_off.wav", true);
+	PrecacheSound("buttons/button19.wav", true);
 
 	// vehicles
 	LoadSoundScript("scripts/game_sounds_vehicles.txt");

@@ -108,3 +108,14 @@ stock void Ink_WeldEffect(int ent1, int ent2)
 	// sound effect
 	EmitSoundToAll("weapons/physgun_off.wav", ent2);
 }
+
+stock void Ink_LinkEffect(int ent1, int ent2)
+{
+	// beam effect
+	int beamColor[4] = {255, 255, 255, 200};
+	TE_SetupBeamEnts(ent1, ent2, CrystalBeam, HaloSprite, 0, 15, 0.25, 1.0, 1.0, 1, 0.0, beamColor, 10);
+	TE_SendToAll(0.0);
+
+	// sound effect
+	EmitSoundToAll("buttons/button19.wav", ent2);
+}

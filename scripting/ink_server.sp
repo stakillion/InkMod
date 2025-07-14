@@ -188,7 +188,9 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 		}
 	}
 
+	ReplySource replySource = SetCmdReplySource(SM_REPLY_TO_CHAT);
 	FakeClientCommandEx(client, "%s %s", chatCmdArg[0], chatCmdArg[1]);
+	SetCmdReplySource(replySource);
 
 	if (chatCmdPrefix[0] == '/') {
 		return Plugin_Handled;
