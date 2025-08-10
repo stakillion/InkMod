@@ -5,12 +5,18 @@ forward void OnObjectsReady();
 forward void OnObjectCreated(int index, StringMap obj);
 forward void OnObjectDestroyed(int index);
 
-native StringMap Ink_GetObject(int index, bool create = false);
+native StringMap Ink_CreateObject(int index, bool overwrite = false);
+native StringMap Ink_GetObjectByKey(int key);
+native StringMap Ink_GetObjectByIndex(int index);
+native IntMapSnapshot Ink_GetObjectSnapshot(int index);
 
 #if !defined REQUIRE_PLUGIN
 public void __pl_ink_objects_SetNTVOptional()
 {
-	MarkNativeAsOptional("Ink_GetObject");
+	MarkNativeAsOptional("Ink_CreateObject");
+	MarkNativeAsOptional("Ink_GetObjectByKey");
+	MarkNativeAsOptional("Ink_GetObjectByIndex");
+	MarkNativeAsOptional("Ink_GetObjectSnapshot");
 }
 #endif
 

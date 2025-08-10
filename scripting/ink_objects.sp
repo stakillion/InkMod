@@ -26,13 +26,15 @@ GlobalForward ObjectCreated;
 GlobalForward ObjectDestroyed;
 
 ObjectMap Objects = null;
-int ClientId[MAXPLAYERS + 1];
 
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
 	RegPluginLibrary("InkMod Objects");
-	CreateNative("Ink_GetObject", Native_Ink_GetObject);
+	CreateNative("Ink_CreateObject", Native_CreateObject);
+	CreateNative("Ink_GetObjectByKey", Native_GetObjectByKey);
+	CreateNative("Ink_GetObjectByIndex", Native_GetObjectByIndex);
+	CreateNative("Ink_GetObjectSnapshot", Native_GetObjectSnapshot);
 
 	return APLRes_Success;
 }
@@ -63,15 +65,24 @@ public void OnEntityDestroyed(int ent)
 	}
 }
 
-public void OnClientPostAdminCheck(int client)
+int Native_CreateObject(Handle plugin, int params)
 {
-	ClientId[client] = GetSteamAccountID(client);
-	Objects.GetObject(client, true);
+	return view_as<int>(Objects.CreateObject(GetNativeCell(1), GetNativeCell(2)));
 }
 
-int Native_Ink_GetObject(Handle plugin, int params)
+int Native_GetObjectByKey(Handle plugin, int params)
 {
-	return view_as<int>(Objects.GetObject(GetNativeCell(1), GetNativeCell(2)));
+	return view_as<int>(Objects.GetObjectByKey(GetNativeCell(1)));
+}
+
+int Native_GetObjectByIndex(Handle plugin, int params)
+{
+	return view_as<int>(Objects.GetObjectByIndex(GetNativeCell(1)));
+}
+
+int Native_GetObjectSnapshot(Handle plugin, int params)
+{
+	return view_as<int>(Objects.Snapshot());
 }
 
 methodmap ObjectMap < IntMap
@@ -85,7 +96,7 @@ methodmap ObjectMap < IntMap
 	{
 		if (index <= MaxClients && index > 0) {
 			if (IsClientAuthorized(index)) {
-				return ClientId[index];
+				return GetSteamAccountID(index);
 			} else {
 				return -1;
 			}
@@ -102,7 +113,27 @@ methodmap ObjectMap < IntMap
 		return -1;
 	}
 
-	public StringMap GetObject(int index, bool create = false)
+	public StringMap GetObjectByKey(int key)
+	{
+		StringMap obj;
+		if (!this.GetValue(key, obj)) {
+			return null;
+		}
+
+		return obj;
+	}
+
+	public StringMap GetObjectByIndex(int index)
+	{
+		int key = this.IndexToKey(index);
+		if (key == -1) {
+			return null;
+		}
+
+		return this.GetObjectByKey(key);
+	}
+
+	public StringMap CreateObject(int index, bool overwrite = false)
 	{
 		int key = this.IndexToKey(index);
 		if (key == -1) {
@@ -110,24 +141,24 @@ methodmap ObjectMap < IntMap
 		}
 
 		StringMap obj;
-		if (!this.GetValue(key, obj)) {
-			if (!create) {
-				return null;
+		if (this.GetValue(key, obj)) {
+			if (!overwrite) {
+				return obj;
 			}
 
-			obj = new StringMap();
-			if (!this.SetValue(key, obj)) {
-				delete obj;
-				return null;
-			}
-
-			Call_StartForward(ObjectCreated);
-			Call_PushCell(index);
-			Call_PushCell(obj);
-			Call_Finish();
+			delete obj;
 		}
 
-		return obj;
+		obj = new StringMap();
+		if (!this.SetValue(key, obj)) {
+			delete obj;
+			return null;
+		}
+
+		Call_StartForward(ObjectCreated);
+		Call_PushCell(index);
+		Call_PushCell(obj);
+		Call_Finish();
 	}
 
 	public void CloseObject(int index)

@@ -180,7 +180,7 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 
 		ReplaceString(chatCmdArg[0], sizeof(chatCmdArg[]), "n_", "");
 		// attempt prop lookup
-		if (Ink_ModelFromAlias(chatCmdArg[0], sizeof(chatCmdArg[]), "", 0, "", 0) != -1) {
+		if (Ink_ModelFromAlias(chatCmdArg[0], "", 0, "", 0) != -1) {
 			strcopy(chatCmdArg[1], sizeof(chatCmdArg[]), chatCmdArg[0]);
 			strcopy(chatCmdArg[0], sizeof(chatCmdArg[]), "n_prop");
 		} else {

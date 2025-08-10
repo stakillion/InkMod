@@ -243,7 +243,7 @@ public Action Command_GetEntityValue(int client, int args)
 		PrintToChat(client, "Entity %i does not exist", ent);
 	}
 
-	StringMap entdata = Ink_GetObject(ent);
+	StringMap entdata = Ink_GetObjectByIndex(ent);
 	int value;
 	if (entdata != null && entdata.GetValue(cmdArg[1], value)) {
 		PrintToChat(client, "Key %s on entity %i is %i", cmdArg[1], ent, value);
@@ -275,7 +275,7 @@ public Action Command_SetEntityValue(int client, int args)
 		PrintToChat(client, "Entity %i does not exist", ent);
 	}
 
-	StringMap entdata = Ink_GetObject(ent, true);
+	StringMap entdata = Ink_GetObjectByIndex(ent);
 	int value = StringToInt(cmdArg[2]);
 	if (entdata != null && entdata.SetValue(cmdArg[1], value)) {
 		PrintToChat(client, "Set key %s on entity %i to %i", cmdArg[1], ent, value);
@@ -306,7 +306,7 @@ public Action Command_GetEntityString(int client, int args)
 		PrintToChat(client, "Entity %i does not exist", ent);
 	}
 
-	StringMap entdata = Ink_GetObject(ent);
+	StringMap entdata = Ink_GetObjectByIndex(ent);
 	char value[128];
 	if (entdata != null && entdata.GetString(cmdArg[1], value, sizeof(value))) {
 		PrintToChat(client, "Key %s on entity %i is %s", cmdArg[1], ent, value);
@@ -338,7 +338,7 @@ public Action Command_SetEntityString(int client, int args)
 		PrintToChat(client, "Entity %i does not exist", ent);
 	}
 
-	StringMap entdata = Ink_GetObject(ent, true);
+	StringMap entdata = Ink_GetObjectByIndex(ent);
 	if (entdata != null && entdata.SetString(cmdArg[1], cmdArg[2])) {
 		PrintToChat(client, "Set key %s on entity %i to %s", cmdArg[1], ent, cmdArg[2]);
 	}

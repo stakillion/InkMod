@@ -44,20 +44,20 @@ ConVar ink_maxplayerlights;
 ConVar ink_maxplayervehicles;
 ConVar ink_maxlandsize;
 
-// entity data
-StringMap Object[MAX_EDICTS + 1] = {null, ...};
-int InkDissolver = INVALID_ENT_REFERENCE;
-float UseTime[MAX_EDICTS + 1];
-
-// client data
-int ClientId[MAXPLAYERS + 1];
-float ClientCmdTime[MAXPLAYERS + 1];
-
 // forwards
 GlobalForward LandClientEntered;
 GlobalForward LandClientExited;
 GlobalForward LandEntityEntered;
 GlobalForward LandEntityExited;
+
+// entity data
+StringMap Object[MAX_EDICTS + 1] = {null, ...};
+float UseTime[MAX_EDICTS + 1];
+int InkDissolver = INVALID_ENT_REFERENCE;
+
+// client data
+int ClientId[MAXPLAYERS + 1];
+float ClientCmdTime[MAXPLAYERS + 1];
 
 // sprites
 int PhysBeam;
@@ -130,11 +130,12 @@ public void OnMapStart()
 {
 	LoadAssets();
 	CreateTimer(0.1, DrawLand, INVALID_HANDLE, TIMER_REPEAT);
+	CreateTimer(0.1, DrawHud, INVALID_HANDLE, TIMER_REPEAT);
 
 	if (LateLoad) {
 		for (int ent = MaxClients + 1; ent <= MAX_EDICTS; ent++) {
 			if (IsValidEntity(ent)) {
-				Object[ent] = Ink_GetObject(ent, false);
+				Object[ent] = Ink_GetObjectByIndex(ent);
 				SetUpEntityHook(ent);
 			}
 		}
@@ -187,7 +188,7 @@ void InitializeClient(int client)
 {
 	ClientId[client] = GetSteamAccountID(client);
 	ClientCmdTime[client] = 0.0;
-	Object[client] = Ink_GetObject(client, true);
+	Object[client] = Ink_CreateObject(client);
 }
 
 // commands
@@ -210,27 +211,27 @@ void RegisterCommands(int adminflags = 0)
 	RegAdminCmd("n_alpha", Command_AlphaEnt, adminflags, "Changes the alpha transparency of an entity.");
 	RegAdminCmd("n_amt", Command_AlphaEnt, adminflags, "Changes the alpha transparency of an entity.");
 
-	RegAdminCmd("n_freeze",   Command_FreezeEnt, adminflags, "Disables physics on the targeted entity.");
+	RegAdminCmd("n_freeze", Command_FreezeEnt, adminflags, "Disables physics on the targeted entity.");
 	RegAdminCmd("n_unfreeze", Command_UnfreezeEnt, adminflags, "Enables physics on the targeted entity.");
 
 	RegAdminCmd("n_move", Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
-	RegAdminCmd("+move",  Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
-	RegAdminCmd("-move",  Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
+	RegAdminCmd("+move", Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
+	RegAdminCmd("-move", Command_MoveEnt, adminflags, "Moves an entity relative to the player's position.");
 
 	RegAdminCmd("n_copy", Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
-	RegAdminCmd("+copy",  Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
-	RegAdminCmd("-copy",  Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
+	RegAdminCmd("+copy", Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
+	RegAdminCmd("-copy", Command_CopyEnt, adminflags, "Copies an entity and moves the copy relative to the player's position.");
 
 	RegAdminCmd("n_lock", Command_LockEnt, adminflags, "Locks an entity, making it unusable.");
-	RegAdminCmd("n_unlock",  Command_UnlockEnt, adminflags, "Unlocks an entity, making it usable.");
+	RegAdminCmd("n_unlock", Command_UnlockEnt, adminflags, "Unlocks an entity, making it usable.");
 
-	RegAdminCmd("n_smove",  Command_SmoveEnt, adminflags, "Moves an entity by the given offset.");
+	RegAdminCmd("n_smove", Command_SmoveEnt, adminflags, "Moves an entity by the given offset.");
 	RegAdminCmd("n_moveto", Command_MoveToEnt, adminflags, "Moves an entity to another entity.");
-	RegAdminCmd("n_drop",   Command_DropEnt, adminflags, "Drops an entity to ground level.");
+	RegAdminCmd("n_drop", Command_DropEnt, adminflags, "Drops an entity to ground level.");
 
 	RegAdminCmd("n_owner", Command_GetEntOwner, adminflags, "Prints the owner of the targeted entity.");
-	RegAdminCmd("n_give",  Command_GiveEnt, adminflags, "Offers the targeted entity to the specified player.");
-	RegAdminCmd("n_claim",  Command_ClaimEnt, adminflags, "Accepts an entity ownership offer.");
+	RegAdminCmd("n_give", Command_GiveEnt, adminflags, "Offers the targeted entity to the specified player.");
+	RegAdminCmd("n_claim", Command_ClaimEnt, adminflags, "Accepts an entity ownership offer.");
 
 	RegAdminCmd("n_remove", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
 	RegAdminCmd("n_del", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
@@ -238,9 +239,9 @@ void RegisterCommands(int adminflags = 0)
 
 	RegAdminCmd("n_replace", Command_ReplaceEnt, adminflags, "Replaces the entity's model with the specified prop.");
 
-	RegAdminCmd("n_rotate", Command_RotateEnt, adminflags, "Rotates an entity on it's axis, by the specified offset.");
-	RegAdminCmd("n_stand",  Command_StandEnt, adminflags, "Sets an entity to it's default rotation (0 0 0).");
-	RegAdminCmd("n_straight",  Command_StandEnt, adminflags, "Sets an entity to it's default rotation (0 0 0).");
+	RegAdminCmd("n_rotate", Command_RotateEnt, adminflags, "Rotates an entity on its axis, by the specified offset.");
+	RegAdminCmd("n_stand", Command_StandEnt, adminflags, "Sets an entity to its default rotation (0 0 0).");
+	RegAdminCmd("n_straight", Command_StandEnt, adminflags, "Sets an entity to its default rotation (0 0 0).");
 
 	RegAdminCmd("n_scale", Command_ScaleEnt, adminflags, "Changes the size of an entity.");
 
@@ -249,7 +250,7 @@ void RegisterCommands(int adminflags = 0)
 	RegAdminCmd("n_stack", Command_StackEnt, adminflags, "Makes a copy of an entity and moves it by the given offset.");
 	RegAdminCmd("n_stackinfo", Command_StackInfo, adminflags, "Prints the difference between the coordinates of two entities.");
 
-	RegAdminCmd("n_weld",    Command_ParentEnt, adminflags, "Parents an entity to another entity.");
+	RegAdminCmd("n_weld", Command_ParentEnt, adminflags, "Parents an entity to another entity.");
 	RegAdminCmd("n_unweld", Command_UnparentEnt, adminflags, "Releases all entities from a parent.");
 	RegAdminCmd("n_release", Command_UnparentEnt, adminflags, "Releases all entities from a parent.");
 
@@ -259,10 +260,14 @@ void RegisterCommands(int adminflags = 0)
 	RegAdminCmd("n_unlink", Command_UnlinkEnt, adminflags, "Destroys the link between a button and other controllable entities.");
 
 	// land commands
-	RegAdminCmd("n_land",  Command_Land, adminflags, "Creates a land area.");
+	RegAdminCmd("n_land", Command_Land, adminflags, "Creates a land area.");
 
-	RegAdminCmd("n_save",  Command_Save, adminflags, "Saves your land-contained entities to the server.");
-	RegAdminCmd("n_load",  Command_Load, adminflags, "Loads a previously saved build from the server.");
+	RegAdminCmd("n_save", Command_Save, adminflags, "Saves your land-contained entities to the server.");
+	RegAdminCmd("n_load", Command_Load, adminflags, "Loads a previously saved build from the server.");
+
+	// misc
+	RegAdminCmd("n_props", Command_PropList, adminflags, "Prints a list of the spawnable props to the console.");
+	RegAdminCmd("n_proplist", Command_PropList, adminflags, "Prints a list of the spawnable props to the console.");
 }
 
 void RegisterCvars()

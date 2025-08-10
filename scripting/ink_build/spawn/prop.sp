@@ -32,7 +32,7 @@ stock int Ink_CreatePhysicsProp(const char[] modelPath)
 	Entity_DisableMotion(ent);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }
@@ -60,7 +60,7 @@ stock int Ink_CreateDynamicProp(const char[] modelPath, const char[] defaultAnim
 	ActivateEntity(ent);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }
@@ -105,7 +105,7 @@ stock int Ink_CreateCycler(const char[] modelPath)
 	//SetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }
@@ -131,7 +131,7 @@ public Action Command_SpawnProp(int client, int args)
 	int type, solid = 6;
 	bool enabled;
 
-	if ((type = Ink_ModelFromAlias(alias, sizeof(alias), model, sizeof(model), animation, sizeof(animation), solid, enabled)) == -1) {
+	if ((type = Ink_ModelFromAlias(alias, model, sizeof(model), animation, sizeof(animation), solid, enabled)) == -1) {
 		Ink_ClientMsg(client, "Prop not found: {green}%s{default}.", alias);
 		return Plugin_Handled;
 	}
@@ -178,6 +178,32 @@ public Action Command_SpawnProp(int client, int args)
 	// give to player
 	Ink_SetEntOwner(ent, client);
 
+	return Plugin_Handled;
+}
+
+public Action Command_PropList(int client, int args)
+{
+	char propPath[PLATFORM_MAX_PATH];
+	BuildPath(Path_SM, propPath, sizeof(propPath), "data/inkmod/props.txt");
+
+	KeyValues propKv = new KeyValues("Props");
+	propKv.ImportFromFile(propPath);
+
+	Ink_ClientMsg(client, "Listing all spawnable props in console.")
+	PrintToConsole(client, "[Ink] Props list:");
+
+	if (propKv.GotoFirstSubKey(false)) do {
+		char keyName[64];
+		propKv.GetSectionName(keyName, sizeof(keyName));
+		bool enabled = view_as<bool>(propKv.GetNum("enabled"));
+
+		if (enabled) {
+			PrintToConsole(client, "- %s", keyName);
+		}
+
+	} while (propKv.GotoNextKey())
+
+	delete propKv;
 	return Plugin_Handled;
 }
 

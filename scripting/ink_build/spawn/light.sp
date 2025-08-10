@@ -50,7 +50,7 @@ stock int Ink_CreateLight(const char[] modelPath, int distance = 500)
 	Entity_AddSpawnFlags(ent, 256);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 	Ink_SetEntColor(ent, {255, 255, 255, 64});
 
 	return ent;

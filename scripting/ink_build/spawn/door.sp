@@ -36,7 +36,7 @@ stock int Ink_CreateDoor(const char[] modelPath, int hardware = 1)
 	ActivateEntity(ent);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }

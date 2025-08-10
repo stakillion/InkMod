@@ -36,7 +36,7 @@ stock int Ink_CreateGate(const char[] modelPath, const char[] defaultAnim = "idl
 	Entity_DisableMotion(ent);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }

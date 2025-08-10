@@ -42,7 +42,7 @@ stock int Ink_CreateLadder(const char[] modelPath)
 	TeleportEntity(ladder, ZERO_VECTOR, ZERO_VECTOR, ZERO_VECTOR);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }

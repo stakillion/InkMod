@@ -35,7 +35,7 @@ stock int Ink_CreateInternet(const char[] modelPath)
 	Entity_AddSpawnFlags(ent, 256);
 
 	// create object data
-	Ink_GetObject(ent, true);
+	Ink_CreateObject(ent);
 
 	return ent;
 }
