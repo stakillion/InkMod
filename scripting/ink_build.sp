@@ -106,6 +106,9 @@ int CrystalBeam;
 #include "ink_build/land.sp"
 #include "ink_build/save.sp"
 
+// hud
+#include "ink_build/hud.sp"
+
 
 /*********************************
           Initialization          

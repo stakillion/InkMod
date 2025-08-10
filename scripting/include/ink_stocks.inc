@@ -262,9 +262,6 @@ stock bool Filter_Dissolving(int ent, int contentsMask, any data)
 	if (ent == data) {
 		return false;
 	}
-	if (ent <= MaxClients) {
-		return false;
-	}
 
 	char entName[16];
 	GetEntPropString(ent, Prop_Data, "m_iName", entName, sizeof(entName));
