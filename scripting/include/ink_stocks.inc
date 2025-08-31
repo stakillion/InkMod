@@ -82,16 +82,17 @@ stock void Ink_CalcEntSpawnPos(int ent, int spawner, float entPos[3], float entA
 	GetClientEyeAngles(spawner, spawnerAng);
 
 	// grab model dimensions
-	float entMins[3];
+	float entMins[3], entMaxs[3];
 	GetEntPropVector(ent, Prop_Send, "m_vecMinsPreScaled", entMins);
+	GetEntPropVector(ent, Prop_Send, "m_vecMaxsPreScaled", entMaxs);
 
 	// do quick maths
-	entPos[0] = spawnerPos[0] + Cosine(DegToRad(spawnerAng[1])) * (64 - entMins[0]);
-	entPos[1] = spawnerPos[1] + Sine(DegToRad(spawnerAng[1])) * (64 - entMins[0]);
+	entPos[0] = spawnerPos[0] + Cosine(DegToRad(spawnerAng[1])) * (64 + entMaxs[0]);
+	entPos[1] = spawnerPos[1] + Sine(DegToRad(spawnerAng[1])) * (64 + entMaxs[0]);
 	entPos[2] = spawnerPos[2] - entMins[2];
 
 	entAng[0] = 0.0;
-	entAng[1] = spawnerAng[1];
+	entAng[1] = spawnerAng[1] - 180;
 	entAng[2] = 0.0;
 }
 

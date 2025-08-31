@@ -8,8 +8,11 @@
 
 public Action DrawHud(Handle timer, int ent)
 {
-	for (int client = 1; client <= MaxClients; client++) {
+	if (!ink_showbuildhud.IntValue) {
+		return Plugin_Handled;
+	}
 
+	for (int client = 1; client <= MaxClients; client++) {
 		if (!IsClientInGame(client)) {
 			continue;
 		}
@@ -25,14 +28,17 @@ public Action DrawHud(Handle timer, int ent)
 			char entClass[128];
 			GetEntityClassname(target, entClass, sizeof(entClass));
 
-			char entName[64], explodedName[2][32];
-			Entity_GetName(target, entName, sizeof(entName));
-			ExplodeString(entName, "-", explodedName, 2, sizeof(explodedName[]));
-
 			if (StrEqual(entClass, "prop_physics") || StrEqual(entClass, "prop_cycler") || StrEqual(entClass, "prop_dynamic")) {
+				char entName[64], explodedName[2][32];
+				Entity_GetName(target, entName, sizeof(entName));
+				ExplodeString(entName, "-", explodedName, 2, sizeof(explodedName[]));
+
 				ShowHudText(client, 6, "Prop: %s   \nOwner: %N   ", explodedName[0], owner);
 			} else {
-				ShowHudText(client, 6, "Entity: %s   \nOwner: %N   ", explodedName[0], owner);
+				char explodedClass[2][32]
+				ExplodeString(entClass, "_", explodedClass, 2, sizeof(explodedClass[]));
+
+				ShowHudText(client, 6, "Entity: %s   \nOwner: %N   ", explodedClass[1], owner);
 			}
 		} else {
 			int land = -1;

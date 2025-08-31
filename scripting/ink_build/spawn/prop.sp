@@ -115,6 +115,7 @@ public Action Command_SpawnProp(int client, int args)
 {
 	if (args < 1) {
 		Ink_ClientMsg(client, "Usage: {green}!prop{default} <model name>");
+		Ink_ClientMsg(client, "A list of the available props can be accessed with the {green}!proplist{default} command.");
 		return Plugin_Handled;
 	}
 
@@ -183,6 +184,10 @@ public Action Command_SpawnProp(int client, int args)
 
 public Action Command_PropList(int client, int args)
 {
+	if (!Ink_LimitClientSpeed(client)) {
+		return Plugin_Handled;
+	}
+
 	char propPath[PLATFORM_MAX_PATH];
 	BuildPath(Path_SM, propPath, sizeof(propPath), "data/inkmod/props.txt");
 

@@ -172,7 +172,7 @@ methodmap ObjectMap < IntMap
 		if (!this.GetValue(key, obj)) {
 			return;
 		}
-
+ 
 		delete obj;
 		this.Remove(key);
 

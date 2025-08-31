@@ -62,12 +62,11 @@ public Action Command_RemoveEnt(int client, int args)
 	
 	if (!Ink_CheckEntOwner(ent, client, ADMFLAG_KICK)) {
 		float landPoints[2][3];
-		if (Object[client].GetArray("land.offset", landPoints[1], 3) 
-		&& Object[client].GetArray("land.origin", landPoints[0], 3)) {
-			if (!InLand(hitPos, landPoints)) {
-				Ink_ClientMsg(client, "This entity doesn't belong to you.");
-				return Plugin_Handled;
-			}
+		Object[client].GetArray("land.offset", landPoints[1], 3)
+		Object[client].GetArray("land.origin", landPoints[0], 3)
+		if (!InLand(hitPos, landPoints)) {
+			Ink_ClientMsg(client, "This entity doesn't belong to you.");
+			return Plugin_Handled;
 		}
 	}
 

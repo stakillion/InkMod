@@ -43,6 +43,7 @@ ConVar ink_maxplayerents;
 ConVar ink_maxplayerlights;
 ConVar ink_maxplayervehicles;
 ConVar ink_maxlandsize;
+ConVar ink_showbuildhud;
 
 // forwards
 GlobalForward LandClientEntered;
@@ -282,6 +283,9 @@ void RegisterCvars()
 
 	// land
 	ink_maxlandsize = CreateConVar("ink_maxlandsize", "2048", "Maximum width of the player's land areas.");
+
+	// hud
+	ink_showbuildhud = CreateConVar("ink_showbuildhud", "1", "Enables/disbles the InkMod HUD.");
 }
 
 void RegisterForwards()
