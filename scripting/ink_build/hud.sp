@@ -23,7 +23,10 @@ public Action DrawHud(Handle timer, int ent)
 		SetHudTextParamsEx(3.050, -0.110, 0.4, {255, 0, 0, 255});
 
 		if (target != -1 && Object[target] != null) {
-			int owner = Ink_GetEntOwner(target);
+			int ownerId, owner = Ink_GetEntOwner(target, ownerId);
+			StringMap ownerObj = Ink_GetObjectByKey(ownerId);
+			char ownerName[32];
+			ownerObj.GetString("name", ownerName, sizeof(ownerName));
 
 			char entClass[128];
 			GetEntityClassname(target, entClass, sizeof(entClass));
@@ -33,12 +36,12 @@ public Action DrawHud(Handle timer, int ent)
 				Entity_GetName(target, entName, sizeof(entName));
 				ExplodeString(entName, "-", explodedName, 2, sizeof(explodedName[]));
 
-				ShowHudText(client, 6, "Prop: %s   \nOwner: %N   ", explodedName[0], owner);
+				ShowHudText(client, 6, "Prop: %s   \nOwner: %s   ", explodedName[0], ownerName);
 			} else {
 				char explodedClass[2][32]
 				ExplodeString(entClass, "_", explodedClass, 2, sizeof(explodedClass[]));
 
-				ShowHudText(client, 6, "Entity: %s   \nOwner: %N   ", explodedClass[1], owner);
+				ShowHudText(client, 6, "Entity: %s   \nOwner: %s   ", explodedClass[1], ownerName);
 			}
 		} else {
 			int land = -1;
@@ -49,7 +52,7 @@ public Action DrawHud(Handle timer, int ent)
 
 				float landPoints[2][3];
 				if (!Object[c].GetArray("land.offset", landPoints[1], 3) 
-				|| !Object[c].GetArray("land.origin", landPoints[0], 3)) {
+				 || !Object[c].GetArray("land.origin", landPoints[0], 3)) {
 					continue;
 				}
 

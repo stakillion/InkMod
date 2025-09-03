@@ -26,11 +26,7 @@ public Action Command_RemoveEnt(int client, int args)
 
 		bool buildRemoved = false;
 		for (int ent = MaxClients + 1; ent <= MAX_EDICTS; ent++) {
-			if (!IsValidEntity(ent)) {
-				continue;
-			}
-
-			if (!Ink_CheckEntOwner(ent, client)) {
+			if (!IsValidEntity(ent) || !Ink_CheckEntOwner(ent, client)) {
 				continue;
 			}
 
@@ -59,7 +55,7 @@ public Action Command_RemoveEnt(int client, int args)
 		Ink_ClientMsg(client, "You're not looking at anything.");
 		return Plugin_Handled;
 	}
-	
+
 	if (!Ink_CheckEntOwner(ent, client, ADMFLAG_KICK)) {
 		float landPoints[2][3];
 		Object[client].GetArray("land.offset", landPoints[1], 3)
@@ -116,6 +112,7 @@ public Action Command_CleanArea(int client, int args)
 	} else {
 		Ink_ClientMsg(client, "Cleaned up {green}%i{default} entities.", count);
 	}
+
 	CleanStartPos[client][0] = 0.0;
 	CleanStartPos[client][1] = 0.0;
 	CleanStartPos[client][2] = 0.0;

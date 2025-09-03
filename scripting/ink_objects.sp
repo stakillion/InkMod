@@ -65,6 +65,22 @@ public void OnEntityDestroyed(int ent)
 	}
 }
 
+public void OnClientPostAdminCheck(int client)
+{
+	StringMap obj = Objects.CreateObject(client);
+	char name[32];
+	GetClientName(client, name, sizeof(name));
+	obj.SetString("name", name);
+}
+
+public void OnClientSettingsChanged(int client)
+{
+	StringMap obj = Objects.GetObjectByIndex(client);
+	char name[32];
+	GetClientName(client, name, sizeof(name));
+	obj.SetString("name", name);
+}
+
 int Native_CreateObject(Handle plugin, int params)
 {
 	return view_as<int>(Objects.CreateObject(GetNativeCell(1), GetNativeCell(2)));
@@ -172,7 +188,7 @@ methodmap ObjectMap < IntMap
 		if (!this.GetValue(key, obj)) {
 			return;
 		}
- 
+
 		delete obj;
 		this.Remove(key);
 

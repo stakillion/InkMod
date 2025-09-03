@@ -239,6 +239,7 @@ void RegisterCommands(int adminflags = 0)
 
 	RegAdminCmd("n_remove", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
 	RegAdminCmd("n_del", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
+	RegAdminCmd("n_delete", Command_RemoveEnt, adminflags, "Removes the targeted entity.");
 	RegAdminCmd("n_clean", Command_CleanArea, adminflags, "Removes all entities within the selected area.");
 
 	RegAdminCmd("n_replace", Command_ReplaceEnt, adminflags, "Replaces the entity's model with the specified prop.");
