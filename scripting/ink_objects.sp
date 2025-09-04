@@ -41,6 +41,8 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public void OnPluginStart()
 {
+	HookEvent("player_changename", OnClientNameChange, EventHookMode_Post);
+
 	ObjectsReady = new GlobalForward("OnObjectsReady", ET_Ignore);
 	ObjectCreated = new GlobalForward("OnObjectCreated", ET_Ignore, Param_Cell, Param_Cell);
 	ObjectDestroyed = new GlobalForward("OnObjectDestroyed", ET_Ignore, Param_Cell);
@@ -73,12 +75,19 @@ public void OnClientPostAdminCheck(int client)
 	obj.SetString("name", name);
 }
 
-public void OnClientSettingsChanged(int client)
+public Action OnClientNameChange(Event event, const char[] name, bool dontBroadcast)
 {
+	char newName[32];
+	GetEventString(event, "newname", newName, sizeof(newName));
+	int client = GetClientOfUserId(GetEventInt(event, "userid"));
+
 	StringMap obj = Objects.GetObjectByIndex(client);
-	char name[32];
-	GetClientName(client, name, sizeof(name));
-	obj.SetString("name", name);
+	if (obj == null) {
+		return Plugin_Continue;
+	}
+
+	obj.SetString("name", newName);
+	return Plugin_Continue;
 }
 
 int Native_CreateObject(Handle plugin, int params)

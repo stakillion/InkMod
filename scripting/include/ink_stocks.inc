@@ -8,7 +8,7 @@
 #include <multicolors>
 
 
-#define INK_CLIENTMSG_TAG "{blue}[Ink]{default}"
+#define INK_CLIENTMSG_TAG "{blue}>{default}"
 
 
 /**************************

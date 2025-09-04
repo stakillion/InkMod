@@ -23,7 +23,8 @@ public Action DrawHud(Handle timer, int ent)
 		SetHudTextParamsEx(3.050, -0.110, 0.4, {255, 0, 0, 255});
 
 		if (target != -1 && Object[target] != null) {
-			int ownerId, owner = Ink_GetEntOwner(target, ownerId);
+			int ownerId;
+			Ink_GetEntOwner(target, ownerId);
 			StringMap ownerObj = Ink_GetObjectByKey(ownerId);
 			char ownerName[32];
 			ownerObj.GetString("name", ownerName, sizeof(ownerName));
